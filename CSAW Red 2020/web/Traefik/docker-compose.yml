@@ -1,0 +1,40 @@
+version: '2'
+
+services:
+  # rev:
+  #   build: .
+  #   command: gunicorn -b "0.0.0.0:5000" -w 8 rev-proxy:app
+  #   ports:
+  #     - 5000:5000
+
+  traefik:
+    image: traefik:2.2.1
+    command:
+      - "--log.level=DEBUG"
+      - "--providers.docker=true"
+      - "--providers.docker.watch"
+      - "--entrypoints.http.address=:80"
+      - "--providers.docker.exposedByDefault=true"
+    ports:
+      - 5000:80
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    labels:
+      - "traefik.enable=false"
+
+  site:
+    image: nginx:1.19.0
+    container_name: site
+    volumes:
+      - ./templates:/usr/share/nginx/html:ro
+    labels:
+      - "traefik.http.routers.site-http.rule=Host(`localhost`)||Host(`rev-proxy.csaw.io`)"
+      - "traefik.http.routers.site-http.entrypoints=http"
+
+  flag:
+    container_name: flag
+    build: .
+    command: gunicorn -b "0.0.0.0:80" -w 1 flag:app
+    labels:
+      - "traefik.http.routers.flag-http.rule=Host(`flag`)"
+      - "traefik.http.routers.flag-http.entrypoints=http"
