@@ -1,0 +1,17 @@
+# Nmap 7.80 scan initiated Thu Nov 12 14:07:34 2020 as: nmap -sC -sV -o picklerick 10.10.171.151
+Nmap scan report for 10.10.171.151
+Host is up (0.11s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.6 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 a7:93:44:1d:e9:22:da:29:83:c4:f4:40:05:8c:a0:76 (RSA)
+|   256 76:61:34:d4:c2:31:25:fe:6b:6b:d9:01:0b:03:2c:51 (ECDSA)
+|_  256 40:df:9b:db:35:ce:83:54:68:9c:6f:ce:de:65:18:ed (ED25519)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Rick is sup4r cool
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov 12 14:08:04 2020 -- 1 IP address (1 host up) scanned in 30.29 seconds
