@@ -279,7 +279,7 @@ drwxr-xr-x  3 root root 4096 Feb 10  2019 snap
 
 * Now let's get whats in the .ssh directory:
 ```
-
+authorized_keys
 ```
 * Let's less that file: `sudo less  /root/.ssh/authorized_keys`
 * We get the following:
