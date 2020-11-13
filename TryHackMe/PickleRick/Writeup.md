@@ -252,12 +252,15 @@ robots.txt
 
 * Let's try going to the root directory now
 * `ls /root/` doesn't output anything, but thats likely because we don't have permissions
-* 'sudo ls /root/` outputs the following without any password:
+* `sudo ls /root/` outputs the following without any password:
+
 ```
 3rd.txt
 snap
 ```
-	* That's what happens when you mess around with admin privileges!
+
+* That's what happens when you mess around with admin privileges!
+
 * Let's run `sudo less /root/3rd.txt`
 * We get the 3rd flag: `3rd ingredients: fleeb juice`
 
