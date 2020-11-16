@@ -58,7 +58,7 @@ Nmap done: 1 IP address (1 host up) scanned in 50.46 seconds
 -rw-rw-r--    1 ftp      ftp            68 Jun 07 20:47 task.txt
 226 Directory send OK.
 ```
-* We can download those by typing `get locks.txt` and `task.txt`
+* We can download those by typing `get locks.txt` and `get task.txt`
 
 
 * `locks.txt` :
