@@ -176,12 +176,12 @@ https://github.com/offensive-security/exploitdb-bin-sploits/raw/master/bin-sploi
 * Imma be honest.. loads of stuff happened here with no success
 * A typical Linux privilege Escalation method is based on checking one of the following: (Quote from [this](https://github.com/Bengman/CTF-writeups/blob/master/Hackthebox/dev0ops.md) writeup)
 ```
-Exploiting services running as root
-Exploiting SUID executables
-Exploiting SUDO rights/user
-Exploiting badly configured cron jobs
-Exploiting users with "." in their path
-Kernel Exploits
+1. Exploiting services running as root
+2. Exploiting SUID executables
+3. Exploiting SUDO rights/user
+4. Exploiting badly configured cron jobs
+5. Exploiting users with "." in their path
+6. Kernel Exploits
 ```
 * I eventually had some success with exploting sudo rights:
 * `sudo -l` with `lin`'s password shows which commands each of the users can execute with sudo
