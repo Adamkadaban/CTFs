@@ -48,7 +48,7 @@ Nmap done: 1 IP address (1 host up) scanned in 50.46 seconds
 # Exploitation
 
 ### ftp login
-`ssh 10.10.207.236 21`
+`ftp 10.10.207.236 21`
 * Type in `anonymous` for the username and press enter for the password
 * Let's see whats on this thing... `ls`
 ```
