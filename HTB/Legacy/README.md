@@ -45,6 +45,7 @@ Nmap done: 1 IP address (1 host up) scanned in 62.51 seconds
 
 ### rdp
 * I tried out some exploits here that were on searchsploit, but it looked like rdp maybe wasn't actually up and running on the machine?
+* One of the exploits I tried out is in this writeup directory if you'd like to try for yourself
 
 ### smb
 
