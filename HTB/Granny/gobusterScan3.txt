@@ -1,0 +1,5 @@
+/_vti_bin (Status: 301)
+/_vti_bin/SHTML.DLL (Status: 200)
+/_vti_bin/_vti_adm/admin.dll (Status: 200)
+/_vti_bin/_vti_aut/author.dll (Status: 200)
+/_vti_bin/shtml.dll (Status: 200)
