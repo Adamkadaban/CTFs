@@ -104,3 +104,108 @@ undefined8 main(int param_1,undefined8 *param_2)
 `my_m0r3_secur3_pwd`
 
 # Crackme5
+* When we open up ghidra, we can see in the main function that we get the output "Good Game" (objective of the problem) if our input string is the same as another string in the program
+	* That other string is probably obfuscated somewhere, so let's open up gdb
+
+### gdb
+* run `gdb ./crackme5`
+* disassemble the main function with `disassemble main`
+* we want to set a breakpoint before the call to `strcmp`, which we can see is at the address `0x000000000040082f`
+* let's set a breakpoint there with `break *0x000000000040082f` and type `run`
+* type in a random input to let the program run
+* once it reaches the breakpoint and stops, we can type `info registers` to see the contents of the registers
+* the rdx and rsi registers have the value `0x7fffffffdfd0` in them
+* we can view the string representation of what's inside that using `x/s 0x7fffffffdfd0`. We get the password
+
+`OfdlDSA|3tXb32~X3tX@sX`4tXtz`
+
+# Crackme6
+* when we open up ghidra, we can see in the disassembler that main makes a call to `compare_pwd` with our argument as a parameter.
+	* from there, we can see that if `my_secure_test` returns 0, we got the right password. lets go to that function  
+* looking at the if statements, we can see the comparisons made character by character (I put comments next to the important bits):
+```
+undefined8 my_secure_test(char *param_1)
+
+{
+  undefined8 uVar1;
+  
+  if ((*param_1 == '\0') || (*param_1 != '1')) { // FIRST CHARACTER
+    uVar1 = 0xffffffff;
+  }
+  else {
+    if ((param_1[1] == '\0') || (param_1[1] != '3')) { // SECOND CHARACTER
+      uVar1 = 0xffffffff;
+    }
+    else {
+      if ((param_1[2] == '\0') || (param_1[2] != '3')) { // THIRD CHARACTER
+        uVar1 = 0xffffffff;
+      }
+      else {
+        if ((param_1[3] == '\0') || (param_1[3] != '7')) { // FOURTH CHARACTER
+          uVar1 = 0xffffffff;
+        }
+        else {
+          if ((param_1[4] == '\0') || (param_1[4] != '_')) { // FIFTH CHARACTER
+            uVar1 = 0xffffffff;
+          }
+          else {
+            if ((param_1[5] == '\0') || (param_1[5] != 'p')) { // SIXTH CHARACTER
+              uVar1 = 0xffffffff;
+            }
+            else {
+              if ((param_1[6] == '\0') || (param_1[6] != 'w')) { // SEVENTH CHARACTER
+                uVar1 = 0xffffffff;
+              }
+              else {
+                if ((param_1[7] == '\0') || (param_1[7] != 'd')) { // EIGHTH CHARACTER
+                  uVar1 = 0xffffffff;
+                }
+                else {
+                  if (param_1[8] == '\0') {
+                    uVar1 = 0;
+                  }
+                  else {
+                    uVar1 = 0xffffffff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  return uVar1;
+}
+```
+* The password is `1337_pwd`
+
+# Crackme7
+* let's open the binary in ghidra
+* there's a bunch of if statements, but we do see that something makes a call to `giveGlad()`
+	* looking at the code for that, we can see that the input has to match `0x7a69` 
+		* indicative code snippet: `if (local_14 == 0x7a69)`
+* we can use python to hex decode that: `python -c "print(0x7a69)"`
+	* this gives us the number `31337`
+* input `31337` on the selection menu
+```
+Menu:
+
+[1] Say hello
+[2] Add numbers
+[3] Quit
+
+[>] 31337
+Wow such h4x0r!
+flag{much_reversing_very_ida_wow}
+```
+
+# Crackme8
+* let's open the binary in ghidra
+* we can see that if our parameter equals a certain value, `giveFlag()` is called
+	* indicative code snippet: `if (iVar2 == -0x35010ff3)`
+* we can use python to hex decode that: `python -c "print(-0x35010ff3)"`
+	* this gives us the number `-889262067`
+* running `./crackme8 -889262067` gives us the flag:
+
+`flag{at_least_this_cafe_wont_leak_your_credit_card_numbers}`
