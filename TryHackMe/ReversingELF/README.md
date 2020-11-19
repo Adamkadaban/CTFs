@@ -117,7 +117,7 @@ undefined8 main(int param_1,undefined8 *param_2)
 * the rdx and rsi registers have the value `0x7fffffffdfd0` in them
 * we can view the string representation of what's inside that using `x/s 0x7fffffffdfd0`. We get the password
 
-`OfdlDSA|3tXb32~X3tX@sX`4tXtz`
+``OfdlDSA|3tXb32~X3tX@sX`4tXtz``
 
 # Crackme6
 * when we open up ghidra, we can see in the disassembler that main makes a call to `compare_pwd` with our argument as a parameter.
