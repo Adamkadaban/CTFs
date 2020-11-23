@@ -114,3 +114,5 @@ Nmap done: 1 IP address (1 host up) scanned in 17.26 seconds
 * Once in the machine, we can cd over to '\Users\Administrator\Desktop` and print the file with `more root.txt`
 * The root flag is `3018977fb944bf1878f75b879fba67cc`
   
+# Notes:
+* I suggest reading [this](https://blog.rapid7.com/2013/03/09/psexec-demystified/) for a better understanding of psexec. It helped me a lot
