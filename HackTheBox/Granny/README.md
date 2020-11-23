@@ -150,3 +150,12 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 	* Using the `cat` command on the meterpreter or the `more` command on the shell, we get the user flag: `700c5dc163014e22b3e408f8703f67d1`
 
 * We can cd to `C:\Documents and Settings\Administrator\Desktop>` to get the root flag: `aa4beed1c0584445ab463a6747bd06e9`
+
+# Notes
+* When doing stuff with webdav, there are some useful tools to use:
+
+### davtest
+`davtest -url http://10.10.10.15` will give you a list of files that you can upload, rename, edit, etc.
+
+### dave
+`dave 10.10.10.15` will show you the full directory of the website, let you traverse it, and even let you upload files
