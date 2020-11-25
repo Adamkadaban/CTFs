@@ -197,6 +197,6 @@ User shelly may run the following commands on Shocker:
 ```
 * Here we can see that shelly can run the perl command as sudo without any passwords.
 * That's kinda bad, because perl lets people execute commands.
-* Running `sudo perl -e "exec '/bin/sh';" gives us a root shell
+* Running `sudo perl -e "exec '/bin/sh';"` gives us a root shell
 * Now, we can `cd /root/` and `cat root.txt` to get the root flag: `b46763e9cb93d9b229df1dc0856f0253`
 
