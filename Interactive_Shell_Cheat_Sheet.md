@@ -10,7 +10,7 @@
 6. Done! Now your shell should be fully ainteractive
 
 ### Windows
-1. Install `rlwrap on your system`
-2. Now, every time you run a nc listener, just put `rlwrap in front`
+1. Install `rlwrap` on your system
+2. Now, every time you run a nc listener, just put `rlwrap` in front
 3. For example: `rlwrap nc -lvnp 1337`
 	* This will give you arrow keys and command history, but won't give autocompletion (as far as I can tell) for windows and *nix systems
