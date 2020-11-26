@@ -1,0 +1,14 @@
+# Nmap 7.80 scan initiated Wed Nov 25 05:13:49 2020 as: nmap -sC -sV -oN Sense.nmap 10.10.10.60
+Nmap scan report for 10.10.10.60
+Host is up (0.12s latency).
+Not shown: 998 filtered ports
+PORT    STATE SERVICE    VERSION
+80/tcp  open  http       lighttpd 1.4.35
+|_http-server-header: lighttpd/1.4.35
+|_http-title: Did not follow redirect to https://10.10.10.60/
+|_https-redirect: ERROR: Script execution failed (use -d to debug)
+443/tcp open  ssl/https?
+|_ssl-date: TLS randomness does not represent time
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 25 05:15:47 2020 -- 1 IP address (1 host up) scanned in 118.18 seconds
