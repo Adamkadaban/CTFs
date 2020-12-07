@@ -261,7 +261,6 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 	* `'` ends the string
 	* `OR 1=1` returns true, which allows the query to select everything
 	* `; -- ` ends the query and ignores everything afterward
-* This logs us in!
 * Now we can input the same stuff, and that gets us all of the gifts and children (22 of them), but we can't see the rest of the database
 	* Another way to ouput the full two columns that might seem more intuitive is `' ; --`
 * We can assume that there's also a username and password column, so let's type in `' UNION SELECT username, password FROM users --`
@@ -277,7 +276,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 	* I saved this as `burpFile.txt` by right-clicking on the request in burp and selecting `Save Item`
 * Now, we can run `sqlmap -r burpFile.txt --dbms=sqlite -a` and press enter a few times to chose default settings, which will dump the whole database
 
-# Day 9
+# Day 6
 * Going to `http://10.10.249.208:5000/`, there a are a couple inputs
 	* We can input an example wish
 	* Now, going to the source code of the website, we can see that it was modified
@@ -298,3 +297,6 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 
 * Of course, the testing here can be done automatically by running an automatic scan with ZAP and looking at the alerts
 	* When running this, it gives options for persistent and reflected xss
+
+# Day 7
+
