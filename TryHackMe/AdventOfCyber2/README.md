@@ -277,3 +277,24 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 	* I saved this as `burpFile.txt` by right-clicking on the request in burp and selecting `Save Item`
 * Now, we can run `sqlmap -r burpFile.txt --dbms=sqlite -a` and press enter a few times to chose default settings, which will dump the whole database
 
+# Day 9
+* Going to `http://10.10.249.208:5000/`, there a are a couple inputs
+	* We can input an example wish
+	* Now, going to the source code of the website, we can see that it was modified
+		* This tells us that the site likely isn't pulling from some kind of database.
+* We can test for cross-site scripting by typing in `<script>alert(1)</script>`
+	* This doesn't work and looks like it breaks the page instead.
+* Maybe they're sanitizing the input?
+	* One way that inputs are sanitized is by checking tags on the outside of the input
+	* We can try </script><script>alert(1)</script><script>	
+		* Because </thing><thing> isn't valid html, that can get past the site
+	
+
+* Another way that we see a possible exploit is through the get requests made in the url `http://10.10.249.208:5000/?q=<INPUT>`
+	* We can see that there's a parameter `q` that we can set equal to our query
+	* Let's try `http://10.10.249.208:5000/?q=<script>alert(2)</script>`
+		* That works
+
+
+* Of course, the testing here can be done automatically by running an automatic scan with ZAP and looking at the alerts
+	* When running this, it gives options for persistent and reflected xss
