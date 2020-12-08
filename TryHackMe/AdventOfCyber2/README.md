@@ -299,4 +299,48 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 	* When running this, it gives options for persistent and reflected xss
 
 # Day 7
+* Opening `pcap1.pcap` in wireshark, looking at the `Info` column, we can look for `ICMP`
+	* Once we find that, we can look at the `Source` column to get the IP: `10.11.3.2`
+
+* We can filter for GET requests with `http.request.method == GET`
+
+* We can look at GET requests made with a specific ip with `http.request.method == GET && ip.src == 10.10.67.199`
+	* It looks like this machine visited `/posts/reindeer-of-the-week/`
+		* The article name is `reindeer-of-the-week`
+
+
+* Typing `ftp` as a filter shows us all the ftp traffic
+	* There's a request that shows us the info `Request: USER elfmcskidy`
+		* We can right-click on this and select `follow` -> `TCP Stream` to see all te requests made in this stream
+		* We get the following output in ASCII mode:
+```
+220 Welcome to the TBFC FTP Server!.
+USER elfmcskidy
+331 Please specify the password.
+PASS plaintext_password_fiasco
+530 Login incorrect.
+SYST
+530 Please login with USER and PASS.
+QUIT
+221 Goodbye.
+```
+* Username: `elfmcskidy`
+* Password: `plaintext_password_fiasco`
+
+* There's also a request for `USER anonymous`, but we don't care too much about that since we're looking for credentials
+
+* Scrolling through the pcaps, we can look at the `Protocol` column and we see a lot of `SSH` packets
+
+* Looking through the packets a bit more, we can see that `HTTP` made a `GET` request for `/christmas.zip`
+* An easy way to extract files out of wireshark packet captures is by going to `File` -> `Export Objects` -> `HTTP` (because we saw that was how the file was downloaded) -> select `christmas.zip`
+	* Once you save the file, you can extract it and `cat elf_mcskidy_wishlist.txt`, which gets the following output:
+```
+Wish list for Elf McSkidy
+-------------------------
+Budget: £100
+
+x3 Hak 5 Pineapples
+x1 Rubber ducky (to replace Elf McEager)
+```
+* The replacement for Elf McEager is `Rubber ducky`
 
