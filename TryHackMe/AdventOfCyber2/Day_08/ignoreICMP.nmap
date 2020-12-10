@@ -1,0 +1,10 @@
+# Nmap 7.80 scan initiated Thu Dec 10 02:09:58 2020 as: nmap -Pn -oN ignoreICMP.nmap 10.10.4.45
+Nmap scan report for 10.10.4.45
+Host is up (0.11s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+2222/tcp open  EtherNetIP-1
+3389/tcp open  ms-wbt-server
+
+# Nmap done at Thu Dec 10 02:10:07 2020 -- 1 IP address (1 host up) scanned in 8.95 seconds

@@ -1,0 +1,19 @@
+# Nmap 7.80 scan initiated Thu Dec 10 02:05:50 2020 as: nmap -sC -sV -oN initial.nmap 10.10.4.45
+Nmap scan report for 10.10.4.45
+Host is up (0.11s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE       VERSION
+80/tcp   open  http          Apache httpd 2.4.29 ((Ubuntu))
+|_http-generator: Hugo 0.78.2
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: TBFC&#39;s Internal Blog
+2222/tcp open  ssh           OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 cf:c9:99:d0:5c:09:27:cd:a1:a8:1b:c2:b1:d5:ef:a6 (RSA)
+|   256 4c:d4:f9:20:6b:ce:fc:62:99:54:7d:c2:b4:b2:f2:b2 (ECDSA)
+|_  256 d0:e6:72:18:b5:20:89:75:d5:69:74:ac:cc:b8:3b:9b (ED25519)
+3389/tcp open  ms-wbt-server xrdp
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec 10 02:07:14 2020 -- 1 IP address (1 host up) scanned in 84.05 seconds
