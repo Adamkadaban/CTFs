@@ -1,0 +1,37 @@
+# Nmap 7.80 scan initiated Sun Dec 20 11:09:56 2020 as: nmap -sC -sV -oN initial.nmap 10.10.51.9
+Nmap scan report for 10.10.51.9
+Host is up (0.18s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE     VERSION
+22/tcp  open  ssh         OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 fa:70:d4:c2:86:0e:e3:fb:9f:0a:36:7a:11:36:a5:dc (RSA)
+|   256 4b:12:67:10:b4:a5:21:0d:30:ad:ef:15:ae:c4:04:97 (ECDSA)
+|_  256 e4:ea:83:e9:cf:fe:9f:e9:fa:a2:8e:2f:b7:fc:b4:c0 (ED25519)
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: TBFC-SMB-01)
+445/tcp open  netbios-ssn Samba smbd 4.7.6-Ubuntu (workgroup: TBFC-SMB-01)
+Service Info: Host: TBFC-SMB; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_nbstat: NetBIOS name: TBFC-SMB, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.7.6-Ubuntu)
+|   Computer name: tbfc-smb
+|   NetBIOS computer name: TBFC-SMB\x00
+|   Domain name: \x00
+|   FQDN: tbfc-smb
+|_  System time: 2020-12-20T16:10:17+00:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-12-20T16:10:17
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Dec 20 11:10:21 2020 -- 1 IP address (1 host up) scanned in 24.73 seconds

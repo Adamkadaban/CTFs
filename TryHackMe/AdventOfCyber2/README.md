@@ -501,3 +501,134 @@ Nmap done: 1 IP address (1 host up) scanned in 44.91 seconds
 * Waiting for a couple minutes gets us a reverse shell!
 
 * Now we can `cat /root/root/txt` to get the flag: `THM{even_you_can_be_santa}`
+
+# Day 10
+IP: `10.10.51.9`
+### nmap
+`nmap -sC -sV 10.10.51.9 -oN initial.nmap`
+```
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-12-20 11:09 EST
+Nmap scan report for 10.10.51.9
+Host is up (0.18s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE     VERSION
+22/tcp  open  ssh         OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 fa:70:d4:c2:86:0e:e3:fb:9f:0a:36:7a:11:36:a5:dc (RSA)
+|   256 4b:12:67:10:b4:a5:21:0d:30:ad:ef:15:ae:c4:04:97 (ECDSA)
+|_  256 e4:ea:83:e9:cf:fe:9f:e9:fa:a2:8e:2f:b7:fc:b4:c0 (ED25519)
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: TBFC-SMB-01)
+445/tcp open  netbios-ssn Samba smbd 4.7.6-Ubuntu (workgroup: TBFC-SMB-01)
+Service Info: Host: TBFC-SMB; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_nbstat: NetBIOS name: TBFC-SMB, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.7.6-Ubuntu)
+|   Computer name: tbfc-smb
+|   NetBIOS computer name: TBFC-SMB\x00
+|   Domain name: \x00
+|   FQDN: tbfc-smb
+|_  System time: 2020-12-20T16:10:17+00:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-12-20T16:10:17
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 24.73 seconds
+
+```
+* We have smb running. Let's use enum4linux and smbmap:
+
+### enum4linux
+`enum4linux -U 10.10.51.9`
+```
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sun Dec 20 11:07:35 2020
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 10.10.51.9
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ================================================== 
+|    Enumerating Workgroup/Domain on 10.10.51.9    |
+ ================================================== 
+[+] Got domain/workgroup name: TBFC-SMB-01
+
+ =================================== 
+|    Session Check on 10.10.51.9    |
+ =================================== 
+[+] Server 10.10.51.9 allows sessions using username '', password ''
+
+ ========================================= 
+|    Getting domain SID for 10.10.51.9    |
+ ========================================= 
+Domain Name: TBFC-SMB-01
+Domain Sid: (NULL SID)
+[+] Can't determine if host is part of domain or part of a workgroup
+
+ =========================== 
+|    Users on 10.10.51.9    |
+ =========================== 
+index: 0x1 RID: 0x3e8 acb: 0x00000010 Account: elfmcskidy	Name: 	Desc: 
+index: 0x2 RID: 0x3ea acb: 0x00000010 Account: elfmceager	Name: elfmceager	Desc: 
+index: 0x3 RID: 0x3e9 acb: 0x00000010 Account: elfmcelferson	Name: 	Desc: 
+
+user:[elfmcskidy] rid:[0x3e8]
+user:[elfmceager] rid:[0x3ea]
+user:[elfmcelferson] rid:[0x3e9]
+enum4linux complete on Sun Dec 20 11:07:44 2020
+
+```
+* We see users `elfmcskidy`, `elfmceager`, and `elfmcelferson`
+### smbmap
+`smbmap -H 10.10.51.9`
+```
+[+] Guest session   	IP: 10.10.51.9:445	Name: 10.10.51.9                                        
+        Disk                                                  	Permissions	Comment
+	----                                                  	-----------	-------
+	tbfc-hr                                           	NO ACCESS	tbfc-hr
+	tbfc-it                                           	NO ACCESS	tbfc-it
+	tbfc-santa                                        	READ, WRITE	tbfc-santa
+	IPC$                                              	NO ACCESS	IPC Service (tbfc-smb server (Samba, Ubuntu))
+
+```
+* There are 4 shares running
+* We can access the `tbfc-santa` share
+	* Let's do that with `smbclient //10.10.51.9/tbfc-santa` and by pressing enter without a password
+* `dir` shows us that theres a directory and a file
+	* We can download the file with `get note_from_mcskidy.txt`
+	* There's an empty directory called `jingle-tunes`
+	* Unfortunately, it doesn't look like there's anything interesting here
+# Day 11
+
+# Day 12
+
+# Day 13
+
+# Day 14
+
+# Day 15
+
+# Day 16
+
+# Day 17
+
+# Day 18
+
+# Day 19
+
+# Day 20
