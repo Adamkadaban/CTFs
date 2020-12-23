@@ -1,0 +1,13 @@
+# Nmap 7.80 scan initiated Wed Dec 23 11:22:30 2020 as: nmap -sC -sV -oN initial.nmap 10.10.72.67
+Nmap scan report for 10.10.72.67
+Host is up (0.16s latency).
+Not shown: 996 filtered ports
+PORT     STATE SERVICE            VERSION
+3389/tcp open  ssl/ms-wbt-server?
+5357/tcp open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+8009/tcp open  ajp13              Apache Jserv (Protocol v1.3)
+8080/tcp open  http               Apache Tomcat 9.0.17
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec 23 11:25:36 2020 -- 1 IP address (1 host up) scanned in 185.51 seconds
