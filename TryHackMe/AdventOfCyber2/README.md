@@ -908,6 +908,27 @@ GPS Position                    : 41 deg 53' 30.53" N, 87 deg 37' 27.40" W
 * We can look for leaked credentials at `https://scylla.sh/search?q=email:rudolphthered@hotmail.com`, which gives us the password `spygame`
 
 # Day 15
+* We can get the solutions for the problems by trying them ourselves in the python interpreter by typing `python3` in the terminal (if needed)
+
+* `True + True` evaluates to `2` because python treats true as 1
+
+* `pypi` is the database for installing python libraries
+
+* `bool("False") evaluates to true because the string "False" is being cast as a boolean. In this case, python will make anything that equals 0 evaluate to false, and everything else true
+
+* the `requests` module is one way that you can download the html of a webpage
+
+```python3
+x = [1, 2, 3]
+
+y = x
+
+y.append(6)
+
+print(x)
+```
+* The above code evaluates to `[1, 2, 3, 6]` because python passes by reference by default, which means setting values equal to eachother is actually setting the address they point to to the same thing
+
 
 # Day 16
 
