@@ -1,0 +1,25 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Wed Dec 23 15:42:40 2020
+Invocation: foremost rabbit-hole.png 
+Output directory: /root/Desktop/CTFs/HackUCF/forensics/rabbit-hole/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: rabbit-hole.png
+Start: Wed Dec 23 15:42:40 2020
+Length: 67 KB (69202 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000132.zip 	       1 KB 	      68085 	 
+1:	00000000.png 	      66 KB 	          0 	  (473 x 689)
+Finish: Wed Dec 23 15:42:40 2020
+
+2 FILES EXTRACTED
+	
+zip:= 1
+png:= 1
+------------------------------------------------------------------
+
+Foremost finished at Wed Dec 23 15:42:40 2020
