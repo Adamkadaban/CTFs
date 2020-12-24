@@ -931,6 +931,167 @@ print(x)
 
 
 # Day 16
+### IP
+`10.10.185.87`
+
+### nmap
+`nmap -sC -sV 10.10.185.87 -oN initial.nmap`
+```
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-12-24 14:16 EST
+Nmap scan report for 10.10.185.87
+Host is up (0.20s latency).
+Not shown: 999 closed ports
+PORT     STATE SERVICE  VERSION
+8000/tcp open  http-alt uvicorn
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     date: Thu, 24 Dec 2020 19:16:27 GMT
+|     server: uvicorn
+|     content-length: 22
+|     content-type: application/json
+|     Connection: close
+|     {"detail":"Not Found"}
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     date: Thu, 24 Dec 2020 19:16:21 GMT
+|     server: uvicorn
+|     content-type: text/html; charset=utf-8
+|     content-length: 6992
+|     last-modified: Mon, 23 Nov 2020 00:31:30 GMT
+|     etag: 43d617909830c0d0a48bbbe8ea26ae39
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <title>Santa's Tracker</title>
+|     <link rel="shortcut icon" href="" type="image/x-icon">
+|     <link rel="stylesheet" href="bulma.css">
+|     <!-- Bulma Version 0.9.0-->
+|     <link rel="stylesheet" type="text/css" href="../css/hero.css">
+|     <!-- <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" /> -->
+|     </head>
+|     <body>
+|     <section class="hero is-info is-medium is-bold">
+|   HTTPOptions: 
+|     HTTP/1.1 405 Method Not Allowed
+|     date: Thu, 24 Dec 2020 19:16:33 GMT
+|     server: uvicorn
+|     content-length: 31
+|     content-type: application/json
+|     Connection: close
+|_    {"detail":"Method Not Allowed"}
+|_http-server-header: uvicorn
+|_http-title: Santa's Tracker
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8000-TCP:V=7.80%I=7%D=12/24%Time=5FE4E908%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,1C40,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Thu,\x2024\x20Dec\x2
+SF:02020\x2019:16:21\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20text
+SF:/html;\x20charset=utf-8\r\ncontent-length:\x206992\r\nlast-modified:\x2
+SF:0Mon,\x2023\x20Nov\x202020\x2000:31:30\x20GMT\r\netag:\x2043d617909830c
+SF:0d0a48bbbe8ea26ae39\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n
+SF:<html>\n\x20\x20\x20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x
+SF:20charset=\"utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-equ
+SF:iv=\"X-UA-Compatible\"\x20content=\"IE=edge\">\n\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x2
+SF:0initial-scale=1\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Santa's\x20
+SF:Tracker</title>\n\x20\x20\x20\x20\x20\x20\x20\x20<link\x20rel=\"shortcu
+SF:t\x20icon\"\x20href=\"\"\x20type=\"image/x-icon\">\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"bulma\.css\">\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20<!--\x20Bulma\x20Version\x200\.9\.0-->\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20type=\"text/
+SF:css\"\x20href=\"\.\./css/hero\.css\">\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20<!--\x20<link\x20rel=\"stylesheet\"\x20href=\"https://unpkg\.com/bu
+SF:lma-modal-fx/dist/css/modal-fx\.min\.css\"\x20/>\x20-->\n\x20\x20\x20\x
+SF:20</head>\n\x20\x20\x20\x20<body>\n\x20\x20\x20\x20\x20\x20\x20\x20<sec
+SF:tion\x20class=\"hero\x20is-info\x20is-medium\x20is-bold\">\n\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20")%r(FourOhFourRequest,AD,"HTTP/1\.1\x20404\x20Not
+SF:\x20Found\r\ndate:\x20Thu,\x2024\x20Dec\x202020\x2019:16:27\x20GMT\r\ns
+SF:erver:\x20uvicorn\r\ncontent-length:\x2022\r\ncontent-type:\x20applicat
+SF:ion/json\r\nConnection:\x20close\r\n\r\n{\"detail\":\"Not\x20Found\"}")
+SF:%r(HTTPOptions,BF,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\ndate
+SF::\x20Thu,\x2024\x20Dec\x202020\x2019:16:33\x20GMT\r\nserver:\x20uvicorn
+SF:\r\ncontent-length:\x2031\r\ncontent-type:\x20application/json\r\nConne
+SF:ction:\x20close\r\n\r\n{\"detail\":\"Method\x20Not\x20Allowed\"}");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 89.11 seconds
+```
+* port `8000` is open
+* looking at the source code, we can see that there is a reference to `/api/api_key`
+
+
+### fuzzing
+* We know that the api key is an odd number somewhere between 1-100, so we can generate that list with the `python -c "for i in range(1,100,2): print(i)" > nums.txt`
+
+* Now we can fuzz for a response with `wfuzz -z file,nums.txt --hw 0 http://10.10.185.87:8000/api/FUZZ`:
+```
+********************************************************
+* Wfuzz 3.1.0 - The Web Fuzzer                         *
+********************************************************
+
+Target: http://10.10.185.87:8000/api/FUZZ
+Total requests: 50
+
+=====================================================================
+ID           Response   Lines    Word       Chars       Payload                                                                                                     
+=====================================================================
+
+000000001:   200        0 L      4 W        41 Ch       "1"                                                                                                         
+000000007:   200        0 L      4 W        42 Ch       "13"                                                                                                        
+000000008:   200        0 L      4 W        42 Ch       "15"                                                                                                        
+000000003:   200        0 L      4 W        41 Ch       "5"                                                                                                         
+000000011:   200        0 L      4 W        42 Ch       "21"                                                                                                        
+000000010:   200        0 L      4 W        42 Ch       "19"                                                                                                        
+000000002:   200        0 L      4 W        41 Ch       "3"                                                                                                         
+000000006:   200        0 L      4 W        42 Ch       "11"                                                                                                        
+000000005:   200        0 L      4 W        41 Ch       "9"                                                                                                         
+000000009:   200        0 L      4 W        42 Ch       "17"                                                                                                        
+000000004:   200        0 L      4 W        41 Ch       "7"                                                                                                         
+000000014:   200        0 L      4 W        42 Ch       "27"                                                                                                        
+000000013:   200        0 L      4 W        42 Ch       "25"                                                                                                        
+000000012:   200        0 L      4 W        42 Ch       "23"                                                                                                        
+000000018:   200        0 L      4 W        42 Ch       "35"                                                                                                        
+000000017:   200        0 L      4 W        42 Ch       "33"                                                                                                        
+000000020:   200        0 L      4 W        42 Ch       "39"                                                                                                        
+000000016:   200        0 L      4 W        42 Ch       "31"                                                                                                        
+000000015:   200        0 L      4 W        42 Ch       "29"                                                                                                        
+000000019:   200        0 L      4 W        42 Ch       "37"                                                                                                        
+000000022:   200        0 L      4 W        42 Ch       "43"                                                                                                        
+000000025:   200        0 L      4 W        42 Ch       "49"                                                                                                        
+000000027:   200        0 L      4 W        42 Ch       "53"                                                                                                        
+000000028:   200        0 L      4 W        42 Ch       "55"                                                                                                        
+000000024:   200        0 L      4 W        42 Ch       "47"                                                                                                        
+000000021:   200        0 L      4 W        42 Ch       "41"                                                                                                        
+000000030:   200        0 L      4 W        42 Ch       "59"                                                                                                        
+000000034:   200        0 L      4 W        42 Ch       "67"                                                                                                        
+000000026:   200        0 L      4 W        42 Ch       "51"                                                                                                        
+000000023:   200        0 L      4 W        42 Ch       "45"                                                                                                        
+000000042:   200        0 L      4 W        42 Ch       "83"                                                                                                        
+000000044:   200        0 L      4 W        42 Ch       "87"                                                                                                        
+000000039:   200        0 L      4 W        42 Ch       "77"                                                                                                        
+000000041:   200        0 L      4 W        42 Ch       "81"                                                                                                        
+000000043:   200        0 L      4 W        42 Ch       "85"                                                                                                        
+000000040:   200        0 L      4 W        42 Ch       "79"                                                                                                        
+000000038:   200        0 L      4 W        42 Ch       "75"                                                                                                        
+000000033:   200        0 L      4 W        42 Ch       "65"                                                                                                        
+000000037:   200        0 L      4 W        42 Ch       "73"                                                                                                        
+000000036:   200        0 L      4 W        42 Ch       "71"                                                                                                        
+000000035:   200        0 L      4 W        42 Ch       "69"                                                                                                        
+000000032:   200        0 L      4 W        42 Ch       "63"                                                                                                        
+000000047:   200        0 L      4 W        42 Ch       "93"                                                                                                        
+000000029:   200        0 L      5 W        58 Ch       "57"                                                                                                        
+000000031:   200        0 L      4 W        42 Ch       "61"                                                                                                        
+000000045:   200        0 L      4 W        42 Ch       "89"                                                                                                        
+000000050:   200        0 L      4 W        42 Ch       "99"                                                                                                        
+000000046:   200        0 L      4 W        42 Ch       "91"                                                                                                        
+000000049:   200        0 L      4 W        58 Ch       "97"                                                                                                        
+000000048:   200        0 L      4 W        58 Ch       "95" 
+```
+* the api key of `57` got a response with a slightly unique character count, so I went to `http://10.10.185.87:8000/api/57` and got `{"item_id":57,"q":"Winter Wonderland, Hyde Park, London."}`
 
 # Day 17
 
@@ -939,3 +1100,11 @@ print(x)
 # Day 19
 
 # Day 20
+
+# Day 21
+
+# Day 22
+
+# Day 23
+
+# Day 24

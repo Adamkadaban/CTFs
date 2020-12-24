@@ -1,0 +1,82 @@
+# Nmap 7.80 scan initiated Thu Dec 24 14:16:12 2020 as: nmap -sC -sV -oN initial.nmap 10.10.185.87
+Nmap scan report for 10.10.185.87
+Host is up (0.20s latency).
+Not shown: 999 closed ports
+PORT     STATE SERVICE  VERSION
+8000/tcp open  http-alt uvicorn
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     date: Thu, 24 Dec 2020 19:16:27 GMT
+|     server: uvicorn
+|     content-length: 22
+|     content-type: application/json
+|     Connection: close
+|     {"detail":"Not Found"}
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     date: Thu, 24 Dec 2020 19:16:21 GMT
+|     server: uvicorn
+|     content-type: text/html; charset=utf-8
+|     content-length: 6992
+|     last-modified: Mon, 23 Nov 2020 00:31:30 GMT
+|     etag: 43d617909830c0d0a48bbbe8ea26ae39
+|     Connection: close
+|     <!DOCTYPE html>
+|     <html>
+|     <head>
+|     <meta charset="utf-8">
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <title>Santa's Tracker</title>
+|     <link rel="shortcut icon" href="" type="image/x-icon">
+|     <link rel="stylesheet" href="bulma.css">
+|     <!-- Bulma Version 0.9.0-->
+|     <link rel="stylesheet" type="text/css" href="../css/hero.css">
+|     <!-- <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" /> -->
+|     </head>
+|     <body>
+|     <section class="hero is-info is-medium is-bold">
+|   HTTPOptions: 
+|     HTTP/1.1 405 Method Not Allowed
+|     date: Thu, 24 Dec 2020 19:16:33 GMT
+|     server: uvicorn
+|     content-length: 31
+|     content-type: application/json
+|     Connection: close
+|_    {"detail":"Method Not Allowed"}
+|_http-server-header: uvicorn
+|_http-title: Santa's Tracker
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8000-TCP:V=7.80%I=7%D=12/24%Time=5FE4E908%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,1C40,"HTTP/1\.1\x20200\x20OK\r\ndate:\x20Thu,\x2024\x20Dec\x2
+SF:02020\x2019:16:21\x20GMT\r\nserver:\x20uvicorn\r\ncontent-type:\x20text
+SF:/html;\x20charset=utf-8\r\ncontent-length:\x206992\r\nlast-modified:\x2
+SF:0Mon,\x2023\x20Nov\x202020\x2000:31:30\x20GMT\r\netag:\x2043d617909830c
+SF:0d0a48bbbe8ea26ae39\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x20html>\n
+SF:<html>\n\x20\x20\x20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x
+SF:20charset=\"utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<meta\x20http-equ
+SF:iv=\"X-UA-Compatible\"\x20content=\"IE=edge\">\n\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x2
+SF:0initial-scale=1\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Santa's\x20
+SF:Tracker</title>\n\x20\x20\x20\x20\x20\x20\x20\x20<link\x20rel=\"shortcu
+SF:t\x20icon\"\x20href=\"\"\x20type=\"image/x-icon\">\n\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\"bulma\.css\">\n\x20\
+SF:x20\x20\x20\x20\x20\x20\x20<!--\x20Bulma\x20Version\x200\.9\.0-->\n\x20
+SF:\x20\x20\x20\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20type=\"text/
+SF:css\"\x20href=\"\.\./css/hero\.css\">\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20<!--\x20<link\x20rel=\"stylesheet\"\x20href=\"https://unpkg\.com/bu
+SF:lma-modal-fx/dist/css/modal-fx\.min\.css\"\x20/>\x20-->\n\x20\x20\x20\x
+SF:20</head>\n\x20\x20\x20\x20<body>\n\x20\x20\x20\x20\x20\x20\x20\x20<sec
+SF:tion\x20class=\"hero\x20is-info\x20is-medium\x20is-bold\">\n\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20")%r(FourOhFourRequest,AD,"HTTP/1\.1\x20404\x20Not
+SF:\x20Found\r\ndate:\x20Thu,\x2024\x20Dec\x202020\x2019:16:27\x20GMT\r\ns
+SF:erver:\x20uvicorn\r\ncontent-length:\x2022\r\ncontent-type:\x20applicat
+SF:ion/json\r\nConnection:\x20close\r\n\r\n{\"detail\":\"Not\x20Found\"}")
+SF:%r(HTTPOptions,BF,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\ndate
+SF::\x20Thu,\x2024\x20Dec\x202020\x2019:16:33\x20GMT\r\nserver:\x20uvicorn
+SF:\r\ncontent-length:\x2031\r\ncontent-type:\x20application/json\r\nConne
+SF:ction:\x20close\r\n\r\n{\"detail\":\"Method\x20Not\x20Allowed\"}");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec 24 14:17:41 2020 -- 1 IP address (1 host up) scanned in 89.11 seconds
