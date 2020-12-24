@@ -832,6 +832,80 @@ Nmap done: 1 IP address (1 host up) scanned in 19.98 seconds
 
 
 # Day 14
+* We have a reddit username: `IGuidetheClaus2020`
+* Let's take a look at https://reddit.com/u/IGuidetheClaus2020
+	* [This](https://www.reddit.com/r/books/comments/jsvby8/chicago_public_library_says_eliminating_fines_has/gdjz4ef/?context=3) post says `Fun fact: I was actually born in Chicago and my creator's name was Robert!`
+
+* We can look for other social media accounts with the same username with `sherlock IGuidetheClaus2020`
+```
+[*] Checking username IGuidetheClaus2020 on:
+[+] 500px: https://500px.com/p/IGuidetheClaus2020
+[+] Badoo: https://badoo.com/profile/IGuidetheClaus2020
+[+] Pling: https://www.pling.com/u/IGuidetheClaus2020/
+[+] Reddit: https://www.reddit.com/user/IGuidetheClaus2020
+[+] Travellerspoint: https://www.travellerspoint.com/users/IGuidetheClaus2020
+```	
+* A couple of these are false positives... no major successes though
+* However, we can still do some google searching
+	* I typed `"IGuidetheClaus2020"` into google and found a [twitter account](https://twitter.com/iguideclaus2020?lang=en) with the username `IGuideClaus2020`
+		* Looking through some posts we can see that:
+			* Favorite show is `bachelorette`
+			* Email is `rudolphthered@hotmail.com`
+* [This](https://twitter.com/IGuideClaus2020/status/1331615839318138883) tweet on the account links to an [image](https://t.co/jmI66ZuNZI?amp=1)
+	* We can download it with `wget "https://t.co/jmI66ZuNZI?amp=1" -O rudolphImage.jpeg`
+
+* The tweet also says the image was taken outside a hotel, so maybe we can find a location with the exif data in the image
+	* We can look at that with `exiftool rudolphImage.jpeg`. We get the following output:
+```
+ExifTool Version Number         : 12.09
+File Name                       : rudolphImage.jpeg
+Directory                       : .
+File Size                       : 50 kB
+File Modification Date/Time     : 2020:11:25 10:07:43-05:00
+File Access Date/Time           : 2020:12:24 13:33:42-05:00
+File Inode Change Date/Time     : 2020:12:24 13:33:38-05:00
+File Permissions                : rw-r--r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+JFIF Version                    : 1.01
+X Resolution                    : 72
+Y Resolution                    : 72
+Exif Byte Order                 : Big-endian (Motorola, MM)
+Resolution Unit                 : inches
+Y Cb Cr Positioning             : Centered
+Copyright                       : {FLAG}ALWAYSCHECKTHEEXIFD4T4
+Exif Version                    : 0231
+Components Configuration        : Y, Cb, Cr, -
+User Comment                    : Hi. :)
+Flashpix Version                : 0100
+GPS Latitude Ref                : North
+GPS Longitude Ref               : West
+Image Width                     : 650
+Image Height                    : 510
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
+Image Size                      : 650x510
+Megapixels                      : 0.332
+GPS Latitude                    : 41 deg 53' 30.53" N
+GPS Longitude                   : 87 deg 37' 27.40" W
+GPS Position                    : 41 deg 53' 30.53" N, 87 deg 37' 27.40" W
+```
+* We get the flag: `{FLAG}ALWAYSCHECKTHEEXIFD4T4`
+* We get a location: `1 deg 53' 30.53" N, 87 deg 37' 27.40" W` (or `41.891815, -87.624277`)
+	* We can use [this](https://www.gps-coordinates.net/) website to get the street address: `Michigan Ave, 520 North Michigan Avenue, Chicago, IL 60611, United States of America`
+		* This is where the parade was
+	* A quick [google search](https://www.google.com/search?safe=active&sxsrf=ALeKk01BA1Df8hO6BuLH2DbYM8eypLBQ_g%3A1608835115269&ei=K-DkX-n4D5DH5gKFyIvIDQ&q=hotels+near+Michigan+Ave%2C+520+North+Michigan+Avenue%2C+Chicago%2C+IL+60611&oq=hotels+near+Michigan+Ave%2C+520+North+Michigan+Avenue%2C+Chicago%2C+IL+60611&gs_lcp=CgZwc3ktYWIQAzoECAAQRzoHCCMQsAIQJzoECAAQDToECCEQClDFCFj0FmCPGGgBcAJ4AIABc4gBxQqSAQQzLjEwmAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=psy-ab&ved=0ahUKEwipurDsoeftAhWQo1kKHQXkAtkQ4dUDCA0&uact=5) shows us a couple nearby hotels
+		* [This](https://twitter.com/IGuideClaus2020/status/1331625591649529857) post indicates that he's probably at the Marriott
+		* [This[(https://www.google.com/travel/hotels/60611/entity/CgsIo56j1Ke577HQARAB?g2lb=2502548%2C2503780%2C4258168%2C4270442%2C4306835%2C4317915%2C4328159%2C4371334%2C4401769%2C4419364%2C4428793%2C4429192%2C4463263%2C4463666%2C4464463%2C4474862%2C4480320%2C4482194%2C4482438%2C4484375%2C4270859%2C4284970%2C4291517&hl=en-US&gl=us&un=1&ap=aAE&q=hotels%20near%20Michigan%20Ave%2C%20520%20North%20Michigan%20Avenue%2C%20Chicago%2C%20IL%2060611&rp=EMLHmPX6y_GvuAEQoben2Mv6-CYQ492Am5-4usaCARCjnqPUp7nvsdABOAJAAEgCwAEDyAEA&ictx=1&ved=0CAAQ5JsGahcKEwjohL6zo-ftAhUAAAAAHQAAAAAQAg&utm_campaign=sharing&utm_medium=link&utm_source=htls&hrf=CgUIyAEQACIDVVNEKhYKBwjkDxAMGB4SBwjkDxAMGB8YASgAWAGSAQIgAQ) hotel at `540 N Michigan Ave, Chicago, IL 60611` matches the description
+ 
+
+* Looking up `"robert" "rudolph" "chigao"` on google, we find [this](https://en.wikipedia.org/wiki/Robert_L._May) wikipedia page
+	* Looks like Rudolph was quite literally invented by `Robert L. May`
+
+* We can look for leaked credentials at `https://scylla.sh/search?q=email:rudolphthered@hotmail.com`, which gives us the password `spygame`
 
 # Day 15
 
