@@ -1129,7 +1129,7 @@ ID           Response   Lines    Word       Chars       Payload
 * before `eax` is set to `0` at `0x00400b69`, `local4h` is set equal to `eax` at `0x00400b66`, meaning it is `6`
 # Day 18
 ### IP
-``
+`10.10.1.186`
 
 ### rdp
 * open remmina and type in `10.10.1.186` for the server, `cmnatic` for the username, and `Adventofcyber!` for the password
