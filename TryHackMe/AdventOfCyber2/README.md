@@ -1128,7 +1128,16 @@ ID           Response   Lines    Word       Chars       Payload
 * `eax` is `1` at `0x00400b5f`, which is then multiplied by `local_ch`, or `6` at `0x00400b62`. Thus, `eax` is 6*1=`6`
 * before `eax` is set to `0` at `0x00400b69`, `local4h` is set equal to `eax` at `0x00400b66`, meaning it is `6`
 # Day 18
+### IP
+``
 
+### rdp
+* open remmina and type in `10.10.1.186` for the server, `cmnatic` for the username, and `Adventofcyber!` for the password
+
+### ILSpy
+* drag the `TBFC_APP` onto the `ILSpy` icon
+* search `santa` at the top. The password is `santapassword321`
+* we can double click the app and log in with that password to get the flag `thm{046af}`
 # Day 19
 
 # Day 20
