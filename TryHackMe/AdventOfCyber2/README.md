@@ -1094,7 +1094,39 @@ ID           Response   Lines    Word       Chars       Payload
 * the api key of `57` got a response with a slightly unique character count, so I went to `http://10.10.185.87:8000/api/57` and got `{"item_id":57,"q":"Winter Wonderland, Hyde Park, London."}`
 
 # Day 17
+### IP
+`10.10.203.164`
 
+### ssh
+`ssh elfmceager@10.10.203.164` with the password `adventofcyber`
+
+### radare
+1. `r2 -d ./challenge1` to disassemble the file
+2. `aa` to analyze all flags
+3. `pdf @main` to print the disassembled main function:
+```
+[0x00400a30]> pdf @main
+            ;-- main:
+/ (fcn) sym.main 35
+|   sym.main ();
+|           ; var int local_ch @ rbp-0xc
+|           ; var int local_8h @ rbp-0x8
+|           ; var int local_4h @ rbp-0x4
+|              ; DATA XREF from 0x00400a4d (entry0)
+|           0x00400b4d      55             push rbp
+|           0x00400b4e      4889e5         mov rbp, rsp
+|           0x00400b51      c745f4010000.  mov dword [local_ch], 1
+|           0x00400b58      c745f8060000.  mov dword [local_8h], 6
+|           0x00400b5f      8b45f4         mov eax, dword [local_ch]
+|           0x00400b62      0faf45f8       imul eax, dword [local_8h]
+|           0x00400b66      8945fc         mov dword [local_4h], eax
+|           0x00400b69      b800000000     mov eax, 0
+|           0x00400b6e      5d             pop rbp
+\           0x00400b6f      c3             ret
+``` 
+* We can see that `local_ch` gets the value `1` placed in it at `0x00400b51`
+* `eax` is `1` at `0x00400b5f`, which is then multiplied by `local_ch`, or `6` at `0x00400b62`. Thus, `eax` is 6*1=`6`
+* before `eax` is set to `0` at `0x00400b69`, `local4h` is set equal to `eax` at `0x00400b66`, meaning it is `6`
 # Day 18
 
 # Day 19
