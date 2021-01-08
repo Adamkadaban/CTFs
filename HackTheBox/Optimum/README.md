@@ -38,7 +38,7 @@ Nmap done: 1 IP address (1 host up) scanned in 14.78 seconds
 * Run `searchsploit -m searchsploit -m windows/remote/39161.py` to download the exploit
 * The program says we need to set up an http server with nc.exe on port 80
 	* We can get nc.exe by running `locate nc.exe` and then `cp /usr/share/windows-resources/binaries/nc.exe .`
-	* We can set up the server by running `python -m SimpleHttpServer 80`
+	* We can set up the server by running `python -m SimpleHTTPServer 80`
 * The code also says we need to change our local IP and port, so let's do that
 	* My tun0 ip is `10.10.14.12` and I picked the port `8888`
 
