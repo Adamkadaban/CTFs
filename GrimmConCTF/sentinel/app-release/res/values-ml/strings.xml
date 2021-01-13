@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="abc_action_bar_home_description">ഹോമിലേക്ക് പോവുക</string>
+    <string name="abc_action_bar_up_description">മുകളിലേക്ക് പോവുക</string>
+    <string name="abc_action_menu_overflow_description">കൂടുതൽ ഓപ്ഷനുകൾ</string>
+    <string name="abc_action_mode_done">പൂർത്തിയായി</string>
+    <string name="abc_activity_chooser_view_see_all">എല്ലാം കാണുക</string>
+    <string name="abc_activitychooserview_choose_application">ആപ്പ് തിരഞ്ഞെടുക്കുക</string>
+    <string name="abc_capital_off">ഓഫ്</string>
+    <string name="abc_capital_on">ഓൺ</string>
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+    <string name="abc_menu_delete_shortcut_label">ഇല്ലാതാക്കുക</string>
+    <string name="abc_menu_enter_shortcut_label">enter</string>
+    <string name="abc_menu_function_shortcut_label">ഫംഗ്ഷന്‍+</string>
+    <string name="abc_menu_meta_shortcut_label">മെറ്റ+</string>
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+    <string name="abc_menu_space_shortcut_label">സ്‌പെയ്‌സ്</string>
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+    <string name="abc_prepend_shortcut_label">മെനു+</string>
+    <string name="abc_search_hint">തിരയുക…</string>
+    <string name="abc_searchview_description_clear">ചോദ്യം മായ്‌ക്കുക</string>
+    <string name="abc_searchview_description_query">ചോദ്യം തിരയുക</string>
+    <string name="abc_searchview_description_search">തിരയുക</string>
+    <string name="abc_searchview_description_submit">ചോദ്യം സമർപ്പിക്കുക</string>
+    <string name="abc_searchview_description_voice">സംസാരത്തിലൂടെ തിരയുക</string>
+    <string name="abc_shareactionprovider_share_with">ഇനിപ്പറയുന്നതുമായി പങ്കിടുക</string>
+    <string name="abc_shareactionprovider_share_with_application">%s എന്നതുമായി പങ്കിടുക</string>
+    <string name="abc_toolbar_collapse_description">ചുരുക്കുക</string>
+    <string name="search_menu_title">തിരയുക</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+</resources>
