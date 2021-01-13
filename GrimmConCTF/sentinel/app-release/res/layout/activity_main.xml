@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <Button android:id="@id/submit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Submit" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/pin" />
-    <EditText android:id="@id/pin" android:layout_width="98.0dip" android:layout_height="42.0dip" android:hint="Password" android:ems="10" android:inputType="textPassword" app:layout_constraintBottom_toTopOf="@id/submit" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-    <TextView android:textSize="18.0sp" android:id="@id/flagTV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Flag text" app:layout_constraintBottom_toTopOf="@id/pin" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
