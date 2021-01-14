@@ -128,3 +128,157 @@ while True:
 
 * We then get the flag `crypto{3nc0d3_d3c0d3_3nc0d3}` (you may have to run it a few times for it to work)
 
+# XOR
+
+## XOR Starter
+* The XOR operator is universally known as `^`
+* We can write some code to xor each letter
+```
+#!/bin/python3
+
+o = "label"
+
+s = ""
+
+for i in o:
+        s += chr(ord(i)^13)
+
+print("crypto{"+s+"}")
+
+```
+* The flag is `crypto{aloha}`
+
+### XOR Properties
+* **Important Properties:**
+```
+Commutative: A ⊕ B = B ⊕ A
+Associative: A ⊕ (B ⊕ C) = (A ⊕ B) ⊕ C
+Identity: A ⊕ 0 = A
+Self-Inverse: A ⊕ A = 0
+```
+
+* XOR is associative, which is very important for this problem
+* We can use what they give us to solve that by converting the hex into integers and turning the integer into bytes to get the string
+
+
+
+```python3
+#!/bin/python3
+
+import binascii
+from pwn import xor
+from Crypto.Util import number as n
+
+'''
+KEY1 = a6c8b6733c9b22de7bc0253266a3867df55acde8635e19c73313
+KEY2 ^ KEY1 = 37dcb292030faa90d07eec17e3b1c6d8daf94c35d4c9191a5e1e
+KEY2 ^ KEY3 = c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1
+FLAG ^ KEY1 ^ KEY3 ^ KEY2 = 04ee9855208a2cd59091d04767ae47963170d1660df7f56f5faf
+'''
+key1 = int("a6c8b6733c9b22de7bc0253266a3867df55acde8635e19c73313",16)
+
+key2_key1 = int("37dcb292030faa90d07eec17e3b1c6d8daf94c35d4c9191a5e1e",16)
+
+key2_key3 = int("c1545756687e7573db23aa1c3452a098b71a7fbf0fddddde5fc1",16)
+
+flag_key1_key3_key2 = int("04ee9855208a2cd59091d04767ae47963170d1660df7f56f5faf",16)
+
+flagLong = flag_key1_key3_key2 ^ key1 ^ key2_key3
+
+flag = n.long_to_bytes(flagLong)
+
+print(flag.decode('UTF-8'))
+```
+* The flag is `crypto{x0r_i5_ass0c1at1v3}`
+
+## Favorite Byte
+
+* We just have to loop through all the possible bytes and decode the hex with that
+
+```python3
+from Crypto.Util.number import *
+
+n = long_to_bytes(0x73626960647f6b206821204f21254f7d694f7624662065622127234f726927756d)
+
+for k in range(2**8):
+	tmp = ''
+	for i in n:
+		tmp += chr(i ^ k)
+	if 'crypto{' in tmp:
+		print(tmp)
+
+```
+* The flag is `crypto{0x10_15_my_f4v0ur173_by7e}`
+
+## You either know, XOR you don't
+* Here, we just have to use the fact that we already know the first few letters of the flag to figure out what the key used to encrypt was
+	* Then, we can use that key to get the original string
+
+```python3
+#!/bin/python3
+
+from Crypto.Util.number import *
+
+unbase = long_to_bytes(0x0e0b213f26041e480b26217f27342e175d0e070a3c5b103e2526217f27342e175d0e077e263451150104)
+
+knownString = b'crypto{'
+
+pwd = ""
+
+for l in range(1,50):
+	try:
+		pwd = bytes(unbase[i] ^ knownString[i] for i in range(l))
+	except:
+		pass
+
+# pwd ends up being 'myXORke', but that gives an output of 'crypto{%r~n-LQCnAUaY6ifjtJJMvXeb_lGja'
+# That's nonsense, so we assume that the password is actually 'myXORkey'
+
+pwd = b'myXORkey'
+
+pwdLength = len(pwd)
+
+flag = bytes(unbase[i] ^ pwd[i%pwdLength] for i in range(len(unbase)))
+
+print(flag.decode('UTF-8'))
+
+
+```
+* The flag is `crypto{1f_y0u_Kn0w_En0uGH_y0u_Kn0w_1t_4ll}`
+
+
+## Lemur XOR
+* Here, we just have to XOR each of the pixels in both the images
+* [This](https://www.diffchecker.com/image-diff/) website works decently well for that
+
+* Here's the code to do it that uses python's image manipulation library:
+
+```python3
+#!/bin/python3
+
+from PIL import Image
+
+lemur = Image.open("lemur.png")
+flag = Image.open("flag.png")
+
+lemurPixels = lemur.load()
+flagPixels = flag.load()
+
+XORdImage = Image.new(mode = "RGB", size = lemur.size)
+
+for i in range(lemur.size[0]):
+	for j in range(lemur.size[1]):
+		l = lemurPixels[i,j]
+		f = flagPixels[i,j]
+
+		r = l[0] ^ f[0]
+		g = l[1] ^ f[1]
+		b = l[2] ^ f[2]
+
+		XORdImage.putpixel((i,j), (r,g,b))
+
+XORdImage.save("XORdImage.png")
+```
+* Looking at the image, the flag is `crypto{X0Rly_n0t!}`
+
+# Mathematics
