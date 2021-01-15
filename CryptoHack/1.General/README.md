@@ -282,3 +282,64 @@ XORdImage.save("XORdImage.png")
 * Looking at the image, the flag is `crypto{X0Rly_n0t!}`
 
 # Mathematics
+
+## Greatest Common Divisor
+* The Euclidean algorithm is a very fast way of getting the greatest common divisor of 2 numbers
+	* It can be implemented very easily with a short recursive function:
+
+```python3
+def gcd(a,b):
+	if b==0:
+		return a
+	return gcd(b, a%b)
+
+print(gcd(66528, 52920))
+```
+* The flag is `1512`
+
+## Extended GCD
+* Extended GCD can be implemented in a very similar way as above
+
+```python3
+def egcd(a,b):
+	if a==0:
+		return (b,0,1)
+	g,y,x = egcd(b%1,1)
+	return (g, x - (b//a) * y, y)
+
+egcd(26513,32321)
+```
+* The flag is crypto{10245,-8404)
+
+## Modular Arithmetic 1
+* This can be tested very simply
+* `11 ≡ a mod 6` translates to `11 % 6 = a`
+* `8146798528947 ≡ b mod 17` translates to `8146798528947 % 17 = b`
+
+```python3
+a = 11 % 6
+
+b = 8146798528947 % 17
+
+print(max(a,b))
+```
+* The flag is `4`
+
+## Modular Arithmetic 2
+* Fermat's little theorem states that given a prime number p, `p | a^p -a`
+
+* This is typically represented as `a^p ≡ a (mod p)` or `a**p % p = a%p`
+* A variation of that is that `a^(p-1) ≡ 1 (mod p), given gcd(a,p)=1`
+* We can use this for the problem:
+```
+3^17 % 17 must be 3
+7^16 % 17 must be 1
+
+Following,
+273246787654^65536 % 65537 must be 1
+
+```
+* The flag is `1`
+
+## Modular Inverting
+
