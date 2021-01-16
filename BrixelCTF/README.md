@@ -53,6 +53,14 @@
 
 ## Cookieee!
 
+* Open `gameconqueror` (you can `apt install` it)
+* Run the game and click a few times
+	* Open GC an find the process
+	* Then enter the number of cookies into the `value` field in GC
+	* Do this a few times until you only have one address found on the left
+	* Change the value to `10000000` and move back to the game. This gives the flag
+* The flag is `brixelCTF{m3m0ry}`
+
 ## no peeking!
 
 ## registerme.exe
