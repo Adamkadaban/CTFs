@@ -307,8 +307,11 @@ def egcd(a,b):
 	g,y,x = egcd(b%1,1)
 	return (g, x - (b//a) * y, y)
 
-egcd(26513,32321)
+print(egcd(26513,32321))
 ```
+* Here, given inputs egcd(p,q), `p*u + q*v = gcd(p,q)`. The output is the gcd, u, and v
+	* In the example, `26513(10245) + 32321(-8404) = 1`
+
 * The flag is crypto{10245,-8404)
 
 ## Modular Arithmetic 1
@@ -342,4 +345,40 @@ Following,
 * The flag is `1`
 
 ## Modular Inverting
+* Because we know `a^(p-1) % p ≡ a % p`, 
+* We can find modular inverse by first finding the gcd of two numbers (with the Euclidean algorithm)
+	* You can only get a modular inverse if the gcd of the two numbers is 1
 
+* Ex: For n=9, what is a,b such that ab % n = 1
+	* Here, ab can be 1, 10, 19...
+	* Thus, a,b can be (1,1), (10,1), (5,2), (19,1) ...
+	* In one case, 2*5 % 9 = 1 
+
+* Here, we want to find a solution such that `3d % 13 = 1`
+* The following is the code for that:
+
+```python3
+def egcd(a, b):
+    if a == 0:
+        return (b, 0, 1)
+    g, y, x = egcd(b%a,a)
+    return (g, x - (b//a) * y, y)
+
+def modinv(a, m):
+    g, x, y = egcd(a, m)
+    if g != 1:
+        raise Exception('No modular inverse')
+    return x%m
+
+print(modinv(3,13))
+```
+* This comes out to be 9, because 3*9 = 27 and 27%13 is 1
+
+* The flag is `9`
+
+# Data formats
+## Privacy-Enhanced Mail?
+* 
+## CERTainly not
+
+## Transparency
