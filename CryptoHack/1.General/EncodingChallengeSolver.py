@@ -6,6 +6,8 @@ import binascii
 from string import ascii_lowercase as lower
 from string import ascii_uppercase as upper
 import base64
+
+
 r = remote('socket.cryptohack.org', 13377, level = 'debug')
 
 
