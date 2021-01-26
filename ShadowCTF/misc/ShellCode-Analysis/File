@@ -1,0 +1,52 @@
+int f_shellcode()
+{
+  int v0; // ebx
+  _DWORD *v1; // edx
+  int *v2; // esi
+  int v3; // ecx
+  int v4; // eax
+  _DWORD *v5; // eax
+  int (__stdcall *v6)(int, int *, signed int, signed int, signed int, _DWORD, _DWORD, int, int (__cdecl *)(_DWORD, _DWORD, _DWORD, _DWORD)); // edx
+  int (__cdecl *v7)(int, _DWORD *, signed int, signed int); // eax
+  int v8; // ecx
+  int v9; // eax
+  int v10; // eax
+  int v12; // [esp-Ch] [ebp-20h]
+  int v13; // [esp-4h] [ebp-18h]
+  int v14; // [esp+0h] [ebp-14h]
+  int v15; // [esp+4h] [ebp-10h]
+  int v16; // [esp+8h] [ebp-Ch]
+  int v17; // [esp+Ch] [ebp-8h]
+  int v18; // [esp+10h] [ebp-4h]
+  int (__cdecl *savedregs)(int, _DWORD *, signed int, signed int); // [esp+14h] [ebp+0h]
+
+  v0 = *(***(*(__readfsdword(0x30u) + 12) + 20) + 16);
+  v1 = (v0 + *(v0 + *(v0 + 60) + 120));
+  v2 = (v0 + v1[8]);
+  v3 = 0;
+  do
+  {
+    do
+    {
+      ++v3;
+      v4 = *v2;
+      ++v2;
+      v5 = (v0 + v4);
+    }
+    while ( *v5 != 0x50746547 );
+  }
+  while ( v5[1] != 0x41636F72 || v5[2] != 0x65726464 );
+  LOWORD(v3) = *(v0 + v1[9] + 2 * v3);
+  v6 = (v0 + *(v0 + v1[7] + 4 * (v3 - 1)));
+  v7 = v6(v0, &v13, 0x64616F4C, 0x7262694C, 0x41797261, 0, v6, v0, savedregs);
+  v8 = savedregs;
+  savedregs = v7;
+  v18 = v8;
+  LOWORD(v8) = 0x6C6C;
+  v9 = v7(&v15, 0x72657375, 0x642E3233, v8);
+  v17 = 0;
+  v16 = 0x41786F;
+  v10 = savedregs(v9, &v14, 0x7373654D, 0x42656761);
+  v15 = 0;
+  return (v10)(0, &v12, &v12, 0, v10 ^ 536861646F77, v10 ^ 0x4354467B,v10 ^ 0x7368654C4C, v10 ^ 0x2D416E616C79, v10 ^ 0x7369732D, v10 ^ 646F6E337D);
+}
