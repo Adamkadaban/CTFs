@@ -1,1 +1,0 @@
-flag{got_dat_multilib}
