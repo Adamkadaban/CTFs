@@ -277,5 +277,24 @@ HASH: $6$72820166$U4DVzpcYxgw7MVVDGGvB2/H5lRistD5.Ah4upwENR5UtffLR4X4SxSzfREv8z6
 PASS: hashcat
 ```
 * We can run `hashcat -m 1800 root.hash /usr/share/wordlists/rockyou.txt -a 0`
-	* The password is `love2fish`
+```
+$6$rFK4s/vE$zkh2/RBiRZ746OW3/Q/zqTRVfrfYJfFjFc2/q.oYtoF1KglS3YWoExtT3cvA3ml9UtDS8PFzCk902AsWx00Ck.:love2fish
+                                                 
+Session..........: hashcat
+Status...........: Cracked
+Hash.Name........: sha512crypt $6$, SHA512 (Unix)
+Hash.Target......: $6$rFK4s/vE$zkh2/RBiRZ746OW3/Q/zqTRVfrfYJfFjFc2/q.o...x00Ck.
+Time.Started.....: Sat Mar 27 00:27:42 2021 (6 mins, 5 secs)
+Time.Estimated...: Sat Mar 27 00:33:47 2021 (0 secs)
+Guess.Base.......: File (/usr/share/wordlists/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:      657 H/s (7.91ms) @ Accel:64 Loops:128 Thr:1 Vec:4
+Recovered........: 1/1 (100.00%) Digests
+Progress.........: 239872/14344384 (1.67%)
+Rejected.........: 0/239872 (0.00%)
+Restore.Point....: 239616/14344384 (1.67%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:4992-5000
+Candidates.#1....: lucinha -> lospollitos
+```
+* The password is `love2fish`
 
