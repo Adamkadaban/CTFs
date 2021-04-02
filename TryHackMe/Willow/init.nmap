@@ -1,0 +1,46 @@
+# Nmap 7.91 scan initiated Fri Apr  2 16:13:50 2021 as: nmap -sC -sV -oN init.nmap 10.10.150.213
+Nmap scan report for 10.10.150.213
+Host is up (0.14s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 6.7p1 Debian 5 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 43:b0:87:cd:e5:54:09:b1:c1:1e:78:65:d9:78:5e:1e (DSA)
+|   2048 c2:65:91:c8:38:c9:cc:c7:f9:09:20:61:e5:54:bd:cf (RSA)
+|   256 bf:3e:4b:3d:78:b6:79:41:f4:7d:90:63:5e:fb:2a:40 (ECDSA)
+|_  256 2c:c8:87:4a:d8:f6:4c:c3:03:8d:4c:09:22:83:66:64 (ED25519)
+80/tcp   open  http    Apache httpd 2.4.10 ((Debian))
+|_http-server-header: Apache/2.4.10 (Debian)
+|_http-title: Recovery Page
+111/tcp  open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  2,3,4       2049/tcp   nfs
+|   100003  2,3,4       2049/tcp6  nfs
+|   100003  2,3,4       2049/udp   nfs
+|   100003  2,3,4       2049/udp6  nfs
+|   100005  1,2,3      36745/udp   mountd
+|   100005  1,2,3      37315/udp6  mountd
+|   100005  1,2,3      48262/tcp6  mountd
+|   100005  1,2,3      53761/tcp   mountd
+|   100021  1,3,4      48511/udp6  nlockmgr
+|   100021  1,3,4      52604/tcp   nlockmgr
+|   100021  1,3,4      57749/tcp6  nlockmgr
+|   100021  1,3,4      60854/udp   nlockmgr
+|   100024  1          38458/udp6  status
+|   100024  1          45456/tcp   status
+|   100024  1          56739/udp   status
+|   100024  1          58701/tcp6  status
+|   100227  2,3         2049/tcp   nfs_acl
+|   100227  2,3         2049/tcp6  nfs_acl
+|   100227  2,3         2049/udp   nfs_acl
+|_  100227  2,3         2049/udp6  nfs_acl
+2049/tcp open  nfs_acl 2-3 (RPC #100227)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Apr  2 16:14:23 2021 -- 1 IP address (1 host up) scanned in 33.10 seconds
