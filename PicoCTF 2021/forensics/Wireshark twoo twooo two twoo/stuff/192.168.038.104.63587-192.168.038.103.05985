@@ -1,0 +1,8 @@
+POST /wsman/subscriptions/EB489718-F373-4F7F-8493-B0D1503B3C3E/37 HTTP/1.1
+Connection: Keep-Alive
+Content-Type: multipart/encrypted;protocol="application/HTTP-Kerberos-session-encrypted";boundary="Encrypted Boundary"
+Content-Encoding: SLDC
+User-Agent: Microsoft WinRM Client
+Content-Length: 9597
+Host: wef.windomain.local:5985
+

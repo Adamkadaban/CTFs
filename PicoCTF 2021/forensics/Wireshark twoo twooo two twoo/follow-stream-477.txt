@@ -1,0 +1,11 @@
+
+===================================================================
+Follow: udp,ascii
+Filter: udp.stream eq 477
+Node 0: 192.168.38.104:49392
+Node 1: 8.8.8.8:53
+67
+.............ttR69hjV.reddshrimpandherring.com.windomain.local.....
+	142
+.............ttR69hjV.reddshrimpandherring.com.windomain.local............Qm.@.a.root-servers.net..nstld.verisign-grs.com.xg............:...Q.
+===================================================================

@@ -1,0 +1,11 @@
+
+===================================================================
+Follow: udp,ascii
+Filter: udp.stream eq 358
+Node 0: 192.168.38.104:49273
+Node 1: 8.8.8.8:53
+51
+p............hTid4evh.reddshrimpandherring.com.....
+	124
+p............hTid4evh.reddshrimpandherring.com......*.........=.a.gtld-servers.net..nstld.verisign-grs.*_0./..........:...Q.
+===================================================================

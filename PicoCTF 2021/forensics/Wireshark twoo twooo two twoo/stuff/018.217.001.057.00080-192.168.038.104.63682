@@ -1,0 +1,7 @@
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 73
+Server: Werkzeug/1.0.1 Python/3.6.9
+Date: Mon, 10 Aug 2020 01:39:33 GMT
+
+picoCTF{a97d3ee943221888bd1157429e4a00ed5e9905a610e64664f7e36c7f5e0a4ef9}

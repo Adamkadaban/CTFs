@@ -1,0 +1,13 @@
+
+===================================================================
+Follow: udp,ascii
+Filter: udp.stream eq 88
+Node 0: 192.168.38.104:65386
+Node 1: 8.8.8.8:53
+51
+.
+...........tbK/uIWB.reddshrimpandherring.com.....
+	124
+.
+...........tbK/uIWB.reddshrimpandherring.com......*.........=.a.gtld-servers.net..nstld.verisign-grs.*_0./..........:...Q.
+===================================================================

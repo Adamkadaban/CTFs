@@ -1,0 +1,11 @@
+
+===================================================================
+Follow: udp,ascii
+Filter: udp.stream eq 672
+Node 0: 192.168.38.104:49587
+Node 1: 8.8.8.8:53
+67
+;N...........+sorXMfa.reddshrimpandherring.com.windomain.local.....
+	142
+;N...........+sorXMfa.reddshrimpandherring.com.windomain.local............Qq.@.a.root-servers.net..nstld.verisign-grs.com.xg............:...Q.
+===================================================================

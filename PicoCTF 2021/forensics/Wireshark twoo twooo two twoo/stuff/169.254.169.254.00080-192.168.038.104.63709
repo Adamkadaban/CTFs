@@ -1,0 +1,9 @@
+HTTP/1.0 200 OK
+Content-Length: 56
+Content-Type: text/plain
+Date: Mon, 10 Aug 2020 01:39:37 GMT
+X-Aws-Ec2-Metadata-Token-Ttl-Seconds: 21600
+Connection: close
+Server: EC2ws
+
+AQAAANdL16XINqtaIfPEd4oSsoqp95pLlVW4Iavm0x93mlJlUw-LqQ==

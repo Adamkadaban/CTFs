@@ -1,0 +1,6 @@
+GET /latest/meta-data/iam/security-credentials/ HTTP/1.1
+Host: 169.254.169.254
+User-Agent: aws-sdk-go/1.25.41 (go1.12.11; windows; amd64)
+X-Aws-Ec2-Metadata-Token: AQAAANdL16XINqtaIfPEd4oSsoqp95pLlVW4Iavm0x93mlJlUw-LqQ==
+Accept-Encoding: gzip
+

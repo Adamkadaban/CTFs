@@ -1,0 +1,12 @@
+
+===================================================================
+Follow: udp,ascii
+Filter: udp.stream eq 317
+Node 0: 192.168.38.104:49232
+Node 1: 8.8.8.8:53
+89
+.k...........+nB4/jzJ.reddshrimpandherring.com.us-west-1ec2-utilities.amazonaws.com.....
+	163
+.k...........+nB4/jzJ.reddshrimpandherring.com.us-west-1ec2-utilities.amazonaws.com......F.........>.dns-external-master.amazon.P
+hostmaster.yw.~........<.'......
+===================================================================

@@ -1,0 +1,29 @@
+
+===================================================================
+Follow: tcp,ascii
+Filter: tcp.stream eq 79
+Node 0: 192.168.38.104:63702
+Node 1: 18.217.1.57:80
+449
+GET /flag HTTP/1.1
+Host: 18.217.1.57
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+
+
+	17
+HTTP/1.0 200 OK
+
+	209
+Content-Type: text/html; charset=utf-8
+Content-Length: 73
+Server: Werkzeug/1.0.1 Python/3.6.9
+Date: Mon, 10 Aug 2020 01:39:36 GMT
+
+picoCTF{40f366ccf0f6462f5b8b1dc4d7384a62aa95565afcaad96a937b8c1f1134099b}
+===================================================================

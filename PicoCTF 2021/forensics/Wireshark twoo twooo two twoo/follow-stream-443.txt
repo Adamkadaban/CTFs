@@ -1,0 +1,12 @@
+
+===================================================================
+Follow: udp,ascii
+Filter: udp.stream eq 443
+Node 0: 192.168.38.104:49358
+Node 1: 18.217.1.57:53
+89
+.............ZnR3X2Rl.reddshrimpandherring.com.us-west-1ec2-utilities.amazonaws.com.....
+	161
+.............ZnR3X2Rl.reddshrimpandherring.com.us-west-1ec2-utilities.amazonaws.com......F.......).<.pdns1.ultradns.net.
+hostmaster.amazon.Px.*........<.'......
+===================================================================

@@ -1,0 +1,44 @@
+
+===================================================================
+Follow: tcp,ascii
+Filter: tcp.stream eq 3
+Node 0: 192.168.38.104:63634
+Node 1: 192.168.38.103:5985
+336
+POST /wsman/subscriptions/EB489718-F373-4F7F-8493-B0D1503B3C3E/43 HTTP/1.1
+Connection: Keep-Alive
+Content-Type: multipart/encrypted;protocol="application/HTTP-Kerberos-session-encrypted";boundary="Encrypted Boundary"
+Content-Encoding: SLDC
+User-Agent: Microsoft WinRM Client
+Content-Length: 2502
+Host: wef.windomain.local:5985
+
+
+2502
+--Encrypted Boundary
+Content-Type: application/HTTP-Kerberos-session-encrypted
+OriginalContent: type=application/soap+xml;charset=UTF-16;Length=2200
+--Encrypted Boundary
+Content-Type: application/octet-stream
+<....................B|...... .....|..*.*.f.Lw.. ./....y..I~9......{...L<..r_C...2T../.@.........x.6..K.....&..$|.x.....:....0..Wp.kV.4.U....D........y...,......~...6....q..>......:...I3. .2X[...... Q..h$.k./d...w..Nk.
+.bh.......9..N%.@.n..t.M......K..9.../...pO|..\..l~...S...,.K...wvk[.......z.S..+M@pKe9..=.gF]'.)"-.._..........'.$=l.Z....\..m.8]...M..};+...~...3..R.|.*4...M|:./u}.M...`2......w..l~I%....F.OA....jqwZ4>........_.G.....!.u5.........5Q.8.3....%....k{.....Y}.ZO.......5...~..P.L.x..p...].a.iI2..yxm..C.....Q.q..<...0....t...>....H.C....Q..:...#.[K..).i..-6]..&..>%........<.9.".tu.
+n...k..X1...i.H4..A8V..E{..1~...ZQ....E..Y..z.o..oK....=]}....9h...!.7.y4.."..J.....=D3...Kw.....:.JI>.<...=..S>.......<t.]gu>.S.h......;.EF..[.
+..s.L.7..s.P.,...f=q..w.$/t....4.....0.....In....0~...4l.&..W...P$.<....n.....0.OW0.......'...T.5
++,/.... .,e.......z..../..@Jbn...h...h.N....................S.I.+.Y...F...6.]....^..MT. ba.\....h..f.f.h.._=........5-..h=u...x..KB..8.@.^.T.N...V...@n...t....fs+.!K...z...6....<r....~.....d....u$.b.nD8....Y..t......b...g-......,....6............j...
+H\@...c.e..^>.^.z..1*-f.F.A....=3.A|...6.&....h.......D..G.A,*..V
+...N.#.F9w..x!O....9..~.........#.H....l....{.W.V,!w..........-f.U.....EG
+H..S..dh....;..*W".M:...)....x'(..{.nU.:$^..."4A.....L|...^`..c..\;..7&..Z.^....H....(i..4.....,>...E.M.J..+{z.........L..A@.Z...T..~.....KY...9Z...y.#c/0G....,....Ot....vHN..u.y
+}.........{.3U&..V...6v.6`..h...4..I.......h..T..&2..ku?...#1..N.dr.%3a,.!...)#)...@..{.Y.Y|?.-...pQ.A.v........N.....z.Zi}.q.[.x..06!.T..5{.b"./ff4...R..3-B,.zg...8Hh\.J...e8..T..J...S..........k..,..w.%(0.Y.@..=^5.z...r.......C.S....h...4tF..c.Dw....O...Y.x.....\..... ......w..d.....Z.o.N.8......4}....o.^.@......;.xZ.g....$...b.-..9.U..6.d.9....B....JS..}.`.....A..X.x....3..#...<;.w.].?.y.'....#..g.7...o.......J..&.W2.o(.R.5..@.J.P.H...>t.nA4{..Z4.N.K[...B*...Nw.2.f....4._...a@...g..}|.\..i/..=.B..N7L3..y..E.Q..Uj..5..;.....v..H...%.Mj..9d.2....Mw.........S.....V`l.... ^G......Uh.L.x.z...d.......h..Z.NM.*.........%...C......N..#.........c...H...<.p+3o.E4L*;.......5.....yNE..UQ......x...<Y&.^yB......{O;.ow............Q......12+...+..%Q...n;..3|.D....Jj.G,...N.6..#~.07.w....(.5N\.}[Q.J'..$..VC..Y/....-]...B_i.Zv\....N.H.....g$.<..Wgt..E.--Encrypted Boundary--
+
+	219
+HTTP/1.1 401 
+Server: Microsoft-HTTPAPI/2.0
+WWW-Authenticate: Negotiate
+WWW-Authenticate: Kerberos
+WWW-Authenticate: Basic realm="WSMAN"
+Date: Mon, 10 Aug 2020 01:39:18 GMT
+Connection: close
+Content-Length: 0
+
+
+===================================================================

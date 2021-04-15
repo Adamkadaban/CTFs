@@ -1,0 +1,9 @@
+HTTP/1.1 401 
+Server: Microsoft-HTTPAPI/2.0
+WWW-Authenticate: Negotiate
+WWW-Authenticate: Kerberos
+WWW-Authenticate: Basic realm="WSMAN"
+Date: Mon, 10 Aug 2020 01:39:18 GMT
+Connection: close
+Content-Length: 0
+

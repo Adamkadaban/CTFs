@@ -1,0 +1,11 @@
+
+===================================================================
+Follow: udp,ascii
+Filter: udp.stream eq 628
+Node 0: 192.168.38.104:49543
+Node 1: 8.8.8.8:53
+51
+.'...........v/Wnu7vs.reddshrimpandherring.com.....
+	124
+.'...........v/Wnu7vs.reddshrimpandherring.com......*.........=.a.gtld-servers.net..nstld.verisign-grs.*_0.>..........:...Q.
+===================================================================

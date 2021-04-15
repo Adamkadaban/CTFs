@@ -1,0 +1,28 @@
+HTTP/1.1 200 OK
+Date: Sun, 24 Jan 2021 23:52:57 GMT
+Server: Apache/2.4.46 ()
+Upgrade: h2,h2c
+Connection: Upgrade, Keep-Alive
+Last-Modified: Sun, 24 Jan 2021 23:26:26 GMT
+ETag: "6-5b9adc00bc8dd"
+Accept-Ranges: bytes
+Content-Length: 6
+Keep-Alive: timeout=5, max=100
+Content-Type: text/html; charset=UTF-8
+
+Hello
+HTTP/1.1 404 Not Found
+Date: Sun, 24 Jan 2021 23:52:57 GMT
+Server: Apache/2.4.46 ()
+Content-Length: 196
+Keep-Alive: timeout=5, max=99
+Connection: Keep-Alive
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+</body></html>

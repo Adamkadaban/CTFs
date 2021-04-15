@@ -1,0 +1,16 @@
+HTTP/1.1 301 Moved Permanently
+Date: Sun, 24 Jan 2021 23:55:02 GMT
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: max-age=3600
+Expires: Mon, 25 Jan 2021 00:55:02 GMT
+Location: https://powershell.org/
+cf-request-id: 07d86b9ec10000f0ea34322000000001
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=ELOu0tEaWLx24EBcHYKNZW9phLwKCnd76o%2BK46lfooraLRhijEOd3eTMTm1dzBpmOUQwc7r%2BOJrCW4zCEoV77N16I0Sh35UF01rZGxmsJg%3D%3D"}],"group":"cf-nel","max_age":604800}
+NEL: {"max_age":604800,"report_to":"cf-nel"}
+Vary: Accept-Encoding
+Server: cloudflare
+CF-RAY: 616daede0b4cf0ea-IAD
+
+0
+

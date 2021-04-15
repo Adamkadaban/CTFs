@@ -1,0 +1,19 @@
+HTTP/1.0 404 Not Found
+Content-Length: 337
+Content-Type: text/html
+Date: Mon, 10 Aug 2020 01:39:37 GMT
+X-Aws-Ec2-Metadata-Token-Ttl-Seconds: 21600
+Connection: close
+Server: EC2ws
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>404 - Not Found</title>
+ </head>
+ <body>
+  <h1>404 - Not Found</h1>
+ </body>
+</html>

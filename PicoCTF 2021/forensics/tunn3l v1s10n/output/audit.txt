@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Thu Mar 18 20:51:28 2021
+Invocation: foremost tunn3l_v1s10n.bmp 
+Output directory: /root/Desktop/CTFs/PicoCTF 2021/forensics/tunn3l v1s10n/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: tunn3l_v1s10n.bmp
+Start: Thu Mar 18 20:51:28 2021
+Length: 2 MB (2893454 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.bmp 	     805 KB 	          0 	  (1134 x 306)
+Finish: Thu Mar 18 20:51:28 2021
+
+1 FILES EXTRACTED
+	
+bmp:= 1
+------------------------------------------------------------------
+
+Foremost finished at Thu Mar 18 20:51:28 2021

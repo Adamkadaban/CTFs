@@ -1,0 +1,7 @@
+PUT /latest/api/token HTTP/1.1
+Host: 169.254.169.254
+User-Agent: aws-sdk-go/1.25.41 (go1.12.11; windows; amd64)
+Content-Length: 0
+X-Aws-Ec2-Metadata-Token-Ttl-Seconds: 21600
+Accept-Encoding: gzip
+
