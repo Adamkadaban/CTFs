@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .formTitle {
+      margin: 0;
+    }
+
+    /* form {
+      display: table;
+    }
+
+    form div {
+      display: table-row;
+    }
+
+    form div label {
+      display: table-cell;
+    } */
+
+    .formElem label {
+      width: 10rem;
+      margin: 0 1rem 0 0;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
+  <title>!!BETA!! - Cloud Sync</title>
+</head>
+
+<body>
+  <nav>
+    <img class="logo" src="/img/overpass.svg" alt="Overpass logo">
+    <h2 class="navTitle"><a href="/">Overpass</a></h2>
+    <a href="/aboutus">About Us</a>
+    <a href="/downloads">Downloads</a>
+  </nav>
+  <div class="bodyFlexContainer content">
+    <div>
+      <div>
+        <h3 class="formTitle">Overpass Cloud Sync - BETA</h1>
+      </div>
+      <!-- Muiri tells me this is insecure, I only learnt PHP this week so maybe I should let him fix it? Something about php eye en eye? -->
+      <!-- TODO add downloading of your overpass files -->
+      <form action="upload.php" method="post" enctype="multipart/form-data">
+        <div class="formElem"><label for="fileToUpload">Upload your .overpass file for cloud synchronisation</label><input type="file"
+            name="fileToUpload" id="fileToUpload"></div>
+        <div class="formElem"><input type="submit" value="Upload File" name="submit"></div>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
