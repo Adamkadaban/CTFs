@@ -1,0 +1,21 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Dec 11 21:44:02 2021
+Invocation: foremost pcap/pcap.pcap 
+Output directory: /home/adamkadaban/Desktop/ucf/data_exfil/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: pcap/pcap.pcap
+Start: Sat Dec 11 21:44:02 2021
+Length: 169 KB (173784 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+Finish: Sat Dec 11 21:44:02 2021
+
+0 FILES EXTRACTED
+	
+------------------------------------------------------------------
+
+Foremost finished at Sat Dec 11 21:44:02 2021

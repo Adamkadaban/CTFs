@@ -1,3 +1,4 @@
+#!/bin/python3
 from pwn import *
 
 r = remote("ctf.hackucf.org", 10104)
@@ -10,7 +11,7 @@ while(True):
 		if b"=" in l:
 			eq = l[:-3]
 			eq = eq.replace(b"/", b"//")
-			print(eq, "=", int(eval(eq)))
+			# print(eq, "=", int(eval(eq)))
 			r.sendline(str(int(eval(eq))))
 			r.sendline("\n")
 	except:
