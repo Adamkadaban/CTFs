@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # It looks like they change some of the encryption used occasionally. This works as of November 10, 2020
+# No longer needed as of 2021
 echo "Your code is: "
 curl -s -X POST https://www.hackthebox.eu/api/invite/generate | cut -d "\"" -f 8 | base64 -d
 echo ""
