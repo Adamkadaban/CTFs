@@ -158,3 +158,18 @@
 {{ url_for.__globals__.os.popen('cat flag').read() }}
 ```
 
+### Level 10
+* Once again, I had a lot of trouble finding out what was blacklisted
+	* `config`, which is a global variable passed by default, is set to `None` on this level
+	* Usually, this is a good way to find out more about what's running on the server
+		* Luckily we don't really need to use config to get the flag, but I'll show how to do some other things
+
+* When we type in `{{config}}` nothing shows up
+	* This could be due to WAF, but I decided to look more into it.
+	* Turns out, config is set to `None` here.
+* Here's the payload to check that:
+
+```python3
+{{ url_for.__globals__.__builtins__.locals()}}
+```
+* Once again, we're accessing the [built-in python functions](https://docs.python.org/3/library/functions.html), one of which being `locals()`, which shows the local symbol table 
