@@ -111,7 +111,7 @@ with open("decrypted_rsa.key", "w") as fout:
 ```
 
 * That gets us the following:
-````
+```
 -----BEGIN RSA PRIVATE KEY-----
 Proc-Type: 4,ENCRYPTED
 DEK-Info: AES-128-CBC,2E2F405A3529F92188B453CAA6E33270
