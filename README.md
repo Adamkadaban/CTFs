@@ -270,7 +270,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     - [Alt Decoder](https://www.blackcatsystems.com/software/sstv.html)
     - Use these qsstv settings:
     
-    ![SSTV settings](SSTV_settings.png)
+    ![SSTV settings](resources/SSTV_settings.png)
     
 - Spectrogram image
     - [Decoder](https://academo.org/demos/spectrum-analyzer/)
@@ -521,9 +521,9 @@ print("The canary is: " + canary)
 #### SMT Solvers
 - [angr](https://github.com/angr/angr) (python)
 	- [Docs](https://docs.angr.io/core-concepts/toplevel)
-	- [Tutorial](https://github.com/Adamkadaban/CTFs/blob/master/SMT_Solvers.md)
+	- [Tutorial](https://github.com/Adamkadaban/CTFs/blob/master/resources/SMT_Solvers.md)
 - [z3](https://github.com/Z3Prover/z3)
-	- [Tutorial](https://github.com/Adamkadaban/CTFs/blob/master/SMT_Solvers.md)
+	- [Tutorial](https://github.com/Adamkadaban/CTFs/blob/master/resources/SMT_Solvers.md)
 
 #### Reversing byte-by-byte checks
 
