@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Jul 10 16:07:32 2021
+Invocation: foremost CustomerDetails.xlsx 
+Output directory: /root/Desktop/CTFs/TryHackMe/Overpass 3 - Hosting/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: CustomerDetails.xlsx
+Start: Sat Jul 10 16:07:32 2021
+Length: 9 KB (10019 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.xlsx 	       9 KB 	          0 	 
+Finish: Sat Jul 10 16:07:32 2021
+
+1 FILES EXTRACTED
+	
+zip:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Jul 10 16:07:32 2021
