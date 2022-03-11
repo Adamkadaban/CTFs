@@ -4,7 +4,7 @@ Writeups / Files for some of the Cyber CTFs that I've done
 I've also included a list of CTF resources as well as a cheat sheet covering tons of common CTF challenges
 
 # Table of Contents
-- **[Resources]**(#resources)
+- **[Resources](#resources)**
   * [YouTube (We love video resources)](#youtube--we-love-video-resources-)
   * [Practice / Learning Sites](#practice---learning-sites)
     + [CTFs](#ctfs-1)
@@ -15,7 +15,7 @@ I've also included a list of CTF resources as well as a cheat sheet covering ton
     + [Crypto](#crypto-1)
     + [Pentesting](#pentesting)
 
-- **[CTF Cheat Sheet]**(#ctf-cheat-sheet)
+- **[CTF Cheat Sheet](#ctf-cheat-sheet)**
   * [Forensics / Steganography](#forensics---steganography)
       - [General](#general)
       - [Audio](#audio)
