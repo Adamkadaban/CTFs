@@ -11,7 +11,7 @@ Writeups / Files for some of the Cyber CTFs that I've done
 			* ISOs
 			* pcaps
 		* Binary Exploitation
-			* ** For this one, I suggest looking at my [LearnPwn](https://github.com/Adamkadaban/LearnPwn) repo instead, as this cheatsheet was made before I knew much about pwn **
+			* **For this one, I suggest looking at my [LearnPwn](https://github.com/Adamkadaban/LearnPwn) repo instead, as this cheatsheet was made before I knew much about pwn**
 			* Buffer Overflows
 			* PIE
 			* NX
