@@ -366,8 +366,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 #### NX (Non-executable)
 
 - We can use ROP (return oriented programming) to solve
-- Leak libc:
-    - 
+
 
 #### ROP (for statically compiled binaries)
 
