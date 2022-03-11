@@ -220,7 +220,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - Really good resource from John Hammond for different types of challenges:
     - [https://github.com/JohnHammond/ctf-katana](https://github.com/JohnHammond/ctf-katana)
 - Another very great cheat sheet for creating and solving challenges:
-    - [https://github.com/apsdehal/awesome-ctf/blob/master/README.md](https://github.com/apsdehal/awesome-ctf/blob/master/README.md)__s
+    - [https://github.com/apsdehal/awesome-ctf/blob/master/README.md](https://github.com/apsdehal/awesome-ctf/blob/master/README.md)
 - file
     - `file <file.xyz>`
     - Determines the type of file
