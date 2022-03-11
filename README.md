@@ -1,8 +1,21 @@
 # CTFs
 Writeups / Files for some of the Cyber CTFs that I've done
 
-# CTF Cheat Sheet
-- [CTF Cheat Sheet](#ctf-cheat-sheet)
+I've also included a list of CTF resources as well as a cheat sheet covering tons of common CTF challenges
+
+# Table of Contents
+- **[Resources]**(#resources)
+  * [YouTube (We love video resources)](#youtube--we-love-video-resources-)
+  * [Practice / Learning Sites](#practice---learning-sites)
+    + [CTFs](#ctfs-1)
+    + [General](#general-2)
+    + [Pwn](#pwn)
+    + [Rev](#rev)
+    + [Web](#web-1)
+    + [Crypto](#crypto-1)
+    + [Pentesting](#pentesting)
+
+- **[CTF Cheat Sheet]**(#ctf-cheat-sheet)
   * [Forensics / Steganography](#forensics---steganography)
       - [General](#general)
       - [Audio](#audio)
@@ -44,17 +57,162 @@ Writeups / Files for some of the Cyber CTFs that I've done
       - [Windows / General](#windows---general)
   * [OSINT](#osint)
   * [Misc](#misc)
-- [Resources](#resources)
-  * [YouTube (We love video resources)](#youtube--we-love-video-resources-)
-  * [Practice / Learning Sites](#practice---learning-sites)
-    + [CTFs](#ctfs-1)
-    + [General](#general-2)
-    + [Pwn](#pwn)
-    + [Rev](#rev)
-    + [Web](#web-1)
-    + [Crypto](#crypto-1)
-    + [Pentesting](#pentesting)
 
+# Resources
+## YouTube (We love video resources)
+- [John Hammond](https://www.youtube.com/user/RootOfTheNull)
+    - Used to make a lot of CTF videos, but has moved on to more malware rev stuff
+    - Still a ton of useful videos. The CTF ones especially are amazing for teaching brand new baby cyber members how to do things. Highly highly recommend.
+- [Live Overflow](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w)
+    - Makes extremely interesting and in-depth videos about cyber.
+    - Has an [amazing pwn series](https://www.youtube.com/watch?v=iyAyN3GFM7A&list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN&ab_channel=LiveOverflow)
+- [IppSec](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)
+    - Best pwner on YouTube.
+    - Makes writeups of every single HackTheBox machine
+        - Talks about diff ways to solve and why things work. Highly reccomend
+- [Computerphile](https://www.youtube.com/user/Computerphile)
+    - Same people as Numberphile, but cooler. Makes really begginer-level and intuitive videos about basic concepts.
+- [pwn.college](https://www.youtube.com/channel/UCkRe0pvrQvhkhFSciV0l2MQ)
+    - Beautiful, amazing, wonderful ASU professor that has tons of videos on pwn
+    - Guided course material: [https://pwn.college/](https://pwn.college/)
+    - Tons of practiceproblems: [https://dojo.pwn.college/](https://dojo.pwn.college/)
+- [PwnFunction](https://www.youtube.com/channel/UCW6MNdOsqv2E9AjQkv9we7A)
+    - Very high-quality and easy-to-understand animated videos about diff topics
+    - Topics are a bit advanced, but easily understandable
+- [Martin Carlisle](https://www.youtube.com/user/carlislemc/featured)
+    - Princeton Grad - Cyber Professor - picoCTF problem writer - YouTuber - He's got it all!
+    - Fr makes amazing writeup videos about the picoCTF challenges.
+- [Sam Bowne](https://www.youtube.com/channel/UCC2OBhIt1sHE4odV05RYP1w)
+	- Absolutely amazing professor at the City College of San Francisco
+	- Sponsor of one of the best CPTC teams in the country
+	- Open sources all of his lectures and course material on [his website](https://samsclass.info/)
+- [UFSIT](https://www.youtube.com/channel/UCkRe0pvrQvhkhFSciV0l2MQ)
+    - UF Cyber team (I'm a bit biased, but def one of the better YouTube channels for this)
+- [Gynvael](https://www.youtube.com/channel/UCCkVMojdBWS-JtH7TliWkVg)
+    - Polish guy that competes on an amazing international CTF team
+    - Makes amazingly intuitive video writeups. Has done the entirey of picoCTF 2019 (that's a lot)
+- [stacksmashing](https://www.youtube.com/c/stacksmashing/videos)
+    - Amazing reverse engineering & hardware hacking videos
+    - Has a really cool series of him reverse engineering WannaCry
+- [Ben Greenberg](https://www.youtube.com/channel/UCsNzKjRToTA2G0lR8FiduWQ)
+    - GMU prof with a bunch of pwn and malware video tutorials
+    - A bit out-of-date, but still good
+- [InfoSecLab at Georgia Tech](https://www.youtube.com/channel/UCUcnLCrBVK9gS6ctEUVvkjA/featured)
+    - Good & advanced in-depth lectues on pwn
+    - Requires some background knowledge
+- [RPISEC](https://www.youtube.com/c/RPISEC_talks/videos)
+    - RPI University team meetings
+    - Very advanced and assumes a bit of cs background knowledge
+    
+
+**I've also made some playlists of diff topics**
+
+[Pwn](https://www.youtube.com/playlist?list=PLwP8RAsXLdE7rmCJsnhSigSdxsgIGFfvx)
+
+[Crypto](https://www.youtube.com/playlist?list=PLwP8RAsXLdE4luKhUCnMZbsWVB3nHtJgI)
+
+[Web](https://www.youtube.com/playlist?list=PLwP8RAsXLdE4tKItjvHIAyDxrVB9v20qP)
+
+[x86 Assembly](https://www.youtube.com/playlist?list=PLmxT2pVYo5LB5EzTPZGfFN0c2GDiSXgQe)
+
+[CSAW writeups](https://www.youtube.com/playlist?list=PLwP8RAsXLdE5H265XMi4q_LhskD1zJGgK)
+
+## Practice / Learning Sites
+### CTFs
+- [PicoCTF](https://play.picoctf.org/practice)
+	- Tons of amazing practice challenges.
+	- Definitely the gold standard for getting started
+- [UCF](https://ctf.hackucf.org/challenges)
+	- Good overall, but great pwn practice
+	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/HackUCF)
+- [hacker101](https://ctf.hacker101.com/ctf)
+	- CTF, but slightly more geared toward pentesting
+- [CSAW](https://365.csaw.io/)
+	- Down 90% the time and usually none of the connections work
+	- If it is up though, it has a lot of good introductory challenges
+- [CTF101](https://ctf101.org/)
+	- One of the best intros to CTFs I've seen (gj osiris)
+	- Very succinct and beginner-friendly
+
+
+### General
+- [HackTheBox](hackthebox.com)
+	- The OG box site
+		- Boxes are curated to ensure quality
+	- Now has some CTF-style problems
+	- Now has courses to start learning
+- [TryHackMe](https://tryhackme.com/hacktivities)
+	- Slightly easier boxes than HackTheBox
+	- Step-by-step challenges
+	- Now has "learning paths" to guide you through topics
+- [CybersecLabs](https://www.cyberseclabs.co.uk/)
+	- Great collection of boxes
+	- Has some CTF stuff
+- [VulnHub](https://www.vulnhub.com/)
+	- Has vulnerable virtual machines you have to deploy yourself
+	- Lots of variety, but hard to find good ones imo
+### Pwn
+- [pwnable.kr](http://pwnable.kr/index.php)
+	- Challenges with good range of difficulty
+- [pwnable.tw](https://pwnable.tw/challenge/)
+	- Harder than pwnable.tw
+	- Has writeups once you solve the chall
+- [pwnable.xyz](https://pwnable.xyz/challenges/)
+	- More pwn challenges
+	- Has writeups once you solve the chall
+	- You can upload your own challenges once you solve all of them
+- [pwn dojo](https://dojo.pwn.college)
+	- Best collection of pwn challnges in my opinion
+	- Backed up with slides teaching how to do it & has a discord if you need help
+- [nightmare](https://guyinatuxedo.github.io/)
+	- Gold standard for pwning C binaries
+	- Has a few mistakes/typos, but amazing overall
+- [pwn notes](https://ir0nstone.gitbook.io/notes/types/stack/ret2dlresolve)
+	- Notes from some random person online
+	- Very surface-level, but good intro to everything
+- [Security Summer School](https://security.cs.pub.ro/summer-school/wiki/start)
+	- University of Bucharest Security Course
+	- Very beginner-friendly explanations 
+
+### Rev
+- [challenges.re](https://challenges.re/)
+	- So many challenges 0_0
+	- Tons of diversity
+- [reversing.kr](http://reversing.kr/)
+
+### Web
+- [websec.fr](http://websec.fr/#)
+	- Lots of web challenges with a good range of difficulty
+- [webhacking.kr](https://webhacking.kr/chall.php)
+	- Has archive of lots of good web challenges
+- [Securing Web Applications](https://samsclass.info/129S/129S_S22.shtml)
+	- Open source CCSF Course
+- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
+	- Very much geared toward pentesting, but useful for exploring web in CTFs
+	- Over 100 vulns/challenges in total
+- [PortSwigger](https://portswigger.net/web-security/dashboard)
+	- Gold standard for understanding web hacking
+	- Tons of amazing challenges & explanations
+- [DVWA](https://dvwa.co.uk/)
+	- Very much geared toward pentesting, but useful for exploring web in CTFs
+- [bWAPP](http://www.itsecgames.com/)
+	- Very much geared toward pentesting, but useful for exploring web in CTFs
+### Crypto
+- [CryptoHack]()
+	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/CryptoHack)
+- [cryptopals](https://cryptopals.com/)
+	- The OG crypto challenge site.
+
+### Pentesting
+- [hacker101](https://www.hacker101.com/videos)
+- [hacksplaining](https://www.hacksplaining.com/lessons)
+- [Exploit developement](https://samsclass.info/127/127_S22.shtml)
+	- Open source CCSF Course
+- [Intro to Security](https://cseweb.ucsd.edu/~dstefan/cse127-fall21/)
+	- UC San Diego course taught by Deian Stefan
+	- Covers basic pwn and crypto 
+
+# CTF Cheat Sheet
 ## Forensics / Steganography
 
 #### General
@@ -649,8 +807,7 @@ print(key.u)
 1. Install `rlwrap` on your system
 2. Now, every time you run a nc listener, just put `rlwrap` in front
 3. For example: `rlwrap nc -lvnp 1337`
-	* This will give you arrow keys and command history, but won't give autocompletion (as far as I can tell) for windows and *nix systems
-
+	* This will give you arrow keys and command history, but won't give autocompletion (as far as I can tell) for windows and *nix systems 
 ## OSINT
 
 - [pimeyes](https://pimeyes.com/en)
@@ -673,156 +830,3 @@ print(key.u)
 - View CNC GCode
     - [https://ncviewer.com/](https://ncviewer.com/)
 
-# Resources
-## YouTube (We love video resources)
-- [John Hammond](https://www.youtube.com/user/RootOfTheNull)
-    - Used to make a lot of CTF videos, but has moved on to more malware rev stuff
-    - Still a ton of useful videos. The CTF ones especially are amazing for teaching brand new baby cyber members how to do things. Highly highly recommend.
-- [Live Overflow](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w)
-    - Makes extremely interesting and in-depth videos about cyber.
-    - Has an [amazing pwn series](https://www.youtube.com/watch?v=iyAyN3GFM7A&list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN&ab_channel=LiveOverflow)
-- [IppSec](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)
-    - Best pwner on YouTube.
-    - Makes writeups of every single HackTheBox machine
-        - Talks about diff ways to solve and why things work. Highly reccomend
-- [Computerphile](https://www.youtube.com/user/Computerphile)
-    - Same people as Numberphile, but cooler. Makes really begginer-level and intuitive videos about basic concepts.
-- [pwn.college](https://www.youtube.com/channel/UCkRe0pvrQvhkhFSciV0l2MQ)
-    - Beautiful, amazing, wonderful ASU professor that has tons of videos on pwn
-    - Guided course material: [https://pwn.college/](https://pwn.college/)
-    - Tons of practiceproblems: [https://dojo.pwn.college/](https://dojo.pwn.college/)
-- [PwnFunction](https://www.youtube.com/channel/UCW6MNdOsqv2E9AjQkv9we7A)
-    - Very high-quality and easy-to-understand animated videos about diff topics
-    - Topics are a bit advanced, but easily understandable
-- [Martin Carlisle](https://www.youtube.com/user/carlislemc/featured)
-    - Princeton Grad - Cyber Professor - picoCTF problem writer - YouTuber - He's got it all!
-    - Fr makes amazing writeup videos about the picoCTF challenges.
-- [Sam Bowne](https://www.youtube.com/channel/UCC2OBhIt1sHE4odV05RYP1w)
-	- Absolutely amazing professor at the City College of San Francisco
-	- Sponsor of one of the best CPTC teams in the country
-	- Open sources all of his lectures and course material on [his website](https://samsclass.info/)
-- [UFSIT](https://www.youtube.com/channel/UCkRe0pvrQvhkhFSciV0l2MQ)
-    - UF Cyber team (I'm a bit biased, but def one of the better YouTube channels for this)
-- [Gynvael](https://www.youtube.com/channel/UCCkVMojdBWS-JtH7TliWkVg)
-    - Polish guy that competes on an amazing international CTF team
-    - Makes amazingly intuitive video writeups. Has done the entirey of picoCTF 2019 (that's a lot)
-- [stacksmashing](https://www.youtube.com/c/stacksmashing/videos)
-    - Amazing reverse engineering & hardware hacking videos
-    - Has a really cool series of him reverse engineering WannaCry
-- [Ben Greenberg](https://www.youtube.com/channel/UCsNzKjRToTA2G0lR8FiduWQ)
-    - GMU prof with a bunch of pwn and malware video tutorials
-    - A bit out-of-date, but still good
-- [InfoSecLab at Georgia Tech](https://www.youtube.com/channel/UCUcnLCrBVK9gS6ctEUVvkjA/featured)
-    - Good & advanced in-depth lectues on pwn
-    - Requires some background knowledge
-- [RPISEC](https://www.youtube.com/c/RPISEC_talks/videos)
-    - RPI University team meetings
-    - Very advanced and assumes a bit of cs background knowledge
-    
-
-**I've also made some playlists of diff topics**
-
-[Pwn](https://www.youtube.com/playlist?list=PLwP8RAsXLdE7rmCJsnhSigSdxsgIGFfvx)
-
-[Crypto](https://www.youtube.com/playlist?list=PLwP8RAsXLdE4luKhUCnMZbsWVB3nHtJgI)
-
-[Web](https://www.youtube.com/playlist?list=PLwP8RAsXLdE4tKItjvHIAyDxrVB9v20qP)
-
-[x86 Assembly](https://www.youtube.com/playlist?list=PLmxT2pVYo5LB5EzTPZGfFN0c2GDiSXgQe)
-
-[CSAW writeups](https://www.youtube.com/playlist?list=PLwP8RAsXLdE5H265XMi4q_LhskD1zJGgK)
-
-## Practice / Learning Sites
-### CTFs
-- [PicoCTF](https://play.picoctf.org/practice)
-	- Tons of amazing practice challenges.
-	- Definitely the gold standard for getting started
-- [UCF](https://ctf.hackucf.org/challenges)
-	- Good overall, but great pwn practice
-	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/HackUCF)
-- [hacker101](https://ctf.hacker101.com/ctf)
-	- CTF, but slightly more geared toward pentesting
-- [CSAW](https://365.csaw.io/)
-	- Down 90% the time and usually none of the connections work
-	- If it is up though, it has a lot of good introductory challenges
-- [CTF101](https://ctf101.org/)
-	- One of the best intros to CTFs I've seen (gj osiris)
-	- Very succinct and beginner-friendly
-
-
-### General
-- [HackTheBox](hackthebox.com)
-	- The OG box site
-		- Boxes are curated to ensure quality
-	- Now has some CTF-style problems
-	- Now has courses to start learning
-- [TryHackMe](https://tryhackme.com/hacktivities)
-	- Slightly easier boxes than HackTheBox
-	- Step-by-step challenges
-	- Now has "learning paths" to guide you through topics
-- [CybersecLabs](https://www.cyberseclabs.co.uk/)
-	- Great collection of boxes
-	- Has some CTF stuff
-- [VulnHub](https://www.vulnhub.com/)
-	- Has vulnerable virtual machines you have to deploy yourself
-	- Lots of variety, but hard to find good ones imo
-### Pwn
-- [pwnable.kr](http://pwnable.kr/index.php)
-	- Challenges with good range of difficulty
-- [pwnable.tw](https://pwnable.tw/challenge/)
-	- Harder than pwnable.tw
-	- Has writeups once you solve the chall
-- [pwnable.xyz](https://pwnable.xyz/challenges/)
-	- More pwn challenges
-	- Has writeups once you solve the chall
-	- You can upload your own challenges once you solve all of them
-- [pwn dojo](https://dojo.pwn.college)
-	- Best collection of pwn challnges in my opinion
-	- Backed up with slides teaching how to do it & has a discord if you need help
-- [nightmare](https://guyinatuxedo.github.io/)
-	- Gold standard for pwning C binaries
-	- Has a few mistakes/typos, but amazing overall
-- [pwn notes](https://ir0nstone.gitbook.io/notes/types/stack/ret2dlresolve)
-	- Notes from some random person online
-	- Very surface-level, but good intro to everything
-- [Security Summer School](https://security.cs.pub.ro/summer-school/wiki/start)
-	- University of Bucharest Security Course
-	- Very beginner-friendly explanations 
-
-### Rev
-- [challenges.re](https://challenges.re/)
-	- So many challenges 0_0
-	- Tons of diversity
-- [reversing.kr](http://reversing.kr/)
-
-### Web
-- [websec.fr](http://websec.fr/#)
-	- Lots of web challenges with a good range of difficulty
-- [webhacking.kr](https://webhacking.kr/chall.php)
-	- Has archive of lots of good web challenges
-- [Securing Web Applications](https://samsclass.info/129S/129S_S22.shtml)
-	- Open source CCSF Course
-- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
-	- Very much geared toward pentesting, but useful for exploring web in CTFs
-	- Over 100 vulns/challenges in total
-- [PortSwigger](https://portswigger.net/web-security/dashboard)
-	- Gold standard for understanding web hacking
-	- Tons of amazing challenges & explanations
-- [DVWA](https://dvwa.co.uk/)
-	- Very much geared toward pentesting, but useful for exploring web in CTFs
-- [bWAPP](http://www.itsecgames.com/)
-	- Very much geared toward pentesting, but useful for exploring web in CTFs
-### Crypto
-- [CryptoHack]()
-	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/CryptoHack)
-- [cryptopals](https://cryptopals.com/)
-	- The OG crypto challenge site.
-
-### Pentesting
-- [hacker101](https://www.hacker101.com/videos)
-- [hacksplaining](https://www.hacksplaining.com/lessons)
-- [Exploit developement](https://samsclass.info/127/127_S22.shtml)
-	- Open source CCSF Course
-- [Intro to Security](https://cseweb.ucsd.edu/~dstefan/cse127-fall21/)
-	- UC San Diego course taught by Deian Stefan
-	- Covers basic pwn and crypto 
