@@ -522,6 +522,7 @@ print("The canary is: " + canary)
 #### SMT Solvers
 - [angr](https://github.com/angr/angr) (python)
 	- [Docs](https://docs.angr.io/core-concepts/toplevel)
+	- [Tutorial](https://github.com/Adamkadaban/CTFs/blob/master/SMT_Solvers.md)
 - [z3](https://github.com/Z3Prover/z3)
 	- [Tutorial](https://github.com/Adamkadaban/CTFs/blob/master/SMT_Solvers.md)
 
@@ -830,3 +831,5 @@ print(key.u)
 - View CNC GCode
     - [https://ncviewer.com/](https://ncviewer.com/)
 
+# Notes
+* TOC generated with [ecotrust-canada](https://ecotrust-canada.github.io/markdown-toc/)
