@@ -376,6 +376,32 @@ print(modinv(3,13))
 
 * The flag is `9`
 
+## Quadratic Residues
+* The idea here is to find a value `a` such that `a**2 % p == [ints]`
+	* Solving for `a` means taking the square root modulu of the number, which isn't always possible
+
+* Here's how I solved that:
+```python3
+a = [i for i in range(29**2) if i%29 == 14]
+b = [i for i in range(29**2) if i%29 == 6]
+c = [i for i in range(29**2) if i%29 == 11]
+A = set(a).union(set(b))
+B = set(b).union(set(c))
+C = A.union(B)
+possible_nums = [i for i in list(C) if int(sqrt(i)) == sqrt(i)]
+print(sqrt(i) for i in possible_nums) # [21, 8]
+
+```
+* We submit the smaller of the two solutons, which is `8`
+
+## Legendre Symbol
+* One way to check if an integer is a quadratic residue quickly is using the Lengendre's symbol
+	* This is a multiplicative function with discrete values in [-1,1] 
+	* Given (a/p), the result is:
+		* -1, if a is a quadratic residue modulo p and a%p!=0
+		* 1, if a is a non-quadratic residue modulo p
+		* 0, if a%p==0
+
 # Data formats
 ## Privacy-Enhanced Mail?
 * Here, we can simply just extract the values from the key with pycryptodome
