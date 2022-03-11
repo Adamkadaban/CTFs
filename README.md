@@ -426,7 +426,7 @@ print("The canary is: " + canary)
 	- `%hhx` leaks 1 byte (half of half of int size)
 	- `%hx` leaks 2 bytes (half of int size)
 	- `%x` leaks 4 bytes (int size)
-	- `lx` leaks 8 bytes (long size)
+	- `%lx` leaks 8 bytes (long size)
 - very good video on modifying the stack with fstring vuln and %n:
     - [https://www.youtube.com/watch?v=gzLPVkZbaPA&ab_channel=MartinCarlisle](https://www.youtube.com/watch?v=gzLPVkZbaPA&ab_channel=MartinCarlisle)
     
