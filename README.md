@@ -268,9 +268,9 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     - [Example](https://ctftime.org/writeup/25606)
     - [Decoder](https://ourcodeworld.com/articles/read/956/how-to-convert-decode-a-slow-scan-television-transmissions-sstv-audio-file-to-images-using-qsstv-in-ubuntu-18-04)
     - [Alt Decoder](https://www.blackcatsystems.com/software/sstv.html)
-    - Use these qsstv settings:d
+    - Use these qsstv settings:
     
-    ![CTF%20Cheat%20%20b96ba/Untitled.png](CTF%20Cheat%20%20b96ba/Untitled.png)
+    ![SSTV settings](SSTV_settings.png)
     
 - Spectrogram image
     - [Decoder](https://academo.org/demos/spectrum-analyzer/)
