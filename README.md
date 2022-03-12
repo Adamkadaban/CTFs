@@ -335,6 +335,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 
 ## Pwn / Binary Exploitation
 - **For this one, I suggest looking at my [LearnPwn](https://github.com/Adamkadaban/LearnPwn) repo instead, as this cheatsheet was made before I knew much about pwn**
+    - However, I have included _some_ notes correcting (or amending) to what I have here.
 #### General
 
 - check security of ELF
@@ -349,11 +350,13 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
         - `python -c "import pwn; print(pwn.p32(<intAddr>))`
     - big endian (for 64 bits)
         - `python -c "import pwn; print(pwn.p64(<intAddr>))`
+    - pwntools automatically packs addresses with the correct endianness for you
 
 #### Buffer overflow
 
 - If you ever need to get a /bin/sh shell and you are sure it works but the program exits anyways, use this trick:
     - `( python -c "print '<PAYLOAD>'" ; cat ) | ./<program>`
+    - pwntools does this with their `process.interactive()`
 
 #### PIE (Positional Independent Execution)
 
@@ -379,8 +382,25 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 
 #### Stack Canary
 
+**Finding the stack canary in a debugger**
 - Stack canary is a value placed before the EIP/RIP (instruction pointer) that can overwritten by a buffer overflow. The program causes an error basically if the stack is overwritten to something different than it originally was. Our goal is to find the original stack so when we overflow, the program runs normally.
-- Simple script to bruteforce a 4 byte canary:
+- The stack canary is taken from `gs`, or `fs` (for 32 and 64 bit respectively)
+    - In the disassembly, before something is read, you can see a line similar to the following:
+```
+   0x000000000000121a <+4>: sub    rsp,0x30
+   0x000000000000121e <+8>: mov    rax,QWORD PTR fs:0x28
+   0x0000000000001227 <+17>:mov    QWORD PTR [rbp-0x8],rax
+   0x000000000000122b <+21>:xor    eax,eax
+
+```
+- Here, the stack canary is moved into `rax` at offset +8.
+    - Thus, break at the next offset and check what's in rax (`i r rax`) to see what the current canary is
+
+**Static Canaries**
+- A canary is only static if it was manually implemented by the programmer (which is the case in some intro pwn challenges), or if you are able to fork the program.
+    - When you fork the binary, the forked one has the same canary, so you can do a byte-by-byte bruteforce on that
+
+- Simple script to bruteforce a static 4 byte canary:
 
 ```python
 #!/bin/python3
