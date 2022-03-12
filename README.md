@@ -28,7 +28,6 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
       - [Buffer overflow](#buffer-overflow)
       - [PIE (Positional Independent Execution)](#pie--positional-independent-execution-)
       - [NX (Non-executable)](#nx--non-executable-)
-  * [Leak libc:](#leak-libc-)
       - [ROP (for statically compiled binaries)](#rop--for-statically-compiled-binaries-)
       - [Stack Canary](#stack-canary)
       - [Format String Vulnerabilities](#format-string-vulnerabilities)
