@@ -113,6 +113,10 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 
 [Web](https://www.youtube.com/playlist?list=PLwP8RAsXLdE4tKItjvHIAyDxrVB9v20qP)
 
+[Forensics](https://www.youtube.com/playlist?list=PLwP8RAsXLdE77qStEZ6si0S8q1D8pdmmp)
+
+[OSINT](https://www.youtube.com/playlist?list=PLwP8RAsXLdE485giESRsEkAxnhMm8T3wo)
+
 [x86 Assembly](https://www.youtube.com/playlist?list=PLmxT2pVYo5LB5EzTPZGfFN0c2GDiSXgQe)
 
 [CSAW writeups](https://www.youtube.com/playlist?list=PLwP8RAsXLdE5H265XMi4q_LhskD1zJGgK)
