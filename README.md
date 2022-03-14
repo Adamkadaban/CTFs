@@ -26,9 +26,9 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
   * [Pwn / Binary Exploitation](#pwn--binary-exploitation)
       - [General](#general-1)
       - [Buffer overflow](#buffer-overflow)
-      - [PIE (Positional Independent Execution)](#pie-positional-independent-execution-)
-      - [NX (Non-executable)](#nx-non-executable-)
-      - [ROP (for statically compiled binaries)](#rop-for-statically-compiled-binaries-)
+      - [PIE (Positional Independent Execution)](#pie-positional-independent-execution)
+      - [NX (Non-executable)](#nx-non-executable)
+      - [ROP (for statically compiled binaries)](#rop-for-statically-compiled-binaries)
       - [Stack Canary](#stack-canary)
       - [Format String Vulnerabilities](#format-string-vulnerabilities)
       - [Shellcode](#shellcode)
@@ -894,4 +894,4 @@ print(plaintext.decode("UTF-8"))
     - [https://ncviewer.com/](https://ncviewer.com/)
 
 # Notes
-* TOC generated with [ecotrust-canada](https://ecotrust-canada.github.io/markdown-toc/)
+* TOC generated with [ecotrust-canada](https://github.com/jonschlinkert/markdown-toc)
