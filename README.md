@@ -344,7 +344,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 
 ## Pwn / Binary Exploitation
 - **For this one, I suggest looking at my [LearnPwn](https://github.com/Adamkadaban/LearnPwn) repo instead, as this cheatsheet was made before I knew much about pwn**
-    - However, I have included _some_ notes correcting (or amending) to what I have here.
+    - However, I have included _some_ notes amending to what I have here.
 #### General
 
 - check security of ELF
