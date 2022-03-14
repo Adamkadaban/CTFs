@@ -44,7 +44,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     + [RSA](#rsa)
       - [Grab RSA Info with pycryptodome](#grab-rsa-info-with-pycryptodome)
       - [Chinese Remainder Theorem (p,q,e,c)](#chinese-remainder-theorem--p-q-e-c-)
-      - [Coppersmith attack ](#coppersmith-attack)
+      - [Coppersmith attack (c,e)](#coppersmith-attack--c-e-)
     + [Base16, 32, 36, 58, 64, 85, 91, 92](#base16--32--36--58--64--85--91--92)
   * [Box](#box)
     + [Connecting](#connecting)
@@ -765,7 +765,7 @@ print(key.u)
 - Website that gives factors and euler's totient (phi)
     - [https://www.alpertron.com.ar/ECM.HTM](https://www.alpertron.com.ar/ECM.HTM)
 
-#### Coppersmith attack
+#### Coppersmith attack (c,e)
 - Usually used if the exponent is very small (e <= 5)
 ```python3
 from Crypto.Util.number import *
@@ -787,7 +787,7 @@ def nth_root(radicand, index):
         return -1
 
 c = 
-n = 
+e = 
 
 plaintext = long_to_bytes(nth_root(c, e))
 print(plaintext.decode("UTF-8"))
