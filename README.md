@@ -173,12 +173,21 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - [Security Summer School](https://security.cs.pub.ro/summer-school/wiki/start)
 	- University of Bucharest Security Course
 	- Very beginner-friendly explanations 
+- [RPISEC MBE](https://github.com/RPISEC/MBE)
+    - RPI's Modern Binary Exploiation Course
+    - Has a good amount of labs/projects for practice & some (slighly dated) lectures
+- [how2heap](https://github.com/shellphish/how2heap)
+    - Heap Exploitation series made by ASU's CTF team
+    - Includes a very cool debugger feature to show how the exploits work
 
 ### Rev
 - [challenges.re](https://challenges.re/)
 	- So many challenges 0_0
 	- Tons of diversity
 - [reversing.kr](http://reversing.kr/)
+- [crackmes.one](https://crackmes.one)
+    - Tons of crackme (CTF) style challenges
+
 
 ### Web
 - [websec.fr](http://websec.fr/#)
