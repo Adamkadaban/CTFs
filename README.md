@@ -562,7 +562,7 @@ print("The canary is: " + canary)
 - [z3](https://github.com/Z3Prover/z3)
 	- [Tutorial](https://github.com/Adamkadaban/CTFs/blob/master/resources/SMT_Solvers.md)
 
-#### Reversing byte-by-byte checks
+#### Reversing byte-by-byte checks (side-channel attack)
 
 [https://dustri.org/b/defeating-the-recons-movfuscator-crackme.html](https://dustri.org/b/defeating-the-recons-movfuscator-crackme.html)
 
@@ -585,8 +585,8 @@ for chars in range(keyLen):
         p = process(f'perf stat -x, -e cpu-clock ./{binaryName}'.split())
         p.readline()
         currPin = s + str(i) + '0'*(keyLen - chars - 1)
-        # print(currPin)
-        p.sendline(currPin)
+        # print(currPass)
+        p.sendline(currPass.encode())
         p.readline()
         p.readline()
         p.readline()
