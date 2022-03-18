@@ -80,9 +80,9 @@ y_res = m[y]
 z_res = m[z]
 
 # Need to convert back from z3 symbolic data type to int
-x_res = x_res.as_long
-y_res = y_res.as_long
-z_res = z_res.as_long
+x_res = x_res.as_long()
+y_res = y_res.as_long()
+z_res = z_res.as_long()
 
 print(m)
 
