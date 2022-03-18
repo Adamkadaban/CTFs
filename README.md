@@ -566,6 +566,44 @@ print("The canary is: " + canary)
 
 [https://dustri.org/b/defeating-the-recons-movfuscator-crackme.html](https://dustri.org/b/defeating-the-recons-movfuscator-crackme.html)
 
+- Here's a version I made for a challenge that uses a time-based attack:
+```
+#!/bin/python3
+
+from pwn import *
+import string
+
+keyLen = 8
+binaryName = 'binary'
+
+context.log_level = 'error'
+
+s = ''
+for chars in range(keyLen):
+    a = []
+    for i in range(2**7):
+        p = process(f'perf stat -x, -e cpu-clock ./{binaryName}'.split())
+        p.readline()
+        currPin = s + str(i) + '0'*(keyLen - chars - 1)
+        # print(currPin)
+        p.sendline(currPin)
+        p.readline()
+        p.readline()
+        p.readline()
+        info = p.readall().split(b',')[0]
+        p.close()
+        a.append((float(info), i))
+        # print(float(info), i)
+    a.sort(key = lambda x: x[0])
+    s += str(a[-1][1])
+    print(s + "*"*(keyLen - len(s)))
+    # print(sorted(a, key = lambda x: x[0]))
+
+p = process(f'./{binaryName}')
+p.sendline(s.encode())
+p.interactive()
+
+```
 
 #### Searching strings with gef
 
