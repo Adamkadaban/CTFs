@@ -558,9 +558,9 @@ print("The canary is: " + canary)
 #### SMT Solvers
 - [angr](https://github.com/angr/angr) (python)
 	- [Docs](https://docs.angr.io/core-concepts/toplevel)
-	- [Tutorial](https://github.com/Adamkadaban/CTFs/blob/master/resources/SMT_Solvers.md)
+	- [Tutorial](resources/SMT_Solvers.md#2-angr)
 - [z3](https://github.com/Z3Prover/z3)
-	- [Tutorial](https://github.com/Adamkadaban/CTFs/blob/master/resources/SMT_Solvers.md)
+	- [Tutorial](resources/SMT_Solvers.md#1-z3)
 
 #### Reversing byte-by-byte checks (side-channel attack)
 
