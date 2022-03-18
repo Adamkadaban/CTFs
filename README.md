@@ -568,7 +568,7 @@ print("The canary is: " + canary)
 
 - Here's a version I made for a challenge that uses a time-based attack:
     - You might have to run it a couple times just to account for randomness
-```
+```python3
 #!/bin/python3
 
 from pwn import *
