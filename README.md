@@ -580,12 +580,13 @@ binaryName = 'binary'
 context.log_level = 'error'
 
 s = ''
+print("*"*keyLen)
 for chars in range(keyLen):
     a = []
-    for i in range(2**7):
+    for i in string.printable:
         p = process(f'perf stat -x, -e cpu-clock ./{binaryName}'.split())
         p.readline()
-        currPin = s + str(i) + '0'*(keyLen - chars - 1)
+        currPass = s + i + '0'*(keyLen - chars - 1)
         # print(currPass)
         p.sendline(currPass.encode())
         p.readline()
@@ -593,7 +594,10 @@ for chars in range(keyLen):
         p.readline()
         info = p.readall().split(b',')[0]
         p.close()
-        a.append((float(info), i))
+        try:
+            a.append((float(info), i))
+        except:
+            pass
         # print(float(info), i)
     a.sort(key = lambda x: x[0])
     s += str(a[-1][1])
@@ -603,7 +607,6 @@ for chars in range(keyLen):
 p = process(f'./{binaryName}')
 p.sendline(s.encode())
 p.interactive()
-
 ```
 
 #### Searching strings with gef
