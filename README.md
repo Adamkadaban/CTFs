@@ -567,6 +567,7 @@ print("The canary is: " + canary)
 [https://dustri.org/b/defeating-the-recons-movfuscator-crackme.html](https://dustri.org/b/defeating-the-recons-movfuscator-crackme.html)
 
 - Here's a version I made for a challenge that uses a time-based attack:
+    - You might have to run it a couple times just to account for randomness
 ```
 #!/bin/python3
 
