@@ -337,6 +337,10 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     - `photorec <file.bin>`
 - You can mount an image as a virtual machine
     - [https://habr.com/en/post/444940/](https://habr.com/en/post/444940/)
+- Mount a `.img` file:
+    - `binwalk -M --dd=".*" <fileName>`
+    - run `file` on output and select the Linux filesystem file
+    - `losetup /dev/loop<freeLoopNumber> <fileSystemFile>`
 
 #### Pcap
 
@@ -561,6 +565,7 @@ print("The canary is: " + canary)
 #### Reversing byte-by-byte checks
 
 [https://dustri.org/b/defeating-the-recons-movfuscator-crackme.html](https://dustri.org/b/defeating-the-recons-movfuscator-crackme.html)
+
 
 #### Searching strings with gef
 
