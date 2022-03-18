@@ -35,7 +35,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
       - [Return-to-Libc](#return-to-libc)
   * [Reverse Engineering](#reverse-engineering)
       - [SMT Solvers](#smt-solvers)
-      - [Reversing byte-by-byte checks](#reversing-byte-by-byte-checks)
+      - [Reversing byte-by-byte checks](#reversing-byte-by-byte-checks-side-channel-attack)
       - [Searching strings with gef](#searching-strings-with-gef)
   * [Web](#web)
   * [Crypto](#crypto)
