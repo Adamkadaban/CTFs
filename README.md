@@ -852,7 +852,6 @@ print(plaintext.decode("UTF-8"))
     - This is the case if `p-1 | B!` and `q - 1` has a factor > `B`
 ```python3
 from Crypto.Util.number import *
-from primefac import williams_pp1
 from math import gcd
 
 n = 
