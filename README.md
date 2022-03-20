@@ -45,6 +45,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
       - [Grab RSA Info with pycryptodome](#grab-rsa-info-with-pycryptodome)
       - [Chinese Remainder Theorem (p,q,e,c)](#chinese-remainder-theorem-pqec)
       - [Coppersmith attack (c,e)](#coppersmith-attack-ce)
+      - [Pollards attack (n, e, c)](#pollards-attack-nec)
     + [Base16, 32, 36, 58, 64, 85, 91, 92](#base16-32-36-58-64-85-91-92)
   * [Box](#box)
     + [Connecting](#connecting)
@@ -751,6 +752,7 @@ print(key.u)
 #### Chinese Remainder Theorem (p,q,e,c)
 - Use this when you can factor the number `n`
     - Bad implementations will have more than one prime factor
+    - [Proof](https://www.di-mgt.com.au/crt_rsa.html)
 
 - Old
     
@@ -818,6 +820,7 @@ print(key.u)
 
 #### Coppersmith attack (c,e)
 - Usually used if the exponent is very small (e <= 5)
+    - [Proof](https://web.eecs.umich.edu/~cpeikert/lic13/lec04.pdf)
 ```python3
 from Crypto.Util.number import *
 def nth_root(radicand, index):
@@ -844,7 +847,41 @@ plaintext = long_to_bytes(nth_root(c, e))
 print(plaintext.decode("UTF-8"))
 
 ```
+#### Pollards attack (n, e, c)
+- Based on [Pollard's factorization method](http://www.math.columbia.edu/~goldfeld/PollardAttack.pdf), which makes products of primes [easy to factor](https://people.csail.mit.edu/rivest/pubs/RS01.version-1999-11-22.pdf) if they are (B)smooth 
+    - This is the case if `p-1 | B!` and `q - 1` has a factor > `B`
+```
+from Crypto.Util.number import *
+from primefac import williams_pp1
+from math import gcd
 
+n = 
+c = 
+e = 
+
+def pollard(n):
+    a = 2
+    b = 2
+    while True:
+        a = pow(a,b,n)
+        d = gcd(a-1,n)
+        if 1 < d < n: 
+            return d
+        b += 1
+
+p = pollard(n)
+q = n // p
+
+phi = 1
+for i in [p,q]:
+    phi *= (i-1)
+
+d = inverse(e, phi)
+m = pow(c, d, n)
+
+flag = long_to_bytes(m).decode('UTF-8')
+print(flag)
+```
 ### Base16, 32, 36, 58, 64, 85, 91, 92
 
 [https://github.com/mufeedvh/basecrack](https://github.com/mufeedvh/basecrack)
