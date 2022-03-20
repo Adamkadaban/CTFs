@@ -45,8 +45,8 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
       - [Grab RSA Info with pycryptodome](#grab-rsa-info-with-pycryptodome)
       - [Chinese Remainder Theorem (p,q,e,c)](#chinese-remainder-theorem-pqec)
       - [Coppersmith attack (c,e)](#coppersmith-attack-ce)
-      - [Pollards attack (n, e, c)](#pollards-attack-nec)
-      - [Wiener Attack (n, e, c)](#wiener-attack-nec)
+      - [Pollards attack (n,e,c)](#pollards-attack-nec)
+      - [Wiener Attack (n,e,c)](#wiener-attack-nec)
 
     + [Base16, 32, 36, 58, 64, 85, 91, 92](#base16-32-36-58-64-85-91-92)
   * [Box](#box)
