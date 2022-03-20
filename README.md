@@ -849,7 +849,7 @@ plaintext = long_to_bytes(nth_root(c, e))
 print(plaintext.decode("UTF-8"))
 
 ```
-#### Pollards attack (n, e, c)
+#### Pollards attack (n,e,c)
 - Based on [Pollard's factorization method](http://www.math.columbia.edu/~goldfeld/PollardAttack.pdf), which makes products of primes [easy to factor](https://people.csail.mit.edu/rivest/pubs/RS01.version-1999-11-22.pdf) if they are (B)smooth 
     - This is the case if `p-1 | B!` and `q - 1` has a factor > `B`
 ```python3
@@ -883,7 +883,7 @@ m = pow(c, d, n)
 flag = long_to_bytes(m).decode('UTF-8')
 print(flag)
 ```
-#### Wiener Attack (n, e, c)
+#### Wiener Attack (n,e,c)
 - For use when d is too small (or e is too big)
     - Using [this](https://github.com/orisano/owiener) python module
     - [Proof](https://sagi.io/crypto-classics-wieners-rsa-attack/)
