@@ -46,6 +46,8 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
       - [Chinese Remainder Theorem (p,q,e,c)](#chinese-remainder-theorem-pqec)
       - [Coppersmith attack (c,e)](#coppersmith-attack-ce)
       - [Pollards attack (n, e, c)](#pollards-attack-nec)
+      - [Wiener Attack (n, e, c)](#wiener-attack-nec)
+
     + [Base16, 32, 36, 58, 64, 85, 91, 92](#base16-32-36-58-64-85-91-92)
   * [Box](#box)
     + [Connecting](#connecting)
@@ -879,6 +881,24 @@ d = inverse(e, phi)
 m = pow(c, d, n)
 
 flag = long_to_bytes(m).decode('UTF-8')
+print(flag)
+```
+#### Wiener Attack (n, e, c)
+- For use when d is too small (or e is too big)
+    - Using [this](https://github.com/orisano/owiener) python module
+    - [Proof](https://sagi.io/crypto-classics-wieners-rsa-attack/)
+```python3
+from Crypto.Util.number import *
+import owiener
+
+n = 
+e = 
+c = 
+
+d = owiener.attack(e, n)
+m = pow(c, d, n)
+
+flag = long_to_bytes(m)
 print(flag)
 ```
 ### Base16, 32, 36, 58, 64, 85, 91, 92
