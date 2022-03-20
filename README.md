@@ -850,7 +850,7 @@ print(plaintext.decode("UTF-8"))
 #### Pollards attack (n, e, c)
 - Based on [Pollard's factorization method](http://www.math.columbia.edu/~goldfeld/PollardAttack.pdf), which makes products of primes [easy to factor](https://people.csail.mit.edu/rivest/pubs/RS01.version-1999-11-22.pdf) if they are (B)smooth 
     - This is the case if `p-1 | B!` and `q - 1` has a factor > `B`
-```
+```python3
 from Crypto.Util.number import *
 from primefac import williams_pp1
 from math import gcd
