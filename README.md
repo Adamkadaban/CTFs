@@ -420,6 +420,12 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - A canary is only static if it was manually implemented by the programmer (which is the case in some intro pwn challenges), or if you are able to fork the program.
     - When you fork the binary, the forked one has the same canary, so you can do a byte-by-byte bruteforce on that
 
+**Extra**
+- When a stack canary is improperly overwritten, it will cause a call to `__stack_chk_fail`
+    - If we can't leak the canary, we can also modify the GOT table to prevent it from being called
+- The canary is stored in the `TLS` structure of the current stack and is initialized by `security_init`
+    - If you can overwrite the real canary value, you can set it equal whatever you decide to overflow.
+
 - Simple script to bruteforce a static 4 byte canary:
 
 ```python
