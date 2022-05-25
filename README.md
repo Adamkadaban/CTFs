@@ -215,7 +215,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 	- Very much geared toward pentesting, but useful for exploring web in CTFs
 ### Crypto
 - [CryptoHack]()
-	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/CryptoHack)
+	- I'm currently working on putting writeups [here](https://cryptohack.org/)
 - [cryptopals](https://cryptopals.com/)
 	- The OG crypto challenge site.
 
