@@ -214,11 +214,12 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - [bWAPP](http://www.itsecgames.com/)
 	- Very much geared toward pentesting, but useful for exploring web in CTFs
 ### Crypto
-- [CryptoHack]()
-	- I'm currently working on putting writeups [here](https://cryptohack.org/)
+- [CryptoHack](https://cryptohack.org/)
+	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/CryptoHack)
 - [cryptopals](https://cryptopals.com/)
 	- The OG crypto challenge site.
-
+### Smart Contracts
+- [Capture the Ether](https://cryptohack.org/)
 ### Pentesting
 - [hacker101](https://www.hacker101.com/videos)
 - [hacksplaining](https://www.hacksplaining.com/lessons)
