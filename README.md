@@ -186,6 +186,10 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - [how2heap](https://github.com/shellphish/how2heap)
     - Heap Exploitation series made by ASU's CTF team
     - Includes a very cool debugger feature to show how the exploits work
+- [ROPEmporium](https://ropemporium.com/)
+    - Set of challenges in every major architecture teaching Return-Oriented-Programming
+    - Very high quality. Teaches the most basic to the most advanced techniques. 
+    - I'm currently adding my own writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/ROPEmporium/)
 
 ### Rev
 - [challenges.re](https://challenges.re/)
