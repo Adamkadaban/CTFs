@@ -377,7 +377,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 
 - If you ever need to get a /bin/sh shell and you are sure it works but the program exits anyways, use this trick:
     - `( python -c "print '<PAYLOAD>'" ; cat ) | ./<program>`
-    - pwntools does this with their `process.interactive()`
+    - pwntools does this with its `process.interactive()`
 
 #### PIE (Positional Independent Execution)
 
