@@ -72,9 +72,9 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - [IppSec](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)
     - Best pwner on YouTube.
     - Makes writeups of every single HackTheBox machine
-        - Talks about diff ways to solve and why things work. Highly reccomend
+        - Talks about diff ways to solve and why things work. Highly recommend
 - [Computerphile](https://www.youtube.com/user/Computerphile)
-    - Same people as Numberphile, but cooler. Makes really begginer-level and intuitive videos about basic concepts.
+    - Same people as Numberphile, but cooler. Makes really beginner-level and intuitive videos about basic concepts.
 - [pwn.college](https://www.youtube.com/channel/UCkRe0pvrQvhkhFSciV0l2MQ)
     - Beautiful, amazing, wonderful ASU professor that has tons of videos on pwn
     - Guided course material: [https://pwn.college/](https://pwn.college/)
@@ -93,7 +93,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     - UF Cyber team (I'm a bit biased, but def one of the better YouTube channels for this)
 - [Gynvael](https://www.youtube.com/channel/UCCkVMojdBWS-JtH7TliWkVg)
     - Polish guy that competes on an amazing international CTF team
-    - Makes amazingly intuitive video writeups. Has done the entirey of picoCTF 2019 (that's a lot)
+    - Makes amazingly intuitive video writeups. Has done the entirety of picoCTF 2019 (that's a lot)
 - [stacksmashing](https://www.youtube.com/c/stacksmashing/videos)
     - Amazing reverse engineering & hardware hacking videos
     - Has a really cool series of him reverse engineering WannaCry
@@ -101,7 +101,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     - GMU prof with a bunch of pwn and malware video tutorials
     - A bit out-of-date, but still good
 - [InfoSecLab at Georgia Tech](https://www.youtube.com/channel/UCUcnLCrBVK9gS6ctEUVvkjA/featured)
-    - Good & advanced in-depth lectues on pwn
+    - Good & advanced in-depth lectures on pwn
     - Requires some background knowledge
 - [RPISEC](https://www.youtube.com/c/RPISEC_talks/videos)
     - RPI University team meetings
@@ -169,7 +169,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 	- Has writeups once you solve the chall
 	- You can upload your own challenges once you solve all of them
 - [pwn dojo](https://dojo.pwn.college)
-	- Best collection of pwn challnges in my opinion
+	- Best collection of pwn challenges in my opinion
 	- Backed up with slides teaching how to do it & has a discord if you need help
 - [nightmare](https://guyinatuxedo.github.io/)
 	- Gold standard for pwning C binaries
@@ -181,8 +181,8 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 	- University of Bucharest Security Course
 	- Very beginner-friendly explanations 
 - [RPISEC MBE](https://github.com/RPISEC/MBE)
-    - RPI's Modern Binary Exploiation Course
-    - Has a good amount of labs/projects for practice & some (slighly dated) lectures
+    - RPI's Modern Binary Exploitation Course
+    - Has a good amount of labs/projects for practice & some (slightly dated) lectures
 - [how2heap](https://github.com/shellphish/how2heap)
     - Heap Exploitation series made by ASU's CTF team
     - Includes a very cool debugger feature to show how the exploits work
