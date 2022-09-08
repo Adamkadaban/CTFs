@@ -232,6 +232,14 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - [Intro to Security](https://cseweb.ucsd.edu/~dstefan/cse127-fall21/)
 	- UC San Diego course taught by Deian Stefan
 	- Covers basic pwn and crypto 
+- [Active Directory Cheat Sheet](https://github.com/Tib3rius/Active-Directory-Exploitation-Cheat-Sheet)
+- [WADComs](https://wadcoms.github.io/)
+    - Interactive cheat sheet for Windows/AD environments
+- [LOLBAS](https://lolbas-project.github.io/)
+    - Interactive cheat sheet for **Windows** "Living off the land" binaries, scripts, and libraries for exploitation 
+- [GTFOBins]
+    - Interactive cheat sheet for **Linux** "Living off the land" techniques.
+
 
 # CTF Cheat Sheet
 ## Forensics / Steganography
