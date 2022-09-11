@@ -237,7 +237,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     - Interactive cheat sheet for Windows/AD environments
 - [LOLBAS](https://lolbas-project.github.io/)
     - Interactive cheat sheet for **Windows** "Living off the land" binaries, scripts, and libraries for exploitation 
-- [GTFOBins]
+- [GTFOBins](https://gtfobins.github.io/)
     - Interactive cheat sheet for **Linux** "Living off the land" techniques.
 
 
