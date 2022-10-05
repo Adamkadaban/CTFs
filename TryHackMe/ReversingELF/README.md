@@ -182,7 +182,7 @@ undefined8 my_secure_test(char *param_1)
 
 # Crackme7
 * let's open the binary in ghidra
-* there's a bunch of if statements, but we do see that something makes a call to `giveGlad()`
+* there's a bunch of if statements, but we do see that something makes a call to `giveFlag()`
 	* looking at the code for that, we can see that the input has to match `0x7a69` 
 		* indicative code snippet: `if (local_14 == 0x7a69)`
 * we can use python to hex decode that: `python -c "print(0x7a69)"`
