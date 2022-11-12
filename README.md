@@ -679,7 +679,9 @@ p.interactive()
         - `__import__.('subprocess').getoutput('ls').split('\\n')`
             - list files in system
     - [More python injection](https://medium.com/swlh/hacking-python-applications-5d4cd541b3f1)
-    
+- Cross Site Scripting
+	- [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
+		- Google's Content Security Policy Evaluator
 
 ## Crypto
 
@@ -996,8 +998,9 @@ print(flag)
 ## OSINT
 
 - [pimeyes](https://pimeyes.com/en)
-    - reverse search faces on the internet
-
+    - Reverse search faces on the internet
+- [OSINT Framework](https://osintframework.com/)
+    - Website that aggregates tons of OSINT tools.
 ## Misc
 
 - Resolving DNS Errors
