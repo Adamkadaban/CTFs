@@ -38,6 +38,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
       - [Reversing byte-by-byte checks](#reversing-byte-by-byte-checks-side-channel-attack)
       - [Searching strings with gef](#searching-strings-with-gef)
   * [Web](#web)
+      - [Fuzzing input fields](#fuzzing-input-fields)
   * [Crypto](#crypto)
     + [CyberChef](#cyberchef)
     + [Common Ciphers](#common-ciphers)
@@ -682,6 +683,14 @@ p.interactive()
 - Cross Site Scripting
 	- [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 		- Google's Content Security Policy Evaluator
+
+
+### Fuzzing input fields
+
+- FFUF
+    - Copy the request to the input field and replace the parameter with "FUZZ":
+        - `ffuf -request input.req -request-proto http -w /usr/share/seclists/Fuzzing/special-chars.txt -mc all`
+        - use `-fs` to filter sizes
 
 ## Crypto
 
