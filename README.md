@@ -690,7 +690,7 @@ p.interactive()
 - FFUF
     - Copy the request to the input field and replace the parameter with "FUZZ":
         - `ffuf -request input.req -request-proto http -w /usr/share/seclists/Fuzzing/special-chars.txt -mc all`
-        - use `-fs` to filter sizes
+        - Use `-fs` to filter sizes
 
 ## Crypto
 
