@@ -1,0 +1,19 @@
+# Nmap 7.80 scan initiated Sat Dec 10 20:29:08 2022 as: nmap -sC -sV -oN init.nmap -p- 10.10.137.94
+Nmap scan report for 10.10.137.94
+Host is up (0.13s latency).
+Scanned at 2022-12-10 20:29:08 EST for 5779s
+Not shown: 65529 closed ports
+PORT      STATE    SERVICE VERSION
+80/tcp    open     http    PHP cli server 5.5 or later (PHP 8.1.0-dev)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title:  Admin Dashboard
+15163/tcp filtered unknown
+19682/tcp filtered unknown
+22194/tcp filtered unknown
+32623/tcp filtered unknown
+42734/tcp filtered unknown
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec 10 22:05:28 2022 -- 1 IP address (1 host up) scanned in 5779.78 seconds
