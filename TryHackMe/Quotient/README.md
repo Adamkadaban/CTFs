@@ -3,7 +3,7 @@
 
 # RDP
 
-`redesktop` didn't work for me, so I logged in with `remmina`
+`rdesktop` didn't work for me, so I logged in with `remmina`
 
 # Enumeration
 
