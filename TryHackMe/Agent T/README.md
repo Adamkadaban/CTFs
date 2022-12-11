@@ -53,7 +53,7 @@ I typically never run Nikto, but my scanning wasn't showing anything, and neithe
 
 Here, we can see a header titled `X-Powered-By` with the contents `PHP/8.1.0-dev`
 
-It looks like this is vulnerable to Remote Code Execution through a backdoor.
+It looks like this version of PHP is vulnerable to Remote Code Execution through a backdoor.
 
 I looked up an exploit with searchsploit and downloaded it with
 	`searchsploit -m php/webapps/49933.py`
