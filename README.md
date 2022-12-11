@@ -218,6 +218,9 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 	- Very much geared toward pentesting, but useful for exploring web in CTFs
 - [bWAPP](http://www.itsecgames.com/)
 	- Very much geared toward pentesting, but useful for exploring web in CTFs
+- [CTF Challenge](https://ctfchallenge.com/register)
+    - Collection of web challenges made by Adam Langley that are made to be as realistic as possible.
+    - Good for getting bug bounty experience
 ### Crypto
 - [CryptoHack](https://cryptohack.org/)
 	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/CryptoHack)
