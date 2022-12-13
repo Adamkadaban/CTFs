@@ -79,7 +79,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - [pwn.college](https://www.youtube.com/channel/UCkRe0pvrQvhkhFSciV0l2MQ)
     - Beautiful, amazing, wonderful ASU professor that has tons of videos on pwn
     - Guided course material: [https://pwn.college/](https://pwn.college/)
-    - Tons of practiceproblems: [https://dojo.pwn.college/](https://dojo.pwn.college/)
+    - Tons of practice problems: [https://dojo.pwn.college/](https://dojo.pwn.college/)
 - [PwnFunction](https://www.youtube.com/channel/UCW6MNdOsqv2E9AjQkv9we7A)
     - Very high-quality and easy-to-understand animated videos about diff topics
     - Topics are a bit advanced, but easily understandable
