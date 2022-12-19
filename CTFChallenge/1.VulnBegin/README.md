@@ -312,7 +312,7 @@ ________________________________________________
  :: URL              : http://server.vulnbegin.co.uk/user/FUZZ/info
  :: Wordlist         : FUZZ: /usr/share/wordlists/seclists/Fuzzing/3-digits-000-999.txt
  :: Header           : X-Token: 492E64385D3779BC5F040E2B19D67742
- :: Header           : Cookie: ctfchallenge=eyJkYXRhIjoiZXlKMWMyVnlYMmhoYzJnaU9pSXdibmR1TW1neGVpSXNJbkJ5WlcxcGRXMGlPbVpoYkhObGZRPT0iLCJ2ZXJpZnkiOiI5Mzc0NzRmZjhlNTYwZTk0MjBhYWUyM2FiZTM0OWIzYiJ9
+ :: Header           : Cookie: $ctfc
  :: Follow redirects : false
  :: Calibration      : false
  :: Timeout          : 10
