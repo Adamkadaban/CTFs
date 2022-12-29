@@ -57,6 +57,7 @@ SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
 SF:0\x20\x20\x20\x20\x20\x20\x20\x20>>\x20");
 ```
 Port 9999 is hosting a service that asks for a password
+
 Port 10000 is hosting a website running from SimpleHTTP/0.6 Python/2.7.3 that displays a security graphic
 
 ### gobuster
