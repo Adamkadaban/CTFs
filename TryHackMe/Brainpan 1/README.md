@@ -5,10 +5,10 @@
 
 ### nmap
 
-`nmap -sC -sV 10.10.192.29`
+`nmap -sC -sV 10.10.34.5`
 ```
 Starting Nmap 7.80 ( https://nmap.org ) at 2022-12-28 02:43 EST
-Nmap scan report for 10.10.192.29
+Nmap scan report for 10.10.34.5
 Host is up (0.13s latency).
 Not shown: 998 closed ports
 PORT      STATE SERVICE VERSION
@@ -62,13 +62,13 @@ Port 10000 is hosting a website running from SimpleHTTP/0.6 Python/2.7.3 that di
 
 ### gobuster
 
-`gobuster dir -u http://10.10.192.29:10000/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x html,txt -t 50`
+`gobuster dir -u http://10.10.34.5:10000/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x html,txt -t 50`
 ```
 ===============================================================
 Gobuster v3.3
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 ===============================================================
-[+] Url:                     http://10.10.192.29:10000/
+[+] Url:                     http://10.10.34.5:10000/
 [+] Method:                  GET
 [+] Threads:                 50
 [+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
