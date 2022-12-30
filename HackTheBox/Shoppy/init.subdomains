@@ -1,0 +1,18 @@
+===============================================================
+Gobuster v3.3
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:             http://shoppy.htb
+[+] Method:          GET
+[+] Threads:         500
+[+] Wordlist:        /usr/share/wordlists/seclists/Discovery/DNS/combined_subdomains.txt
+[+] User Agent:      gobuster/3.3
+[+] Timeout:         10s
+[+] Append Domain:   true
+===============================================================
+2022/12/02 18:12:13 Starting gobuster in VHOST enumeration mode
+===============================================================
+Found: mattermost.shoppy.htb Status: 200 [Size: 3122]
+===============================================================
+2022/12/02 18:16:22 Finished
+===============================================================
