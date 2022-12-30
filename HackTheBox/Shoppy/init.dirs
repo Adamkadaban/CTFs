@@ -1,0 +1,12 @@
+/images              [36m (Status: 301)[0m [Size: 179][34m [--> /images/][0m
+/login               [32m (Status: 200)[0m [Size: 1074]
+/admin               [36m (Status: 302)[0m [Size: 28][34m [--> /login][0m
+/assets              [36m (Status: 301)[0m [Size: 179][34m [--> /assets/][0m
+/css                 [36m (Status: 301)[0m [Size: 173][34m [--> /css/][0m
+/Login               [32m (Status: 200)[0m [Size: 1074]
+/js                  [36m (Status: 301)[0m [Size: 171][34m [--> /js/][0m
+/fonts               [36m (Status: 301)[0m [Size: 177][34m [--> /fonts/][0m
+/Admin               [36m (Status: 302)[0m [Size: 28][34m [--> /login][0m
+/exports             [36m (Status: 301)[0m [Size: 181][34m [--> /exports/][0m
+/LogIn               [32m (Status: 200)[0m [Size: 1074]
+/LOGIN               [32m (Status: 200)[0m [Size: 1074]

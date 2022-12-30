@@ -1,0 +1,13 @@
+# Nmap 7.80 scan initiated Fri Dec  2 01:59:59 2022 as: nmap -sC -sV -oN init.nmap 10.10.11.180
+Nmap scan report for 10.10.11.180
+Host is up (0.12s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)
+80/tcp open  http    nginx 1.23.1
+|_http-server-header: nginx/1.23.1
+|_http-title: Did not follow redirect to http://shoppy.htb
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec  2 02:00:26 2022 -- 1 IP address (1 host up) scanned in 26.47 seconds
