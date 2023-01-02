@@ -126,7 +126,7 @@ end
 * The flag is `brixelCTF{pizzanapoli}`
 
 ## s̸͖̾̀͊͠h̸̜̒ï̷̧̲͙̭̤͛͒̋t̷̢̲͚͖̑͜
-* "**64** parsecs from his **base** an the "=" at the end of the message tipped me off that this is base64
+* "**64** parsecs from his **base** and the "=" at the end of the message tipped me off that this is base64
 
 * Here's my code:
 ```python3
