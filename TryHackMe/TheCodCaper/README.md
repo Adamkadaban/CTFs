@@ -148,7 +148,7 @@ Table: users
 	* One of them is `/opt/secret/root`
 
 # pwndbg
-* I don't like pwndbg, so I'm going to use gef locally by downloading it using `python3 -m http.server 80` and `wget http://10.10.41.142:8080/root` locally
+* I don't like pwndbg, so I'm going to use gef locally by downloading it using `python3 -m http.server 80` and `wget http://10.10.41.142:8080/root` remotely
 
 ### gef
 1. `gdb root`
