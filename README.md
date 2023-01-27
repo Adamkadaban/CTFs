@@ -132,7 +132,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 	- Definitely the gold standard for getting started
 - [UCF](https://ctf.hackucf.org/challenges)
 	- Good overall, but great pwn practice
-	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/HackUCF)
+	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/1.CTFs/HackUCF)
 - [hacker101](https://ctf.hacker101.com/ctf)
 	- CTF, but slightly more geared toward pentesting
 - [CSAW](https://365.csaw.io/)
@@ -190,7 +190,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - [ROPEmporium](https://ropemporium.com/)
     - Set of challenges in every major architecture teaching Return-Oriented-Programming
     - Very high quality. Teaches the most basic to the most advanced techniques. 
-    - I'm currently adding my own writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/ROPEmporium/)
+    - I'm currently adding my own writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/2.Labs/ROPEmporium/)
 
 ### Rev
 - [challenges.re](https://challenges.re/)
@@ -223,7 +223,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     - Good for getting bug bounty experience
 ### Crypto
 - [CryptoHack](https://cryptohack.org/)
-	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/CryptoHack)
+	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/2.Labs/CryptoHack)
 - [cryptopals](https://cryptopals.com/)
 	- The OG crypto challenge site.
 ### Smart Contracts
@@ -303,7 +303,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     - [Alt Decoder](https://www.blackcatsystems.com/software/sstv.html)
     - Use these qsstv settings:
     
-    ![SSTV settings](resources/SSTV_settings.png)
+    ![SSTV settings](.resources/SSTV_settings.png)
     
 - Spectrogram image
     - [Decoder](https://academo.org/demos/spectrum-analyzer/)
@@ -571,6 +571,8 @@ print("The canary is: " + canary)
     - decompile apks
 - [devtoolzone](https://devtoolzone.com/decompiler/java)
     - decompile java online
+- [Quiltflower](https://github.com/QuiltMC/quiltflower/)
+    - Advanced terminal-based java decompiler
 - apktool
     - decompile apks
     - `apktool d *.apk`
@@ -584,9 +586,9 @@ print("The canary is: " + canary)
 #### SMT Solvers
 - [angr](https://github.com/angr/angr) (python)
 	- [Docs](https://docs.angr.io/core-concepts/toplevel)
-	- [Tutorial](resources/SMT_Solvers.md#2-angr)
+	- [Tutorial](.resources/SMT_Solvers.md#2-angr)
 - [z3](https://github.com/Z3Prover/z3)
-	- [Tutorial](resources/SMT_Solvers.md#1-z3)
+	- [Tutorial](.resources/SMT_Solvers.md#1-z3)
 
 #### Reversing byte-by-byte checks (side-channel attack)
 
