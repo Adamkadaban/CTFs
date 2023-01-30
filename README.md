@@ -582,6 +582,8 @@ print("The canary is: " + canary)
     - [gef](https://github.com/hugsy/gef) (gdb extension for pwners)
 - [radare2](https://github.com/radareorg/radare2)
     - Binary analysis
+- [FLOSS](https://github.com/mandiant/flare-floss)
+    - `strings` on steroids. Uses static analysis to find and calculate strings
 
 #### SMT Solvers
 - [angr](https://github.com/angr/angr) (python)
