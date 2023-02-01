@@ -1,4 +1,4 @@
-# CTFs
+# A Master's Guide to Learning Security
 Writeups / Files for some of the Cyber CTFs that I've done
 
 I've also included a list of **CTF resources** as well as a comprehensive **cheat sheet** covering tons of common CTF challenges
