@@ -125,6 +125,15 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 
 [CSAW writeups](https://www.youtube.com/playlist?list=PLwP8RAsXLdE5H265XMi4q_LhskD1zJGgK)
 
+**Here are some slides I've made with the help of tjcsc**
+[Pwn](https://docs.google.com/presentation/d/1pusn6q46emvX9CN0SQ6YLctO2xVR8_DHEAg50tJbkYc/edit#slide=id.g17686fdf7bd_0_295)
+
+[Crypto](https://docs.google.com/presentation/d/1EmvJPyqm8bpNGwn0SGYgN1rKov-89PajtwE_uZaLESY/edit#slide=id.g12e7ff9f522_0_198)
+
+[Web](https://docs.google.com/presentation/d/1znRapkr1VAUO7gYjuB8jnFsBNSo0Jo7jsGE-JH7nZ9w/edit#slide=id.g1670189b8d9_0_303)
+
+[Rev](https://docs.google.com/presentation/d/1tcYyUrDrRkK74lQI0weHbjp2nSQtsRQlOGYz57zWjI8/edit#slide=id.g15f164357e9_0_4)
+
 ## Practice / Learning Sites
 ### CTFs
 - [PicoCTF](https://play.picoctf.org/practice)
