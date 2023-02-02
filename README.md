@@ -127,6 +127,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 [CSAW writeups](https://www.youtube.com/playlist?list=PLwP8RAsXLdE5H265XMi4q_LhskD1zJGgK)
 
 **Here are some slides I've made with the help of tjcsc**
+
 [Pwn](https://docs.google.com/presentation/d/1pusn6q46emvX9CN0SQ6YLctO2xVR8_DHEAg50tJbkYc/edit#slide=id.g17686fdf7bd_0_295)
 
 [Crypto](https://docs.google.com/presentation/d/1EmvJPyqm8bpNGwn0SGYgN1rKov-89PajtwE_uZaLESY/edit#slide=id.g12e7ff9f522_0_198)
@@ -721,6 +722,11 @@ p.interactive()
     
 
 [Cipher Detector](https://www.boxentriq.com/code-breaking/cipher-identifier)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+### Hashes
+
+- hashid
+    - Command-line utility to detect the hash type
 
 ### Common Ciphers
 
