@@ -392,6 +392,12 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - check security of ELF
     - `checksec <binary>`
     - `rabin2 -I <binary>`
+- check security of PE
+    - [binary-security-check](https://github.com/koutheir/binary-security-check)
+    - `binary-security-check <bin>.exe`
+- check seccomp bpf
+    - [seccomp-tools](https://github.com/david942j/seccomp-tools)
+    - `seccomp-tools dump ./<binary>`
 - look at symbols
     - `readelf -s <binary>`
 - look at strings
