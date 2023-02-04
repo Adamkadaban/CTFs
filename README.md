@@ -174,7 +174,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - [pwnable.kr](http://pwnable.kr/index.php)
 	- Challenges with good range of difficulty
 - [pwnable.tw](https://pwnable.tw/challenge/)
-	- Harder than pwnable.tw
+	- Harder than pwnable.kr
 	- Has writeups once you solve the chall
 - [pwnable.xyz](https://pwnable.xyz/challenges/)
 	- More pwn challenges
