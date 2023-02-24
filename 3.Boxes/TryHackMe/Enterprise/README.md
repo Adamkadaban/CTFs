@@ -399,7 +399,7 @@ Check                : Registry Autologons
 ```
 
 
-### Unqouted Service Paths
+### Unquoted Service Paths
 
 There is a service running called `zerotieroneservice`
 
