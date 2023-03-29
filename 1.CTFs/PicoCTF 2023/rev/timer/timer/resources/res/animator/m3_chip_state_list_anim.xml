@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_selected="true" android:state_hovered="true">
+        <objectAnimator android:duration="@integer/m3_chip_anim_duration" android:valueTo="@dimen/m3_chip_checked_hovered_translation_z" android:valueType="floatType" android:propertyName="translationZ"/>
+    </item>
+    <item android:state_enabled="true" android:state_checked="true" android:state_hovered="true">
+        <objectAnimator android:duration="@integer/m3_chip_anim_duration" android:valueTo="@dimen/m3_chip_checked_hovered_translation_z" android:valueType="floatType" android:propertyName="translationZ"/>
+    </item>
+    <item>
+        <objectAnimator android:duration="@integer/m3_chip_anim_duration" android:valueTo="0" android:valueType="floatType" android:propertyName="translationZ"/>
+    </item>
+</selector>

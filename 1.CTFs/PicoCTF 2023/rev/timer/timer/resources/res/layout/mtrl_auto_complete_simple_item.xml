@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?attr/textAppearanceSubtitle1" android:ellipsize="end" android:paddingLeft="16dp" android:paddingTop="13dp" android:paddingRight="16dp" android:paddingBottom="13dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1"/>

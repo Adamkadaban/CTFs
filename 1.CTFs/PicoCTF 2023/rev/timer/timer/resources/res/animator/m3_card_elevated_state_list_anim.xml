@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_enabled="true" android:state_hovered="true">
+        <objectAnimator android:interpolator="@interpolator/mtrl_fast_out_slow_in" android:duration="@integer/m3_card_anim_duration_ms" android:valueTo="@dimen/m3_card_elevated_hovered_z" android:valueType="floatType" android:propertyName="translationZ" android:startDelay="@integer/m3_card_anim_delay_ms"/>
+    </item>
+    <item android:state_enabled="true" app:state_dragged="true">
+        <objectAnimator android:interpolator="@interpolator/mtrl_fast_out_slow_in" android:duration="@integer/m3_card_anim_duration_ms" android:valueTo="@dimen/m3_card_elevated_dragged_z" android:valueType="floatType" android:propertyName="translationZ" android:startDelay="@integer/m3_card_anim_delay_ms"/>
+    </item>
+    <item>
+        <set>
+            <objectAnimator android:interpolator="@anim/mtrl_card_lowers_interpolator" android:duration="@integer/m3_card_anim_duration_ms" android:valueTo="0dp" android:valueType="floatType" android:propertyName="translationZ"/>
+        </set>
+    </item>
+    <item>
+        <objectAnimator android:duration="0" android:valueTo="0dp" android:valueType="floatType" android:propertyName="translationZ"/>
+    </item>
+</selector>

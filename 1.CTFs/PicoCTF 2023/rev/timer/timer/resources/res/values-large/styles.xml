@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat.DialogWhenLarge" parent="@style/Base.Theme.AppCompat.Dialog.FixedSize">
+    </style>
+    <style name="Base.Theme.AppCompat.Light.DialogWhenLarge" parent="@style/Base.Theme.AppCompat.Light.Dialog.FixedSize">
+    </style>
+    <style name="Base.Theme.MaterialComponents.DialogWhenLarge" parent="@style/Base.Theme.MaterialComponents.Dialog.FixedSize">
+    </style>
+    <style name="Base.Theme.MaterialComponents.Light.DialogWhenLarge" parent="@style/Base.Theme.MaterialComponents.Light.Dialog.FixedSize">
+    </style>
+    <style name="Theme.Material3.Dark.DialogWhenLarge" parent="@style/Base.Theme.Material3.Dark.Dialog">
+        <item name="windowFixedHeightMajor">@dimen/abc_dialog_fixed_height_major</item>
+        <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
+        <item name="windowFixedWidthMajor">@dimen/abc_dialog_fixed_width_major</item>
+        <item name="windowFixedWidthMinor">@dimen/abc_dialog_fixed_width_minor</item>
+    </style>
+    <style name="Theme.Material3.Light.DialogWhenLarge" parent="@style/Base.Theme.Material3.Light.Dialog">
+        <item name="windowFixedHeightMajor">@dimen/abc_dialog_fixed_height_major</item>
+        <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
+        <item name="windowFixedWidthMajor">@dimen/abc_dialog_fixed_width_major</item>
+        <item name="windowFixedWidthMinor">@dimen/abc_dialog_fixed_width_minor</item>
+    </style>
+</resources>

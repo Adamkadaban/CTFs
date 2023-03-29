@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Tue Mar 14 17:04:42 2023
+Invocation: foremost atbash.jpg 
+Output directory: /home/adam/Desktop/CTFs/1.CTFs/PicoCTF 2023/crypto/HideToSee/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: atbash.jpg
+Start: Tue Mar 14 17:04:42 2023
+Length: 50 KB (51498 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.jpg 	      50 KB 	          0 	 
+Finish: Tue Mar 14 17:04:42 2023
+
+1 FILES EXTRACTED
+	
+jpg:= 1
+------------------------------------------------------------------
+
+Foremost finished at Tue Mar 14 17:04:42 2023

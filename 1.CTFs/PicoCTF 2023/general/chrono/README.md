@@ -1,0 +1,3 @@
+Flag in `/challenge` directory
+
+

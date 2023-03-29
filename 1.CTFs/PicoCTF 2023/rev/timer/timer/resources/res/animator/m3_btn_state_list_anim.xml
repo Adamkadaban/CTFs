@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <selector>
+        <item android:state_enabled="true" android:state_hovered="true">
+            <set>
+                <objectAnimator android:duration="@integer/m3_btn_anim_duration_ms" android:valueTo="@dimen/m3_btn_translation_z_hovered" android:valueType="floatType" android:propertyName="translationZ"/>
+                <objectAnimator android:duration="0" android:valueTo="@dimen/m3_btn_elevation" android:valueType="floatType" android:propertyName="elevation"/>
+            </set>
+        </item>
+        <item android:state_enabled="true">
+            <set>
+                <objectAnimator android:duration="@integer/m3_btn_anim_duration_ms" android:valueTo="@dimen/m3_btn_translation_z_base" android:valueType="floatType" android:propertyName="translationZ" android:startDelay="@integer/m3_btn_anim_delay_ms"/>
+                <objectAnimator android:duration="0" android:valueTo="@dimen/m3_btn_elevation" android:valueType="floatType" android:propertyName="elevation"/>
+            </set>
+        </item>
+        <item>
+            <set>
+                <objectAnimator android:duration="0" android:valueTo="@dimen/m3_btn_disabled_translation_z" android:valueType="floatType" android:propertyName="translationZ"/>
+                <objectAnimator android:duration="0" android:valueTo="@dimen/m3_btn_disabled_elevation" android:valueType="floatType" android:propertyName="elevation"/>
+            </set>
+        </item>
+    </selector>
+</set>

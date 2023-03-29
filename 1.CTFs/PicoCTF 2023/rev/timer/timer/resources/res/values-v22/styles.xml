@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.AppCompat" parent="@style/Base.V22.Theme.AppCompat">
+    </style>
+    <style name="Base.Theme.AppCompat.Light" parent="@style/Base.V22.Theme.AppCompat.Light">
+    </style>
+    <style name="Base.V22.Theme.AppCompat" parent="@style/Base.V21.Theme.AppCompat">
+        <item name="actionModeShareDrawable">?android:attr/actionModeShareDrawable</item>
+        <item name="editTextBackground">?android:attr/editTextBackground</item>
+    </style>
+    <style name="Base.V22.Theme.AppCompat.Light" parent="@style/Base.V21.Theme.AppCompat.Light">
+        <item name="actionModeShareDrawable">?android:attr/actionModeShareDrawable</item>
+        <item name="editTextBackground">?android:attr/editTextBackground</item>
+    </style>
+</resources>

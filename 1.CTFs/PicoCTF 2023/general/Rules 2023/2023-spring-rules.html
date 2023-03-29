@@ -1,0 +1,654 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="picoCTF is a free computer security education program with original content built on a capture-the-flag framework created by security and privacy experts at Carnegie Mellon University.">
+<meta name="designer" content="Ivy Shi (xiaoyus@andrew.cmu.edu)">
+<meta property="og:title" content="picoCTF - Competition Rules">
+<meta property="og:description" content="picoCTF is a free computer security education program with original content built on a capture-the-flag framework created by security and privacy experts at Carnegie Mellon University.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://picoctf.org/competitions/2023-spring-rules.html">
+<meta property="og:image" content="https://picoctf.org/img/logos/picoctf-logo-og.png">
+<meta property="og:image:height" content="600px">
+<meta property="og:image:width" content="600px">
+<meta name="twitter:title" content="picoCTF - Competition Rules">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="https://picoctf.org/competitions/2023-spring-rules.html">
+<meta name="twitter:description" content="picoCTF is a free computer security education program with original content built on a capture-the-flag framework created by security and privacy experts at Carnegie Mellon University."/>
+<meta name="twitter:image" content="https://picoctf.org/img/logos/picoctf-logo-social.png" />
+<title>picoCTF - Competition Rules</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css?1676667982">
+<link rel="stylesheet" href="/css/font-awesome.min.css?1676667982">
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="theme-color" content="#ffffff">
+<script src="/js/jquery.min.js?1676667982"></script>
+<script src="/js/bootstrap.bundle.min.js?1676667982"></script>
+<script src="/js/autohide-navbar.js?1676667982"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-93258343-2"></script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-93258343-2');
+</script>
+
+</head>
+<body>
+<div id="body-container">
+    
+<div class="w-100 fixed-top" id="navtop-container">
+    <div class="container" id="top-inner-container">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <a class="navbar-brand ml-2 ml-md-0" href="/"><img alt="picoCTF logo" src="/img/logos/picoctf-logo-horizontal-white.svg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mr-md-1">
+                    
+                    
+                        
+                        
+                        
+                            
+                            
+                    <li class="nav-item">
+                        <a class="nav-link" id="Get Started-link" href="https://picoctf.org/get_started.html"
+                             >
+                            Get Started </a>
+                    </li>
+                        
+                    
+                        
+                        
+                        
+                            
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="LearnDropLink" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Learn</a>
+                        <div class="dropdown-menu text-md-left text-center" aria-labelledby="LearnDropLink">
+                            
+                            
+                            
+                            <a class="dropdown-item"
+                               href="https://picoctf.org/resources.html"
+                               >
+                                Resources
+                                
+                            </a>
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            
+                            <a class="dropdown-item"
+                               href="https://picoctf.org/community.html"
+                               >
+                                Community
+                                
+                            </a>
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            
+                            <a class="dropdown-item"
+                               href="https://primer.picoctf.org"
+                               >
+                                Primer
+                                
+                            </a>
+                            
+                            
+                        </div>
+                    </li>
+                        
+                    
+                        
+                        
+                        
+                            
+                            
+                    <li class="nav-item">
+                        <a class="nav-link" id="Practice-link" href="https://picoctf.org/index.html#picogym"
+                             >
+                            Practice </a>
+                    </li>
+                        
+                    
+                        
+                        
+                        
+                            
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="CompeteDropLink" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Compete</a>
+                        <div class="dropdown-menu text-md-left text-center" aria-labelledby="CompeteDropLink">
+                            
+                            
+                            
+                            <a class="dropdown-item"
+                               href="https://play.picoctf.org/compete"
+                               >
+                                Current and Upcoming Events
+                                
+                            </a>
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            
+                            <a class="dropdown-item"
+                               href="https://picoctf.org/competitions/past.html"
+                               >
+                                Historical Competitions
+                                
+                            </a>
+                            
+                            
+                        </div>
+                    </li>
+                        
+                    
+                        
+                        
+                        
+                            
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="AboutDropLink" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">About</a>
+                        <div class="dropdown-menu text-md-left text-center" aria-labelledby="AboutDropLink">
+                            
+                            
+                            
+                            <a class="dropdown-item"
+                               href="https://picoctf.org/about.html"
+                               >
+                                About picoCTF
+                                
+                            </a>
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            
+                            <a class="dropdown-item"
+                               href="https://picoctf.org/sponsors.html"
+                               >
+                                Sponsorship
+                                
+                            </a>
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            
+                            <a class="dropdown-item"
+                               href="https://picoctf.org/contact.html"
+                               >
+                                Contact Us
+                                
+                            </a>
+                            
+                            
+                        </div>
+                    </li>
+                        
+                    
+                    <li class="nav-item" id="userlogin"><a aria-current="page" class="nav-link active" href="https://play.picoctf.org/login">Log In</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+    
+    <div id="main-content" class="container pt-45">
+        <div class="row">
+            <div class="col-body">
+                <div class="col-lg-3 col-md-4 d-none d-md-block" id="toc-container">
+                    <ul class="toc-list">
+  <li class="toc-list-item"><a href="#modifications-of-terms">Modifications of Terms.</a></li>
+  <li class="toc-list-item"><a href="#what-is-picoctf-">What is picoCTF ?</a></li>
+  <li class="toc-list-item"><a href="#what-is-the-2023-competition-when-does-it-startend">What is the 2023 Competition? When does it start/end?</a></li>
+  <li class="toc-list-item"><a href="#who-is-eligible-to-participate-in-the-competition">Who is eligible to participate in the Competition?</a></li>
+  <li class="toc-list-item"><a href="#how-do-i-participate-in-the-competition">How do I participate in the Competition?</a></li>
+  <li class="toc-list-item"><a href="#collectionuse-of-your-information">Collection/Use of Your Information.</a></li>
+  <li class="toc-list-item"><a href="#how-do-i-form-a-team">How do I form a Team?</a></li>
+  <li class="toc-list-item"><a href="#how-do-i-become-eligible-to-win-team-prizes">How do I become eligible to win Team prizes?</a></li>
+  <li class="toc-list-item"><a href="#how-are-the-winners-determined">How are the winners determined?</a></li>
+  <li class="toc-list-item"><a href="#what-are-the-team-prizes">What are the Team prizes?</a></li>
+  <li class="toc-list-item"><a href="#what-are-the-other-rules-and-terms-for-picoctf-2023">What are the other rules and terms for picoCTF 2023?</a></li>
+</ul>
+
+                </div>
+                <div class="col-lg-9 col-md-8" id="toc-content-source">
+                    <h1 class="mb-4"> Competition Rules </h1>
+                    <p>Thank you for your interest in the picoCTF 2023 competition (“picoCTF
+2023” or the “Competition”) organized by Carnegie Mellon University
+(“CMU”).</p>
+
+<p>BY CREATING A PICOCTF ACCOUNT (WHETHER FOR YOURSELF AND/OR ON BEHALF OF
+YOUR CHILD OR YOUR STUDENT) AND PARTICIPATING IN THE COMPETITION
+CHALLENGES, YOU ARE AGREEING TO THESE COMPETITION RULES WITH RESPECT TO
+THE COMPETITION. THESE COMPETITION RULES ARE PART OF THE PICOCTF TERMS
+OF USE AND ARE A LEGALLY BINDING AGREEMENT BETWEEN YOU AND CMU. IF THESE
+COMPETITION RULES ARE NOT ACCEPTABLE TO YOU (AND TO YOUR SCHOOL, IF
+APPLICABLE), YOU MUST NOT PROCEED WITH REGISTRATION, AND YOU MAY NOT
+PARTICIPATE IN THE COMPETITION (NOR, IF APPLICBLE, MAY YOUR SCHOOL
+AND/OR ANY STUDENT USERS TO WHOM YOU WANTED TO FACILITATE ACCESS).</p>
+
+<p>IF YOU ARE A PARENT OR GUARDIAN AND YOU PROVIDE CONSENT FOR YOUR MINOR
+CHILD TO CREATE AN ACCOUNT AND PARTICIPATE IN THE COMPETITION
+CHALLENGES, YOU AGREE TO BE BOUND BY THESE COMPETITION RULES ON BEHALF
+OF YOUR CHILD WITH RESPECT TO YOUR CHILD’S PARTICIPATION IN THE
+COMPETITION.</p>
+
+<p>IF YOU ARE A TEACHER OR SCHOOL ADMINISTRATOR THAT FACILITATES A
+REGISTRATION ON BEHALF OF A MINOR STUDENT, YOU REPRESENT AND WARRANT
+THAT YOU HAVE APPROPRIATE AUTHORITY AND ALL NECESSARY PERMISSIONS FROM
+YOUR SCHOOL TO AGREE TO THESE COMPETITION RULES ON BEHALF OF YOU, YOUR
+SCHOOL AND ANY STUDENT USERS IN YOUR CLASS FOR WHOM YOU ARE ENABLING TO
+PARTICIPATE IN THE COMPETITION CHALLENGES. YOU ALSO AGREE THAT YOU HAVE
+OBTAINED ALL NECESSARY PERMISSIONS AND CONSENTS FROM SUCH STUDENT USERS
+AND THEIR PARENTS OR LEGAL GUARDIANS FOR YOU TO REGISTER THE STUDENT
+USERS FOR THE COMPETITION UNDER THESE COMPETITION RULES AND THE TOU,
+INCLUDING THE RIGHT FOR YOU TO PROVIDE THE INFORMATION NECESSARY TO
+CREATE ACCOUNTS FOR SUCH STUDENTS, PRIOR TO CREATING SUCH ACCOUNTS
+AND/OR PROVIDING THE STUDENT USERS WITH ACCESS TO THE SERVICES SUCH AS
+THE COMPETITION CHALLENGES.</p>
+
+<p>AS A REMINDER, THESE COMPETITION RULES ARE INCORPORATED INTO AND MADE A
+PART OF THE TERMS OF USE. PLEASE BE SURE TO REVIEW THE TERMS OF USE IN
+ADDITION TO THESE COMPETITION RULES.</p>
+
+<p>By using and/or participating in the Competition, you are agreeing to
+fully comply with these Competition Rules, without modification by you.
+If you do not agree with these terms and conditions as stated, your only
+recourse is to discontinue using and participating in the Competition.</p>
+
+<h2 id="modifications-of-terms">Modifications of Terms.</h2>
+
+<p>CMU shall have the right to modify these Competition Rules at any time,
+which modification shall be effective immediately upon posting.
+Accordingly, we suggest that you check review our Competition Rules when
+you use the Services to stay informed. If you disagree with the changes
+to these Competition Rules, you should discontinue your participation in
+the Competition. To make your periodic review more convenient, we will
+post a date at the top of this page.</p>
+
+<h2 id="what-is-picoctf-">What is picoCTF ?</h2>
+
+<p>picoCTF is a computer security game targeted at middle and high school
+students. The game consists of a series of challenges centered around a
+unique storyline where participants must reverse engineer, break, hack,
+decrypt, or do whatever it takes to solve the challenge. The challenges
+are all set up with the intent of being hacked, making it an excellent,
+legal way to get hands-on experience.</p>
+
+<h2 id="what-is-the-2023-competition-when-does-it-startend">What is the 2023 Competition? When does it start/end?</h2>
+
+<p>The Competition involves trying to solve a designated number of problems
+within a specified timeframe. The Competition begins on 14 March 2023 at
+12:00pm Eastern Daylight Time and continues until 28 March 2023 at
+3:00pm Eastern Daylight Time (the “Competition Period”).</p>
+
+<h2 id="who-is-eligible-to-participate-in-the-competition">Who is eligible to participate in the Competition?</h2>
+<p>Each individual who participates in the Competition (“Participant”) must:</p>
+
+<ul>
+  <li>be at least 13 years old;</li>
+  <li>if under 18, have the consent of their parent or legal guardian to
+participate;</li>
+  <li>form a team alone or with up to 4 other Participants; and</li>
+  <li>have a valid picoCTF account created through CMU’s picoCTF platform
+(currently available at picoctf.org or https://picoctf.com)
+    <ul>
+      <li>Note: in order to create a picoCTF account, you will need to
+provide certain information to register. If you are under 18, a
+parent or legal guardian must provide their email address as
+part of your account registration to indicate their consent to
+your account registration, unless you have a student account
+created by a teacher through a teacher batch registration.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="how-do-i-participate-in-the-competition">How do I participate in the Competition?</h2>
+
+<p>To participate, you must have created your own individual picoCTF
+account before or during the Competition Period and work on the
+Competition challenges during some and/or all of the Competition Period.
+If you are on a team with other Participants, each of you must have your
+own valid picoCTF account. You may not share a picoCTF account with
+another person.</p>
+
+<p>You do not have to enter the Competition by the first day of the
+Competition Period. However, the later you enter, the less time you have
+to work on the challenges during the Competition Period. For clarity,
+you cannot begin working on the Competition until you have a valid
+picoCTF account.</p>
+
+<p>NOTE: NOT EVERY PARTICIPANT IN THE COMPETITION IS ELIGIBLE TO WIN
+PRIZES. PLEASE SEE DETAILS BELOW.</p>
+
+<h2 id="collectionuse-of-your-information">Collection/Use of Your Information.</h2>
+
+<p>As described in more detail below in these Competition Rules, CMU may
+ask you for additional information to confirm that you are in compliance
+with these Competition Rules and/or the Terms of Use and/or (if
+applicable) that you are eligible to receive prizes in the Competition
+(including but not limited to written verification of any necessary
+parental consent). Please see our picoCTF Privacy Statement for
+information about how we collect, use and disclose information you
+provide.</p>
+
+<h2 id="how-do-i-form-a-team">How do I form a Team?</h2>
+
+<p>Each team is made up of 1-5 Participants (a “Team”). The registration
+page will explain how you can invite others to join your Team (which may
+involve use of a special invitation code).</p>
+
+<p><strong>WHEN SELECTING A TEAM NAME, YOU MAY NOT INCLUDE ANY NAMES OR OTHER
+PERSONALLY IDENTIFIABLE INFORMATION IN YOUR TEAM NAME.</strong></p>
+
+<h2 id="how-do-i-become-eligible-to-win-team-prizes">How do I become eligible to win Team prizes?</h2>
+
+<p>In order to be eligible to compete for Team prizes, each Participant and
+all other members of the Participant’s Team must: (i) be at least 13 but
+younger than 20 and not have a high school diploma or GED; (ii) have
+indicated in their registration that they are a middle or high school
+student and resident in the US; and (iii) be enrolled in an accredited
+United States middle school or high school (“School”) and/or be in the
+process of being home-schooled at the middle or high school level in
+compliance with the applicable home-schooling requirements of the
+applicable student’s home state.</p>
+
+<h2 id="how-are-the-winners-determined">How are the winners determined?</h2>
+
+<p>The Team that solves the most problems within the allotted time will be
+the winner. If more than one Team solves all of the problems, then the
+Team that solved the problems in the shortest amount of time will be the
+winner. As described in more detail below, winners (including any tie
+breakers, questions about eligibility, etc.) are determined by CMU in
+its sole discretion.</p>
+
+<h2 id="what-are-the-team-prizes">What are the Team prizes?</h2>
+
+<p>Subject to these Competition Rules and the Terms of Use, the Team prizes
+will be:</p>
+
+<ul>
+  <li>1st place: $3,000 and may have opportunity to visit Carnegie Mellon
+University's Pittsburgh campus for an award ceremony</li>
+  <li>2nd place: $2,000 and may have opportunity to visit Carnegie Mellon
+University's Pittsburgh campus for an award ceremony</li>
+  <li>
+    <p>3rd place: $1,000and may have opportunity to visit Carnegie Mellon
+University's Pittsburgh campus for an award ceremony</p>
+  </li>
+  <li>Highest placing all middle school team: $500</li>
+  <li>2nd highest placing all middle school team: $300</li>
+  <li>3rd highest placing all middle school team: $150</li>
+</ul>
+
+<h2 id="what-are-the-other-rules-and-terms-for-picoctf-2023">What are the other rules and terms for picoCTF 2023?</h2>
+
+<p>CMU may display one or more Competition leaderboards and/or scoreboards.
+These boards may be available to other Participants and/or the public,
+and may show the Team name, the country of residence and/or school
+identified by the Team leader, and/or the name of the School identified
+by the Team leader. <img src="/img/rules_fl23.png" alt="picoCTF{h34rd_und3r5700d_4ck_cba1c711}" /></p>
+
+<p>While there are no limitations on the resources or tools that
+Participants can use, only the eligible Team Participants may solve
+challenges as part of the Competition. Team advisors, or anyone outside
+the Team, may help facilitate the Team's work, such as by helping set
+up tools or providing resources, but may not provide direct assistance
+on any problems.</p>
+
+<p>Teams may not interfere with the progress of other Teams, nor with the
+operation of the Competition's infrastructure. More specifically,
+attacking the scoring server, other Teams, or machines not explicitly
+designated as targets is cheating. This includes both breaking into such
+machines, and denying others access to them or the ability to solve
+problems (for example, by altering a key or ping-flooding). Sharing keys
+or providing overly-revealing hints with other teams is cheating, as is
+being directly assisted by personnel outside the Team (using tools from
+the internet is OK; asking people on the internet to help solve the
+problem is not). We encourage Participants to solve problems in novel
+and creative ways using all available resources, but we do require that
+Participants solve the problems themselves.</p>
+
+<p>You must comply with the picoCTF Terms of Use and these Competition
+Rules. As a reminder, the Terms of Use include, among other things, a
+description of prohibited conduct and limitations on liability and
+damages.</p>
+
+<p>Answers to problems including challenge write-ups may not be publicly
+posted or otherwise shared with anyone outside of your Team members
+until after the Competition is over.</p>
+
+<p>All information provided to establish an account must be true and
+correct. You are responsible for keeping such information up-to-date.
+Failure to keep your account up-to-date may, among other things,
+jeopardize your eligibility for prizes.</p>
+
+<p>You are solely responsible for keeping your account names and passwords
+confidential. You are responsible for activity that takes place under
+your account (including but not limited to activity that may affect your
+eligibility for prizes). If you believe that your account (or an account
+you have created on behalf of your child or a student) has been or may
+be compromised, you must notify CMU by contacting <a href="mailto:other@picoCTF.org">other@picoCTF.org</a> as
+soon as possible.</p>
+
+<p>If you register to be on a Team with other Participants, you understand
+that information about you may be provided to other Team Participants.
+In addition, you understand that your School may be informed about your
+participation in picoCTF and/or may be asked to verify your enrollment
+in order to verify your eligibility to receive prizes. To the extent
+your School cannot legally release such information about you without
+your consent and you do not provide such consent, you agree that you
+and/or your Team may be ineligible for certain prizes if CMU cannot
+verify your eligibility.</p>
+
+<p>At any time, in the sole and absolute discretion of CMU, CMU shall be
+entitled to disqualify a Participant and/or Team in the event of a
+failure to meet relevant eligibility criteria or any other violation or
+suspected violation of these Competition Rules and/or any Terms of Use
+(including but not limited to cheating). In the event of a Participant’s
+disqualification, CMU may also notify the Participant’s School.</p>
+
+<p>CMU will determine participation eligibility, declare winners (including
+but not limited to in the event of a tie), and award prizes in its sole
+and absolute discretion. You agree that such decisions are final and are
+not subject to review or reconsideration, and that Teams are not
+entitled to be informed of other Teams’ results.</p>
+
+<p>Winning Teams may be asked to produce written solutions for several
+challenges before receiving prizes. Each Participant of a winning team
+will need an adviser or faculty member at the Participant’s School to
+serve as a point of contact.</p>
+
+<p>CMU reserves the right to verify the identity and eligibility of all
+Participants and Teams at any time. Without limiting the general nature
+of the prior sentence, prior to (and as a condition of) awarding any
+prizes, you agree that CMU in its sole and absolute discretion may
+require additional paperwork to be executed by the relevant
+Participants. This information could include, among other things,
+written verification of parental consent (if applicable), verification
+of information needed to confirm eligibility or compliance with these
+Competition Rules and/or the Terms of Use, and information needed to
+facilitate the provision of prizes, and all paperwork requested by CMU
+to enable it to comply with all applicable state, federal and local tax
+reporting (which may require the provision of social security numbers or
+other personal information as needed). All paperwork must be returned
+within seven (7) days of the date provided by CMU (or such other date
+specified by CMU). All prizes will be net of any taxes that CMU is
+required by law to withhold. To the extent permitted by law, all taxes
+imposed on prizes are the sole responsibility of the winners. If a
+potential winner fails to provide such documentation within the
+timeframe required or fails to comply with such laws, the prize may be
+forfeited and CMU may, in its discretion, select an alternate potential
+winner.</p>
+
+<p>In its sole discretion, Carnegie Mellon University may extend an
+invitation to an awards ceremony at its Pittsburgh campus. Reimbursement
+for travel expenses is currently expected to include a round-trip
+domestic airline ticket (coach) to/from Pittsburgh, hotel accommodations
+and ground transportation for each applicable Participant on the winning
+Team, plus one adult chaperone for the Team. As determined by Carnegie
+Mellon in its sole discretion, Carnegie Mellon may make direct
+arrangements for such items and/or may reimburse the winning team
+members and chaperone for their respective documented and reasonable and
+customary, out –of-pocket expenses for such items. Any and all other
+costs associated with attendance at the awards ceremony are the
+responsibility of the relevant Participants and their chaperones.</p>
+
+<p>For any cash prizes awarded to a Team involving more than one
+Participant, each Participant shall be awarded an equal share of such
+prize, which shall be paid in United States dollars. Carnegie Mellon
+may, in its sole discretion, condition the payment of some or all of the
+winning Team's cash prize on the Team attending the event at Carnegie
+Mellon University.</p>
+
+<p>Any prizes awarded are non-transferable, and any non-cash prizes are not
+exchangeable for cash. CMU’s ability to offer any and all prizes is
+subject to applicable laws and regulations.</p>
+
+<p>Competition problems or other content on the picoCTF site remains the
+property of CMU (and/or its content providers). CMU and its relevant
+content providers reserve any and all of their respective rights in such
+materials. You are authorized to access and use such materials solely
+with respect to registration for and/or participation in picoCTF 2023 by
+you (or on behalf of your child or a student, where applicable). You may
+not use the picoCTF 2023 site or any materials on it (including but not
+limited to the Competition problems) for any unauthorized purpose.</p>
+
+<p>The Competition for prizes is available only to residents of the United
+States. The Competition and these Competition Rules are governed by the
+laws of the Commonwealth of Pennsylvania without regard to its conflicts
+of laws provisions. Any claims or disputes relating to picoCTF 2023 or
+these Competition Rules must be settled in accordance with the Terms of
+Use (including the dispute resolution and jurisdiction provisions in the
+Miscellaneous section of the Terms of Use).</p>
+
+<p>The Competition is subject to all disclaimers, limitations on liability
+and damages set forth in the Terms of Use, as supplemented by these
+Competition Rules. Without limiting the general nature of the foregoing,
+you understand and agree that picoCTF 2023 is offered on an AS-IS,
+WHERE-IS basis without warranties of any kind, and that any and all
+implied warranties or duties regarding it are hereby disclaimed
+(including but not limited to warranties of merchantability, fitness for
+a particular purpose or non-infringement). CMU can discontinue the
+Competition at any time in its sole discretion. To the maximum extent
+permitted under applicable law, Carnegie Mellon University, its
+directors, officers, employees, agents, representatives, affiliates,
+licensors, content providers, contractors (including but not limited to
+Third Party Providers) and sponsors (collectively, “picoCTF Parties”)
+shall not be liable for any damages, losses or claims resulting from any
+person’s participation (or attempted participation) in the Competition.
+To the maximum extent permitted under applicable law, neither CMU nor
+picoCTF Parties are responsible for technical problems or technical
+malfunction or other occurrences which may affect the operation of the
+Competition (including but not limited: to hardware or software errors;
+faulty computer, telephone, cable, satellite, network, electronic,
+wireless or Internet connectivity or other online communication
+problems; failure of any e-mail transmissions to be sent to or received;
+lost, late, delayed or intercepted e-mail transmissions; inaccessibility
+of the picoCTF 2023 web site or any third party service providers in
+whole or in part for any reason; traffic congestions on the Internet or
+the picoCTF 2023 site; and/or inaccessibility or unavailability of an
+email account used in connection with picoCTF 2023). To the maximum
+extent permitted under applicable law, you hereby release CMU and the
+PicoCTF Parties from any and all claims, damages or liabilities arising
+from or relating to participation in picoCTF 2023.</p>
+
+<p>To the maximum extent permitted under applicable law, you agree to
+indemnify and hold harmless CMU and picoCTF Parties from and against any
+and all claims, suits, actions, losses, expenses, damages, penalties,
+and costs, including reasonable attorneys’ fees resulting from any
+actual or alleged violation of these Competition Rules by you and/or
+your participation in the Competition.</p>
+
+<p>These Competition Rules shall be enforceable to the maximum extent
+permitted under applicable law. If any portion of this these Competition
+Rules is determined by any court or governmental agency of competent
+jurisdiction to violate applicable law or otherwise not to conform to
+requirements of law, then the rest of these Competition Rules will
+remain in effect and the parties will substitute a suitable and
+equitable provision for the invalid/unenforceable provision in order to
+carry out the original intent and purpose of the original Competition
+Rules.</p>
+
+<p>The picoCTF 2023 site or materials may link to and/or refer to third
+party websites and/or services. CMU does not control or endorse such
+sites. You are responsible for determining the suitability of those
+sites or services.</p>
+
+<p>You may not assign, delegate or transfer any of your rights or
+obligations under these Competition Rules. Any attempted assignment,
+delegation or transfer shall be void.</p>
+
+<p>These Competition Rules and the Terms of Use and your picoCTF 2023
+registration represent your entire agreement with CMU with respect to
+picoCTF 2023.</p>
+
+<p>Version Date: January 23, 2023</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="">
+    
+    <div class="container section text-center">
+        <div class="row">
+            <div class="col" id="footer-content">
+                <div>
+                    <a href="https://cmu.edu" target="_blank" rel="noopener"><img alt="CMU Logo" height="64" width="102" src="/img/logos/cmu.png"></a>
+                    <a href="https://ini.cmu.edu"  target="_blank" rel="noopener"><img alt="INI Logo"  height="64" width="248" src="/img/logos/ini.png"></a>
+                    <a href="https://cylab.cmu.edu" target="_blank" rel="noopener"><img alt="CyLab Logo"  height="64" width="114" src="/img/logos/cylab.png"></a>
+                    <a href="http://pwning.net" target="_blank" rel="noopener"><img alt="PPP Logo"  height="64" width="64" src="/img/logos/ppp.png"></a>
+                </div>
+                <div>
+                    <a href="https://facebook.com/picoctf.competition" target="_blank" rel="noopener"><img width="50"  height="50" alt="Facebook logo" src="/img/logos/facebook.png"></a>
+                    <a href="https://twitter.com/picoctf" target="_blank" rel="noopener"><img width="50"  height="50" alt="Twitter logo"  src="/img/logos/twitter.png"></a>
+                    <a href="https://picoctf.org/discord" target="_blank" rel="noopener"><img width="50"  height="50" alt="Discord logo"  src="/img/logos/discord.png"></a>
+                </div>
+                <div>
+                    <h5>© Carnegie Mellon University 2023<br/>
+                        Use of this site is governed by the <a href="/privacy.html">Privacy Statement</a> and <a href="/terms.html">Terms
+                            of Service</a>.<br/>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</footer> <!-- footer -->
+<script src="/js/script.js"></script>
+
+</div>
+</body>
+</html>

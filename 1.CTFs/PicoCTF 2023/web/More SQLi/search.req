@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE items [
+<!ELEMENT items (item*)>
+<!ATTLIST items burpVersion CDATA "">
+<!ATTLIST items exportTime CDATA "">
+<!ELEMENT item (time, url, host, port, protocol, method, path, extension, request, status, responselength, mimetype, response, comment)>
+<!ELEMENT time (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT host (#PCDATA)>
+<!ATTLIST host ip CDATA "">
+<!ELEMENT port (#PCDATA)>
+<!ELEMENT protocol (#PCDATA)>
+<!ELEMENT method (#PCDATA)>
+<!ELEMENT path (#PCDATA)>
+<!ELEMENT extension (#PCDATA)>
+<!ELEMENT request (#PCDATA)>
+<!ATTLIST request base64 (true|false) "false">
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT responselength (#PCDATA)>
+<!ELEMENT mimetype (#PCDATA)>
+<!ELEMENT response (#PCDATA)>
+<!ATTLIST response base64 (true|false) "false">
+<!ELEMENT comment (#PCDATA)>
+]>
+<items burpVersion="2023.2.3" exportTime="Thu Mar 16 19:13:43 EDT 2023">
+  <item>
+    <time>Thu Mar 16 19:13:38 EDT 2023</time>
+    <url><![CDATA[http://saturn.picoctf.net:65406/welcome.php]]></url>
+    <host ip="13.59.203.175">saturn.picoctf.net</host>
+    <port>65406</port>
+    <protocol>http</protocol>
+    <method><![CDATA[POST]]></method>
+    <path><![CDATA[/welcome.php]]></path>
+    <extension>php</extension>
+    <request base64="true"><![CDATA[UE9TVCAvd2VsY29tZS5waHAgSFRUUC8xLjENCkhvc3Q6IHNhdHVybi5waWNvY3RmLm5ldDo2NTQwNg0KQ29udGVudC1MZW5ndGg6IDI1DQpDYWNoZS1Db250cm9sOiBtYXgtYWdlPTANClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENCk9yaWdpbjogaHR0cDovL3NhdHVybi5waWNvY3RmLm5ldDo2NTQwNg0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMTEuMC41NTYzLjY1IFNhZmFyaS81MzcuMzYNCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksaW1hZ2UvYXZpZixpbWFnZS93ZWJwLGltYWdlL2FwbmcsKi8qO3E9MC44LGFwcGxpY2F0aW9uL3NpZ25lZC1leGNoYW5nZTt2PWIzO3E9MC43DQpSZWZlcmVyOiBodHRwOi8vc2F0dXJuLnBpY29jdGYubmV0OjY1NDA2L3dlbGNvbWUucGhwDQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMsZW47cT0wLjkNCkNvb2tpZTogUEhQU0VTU0lEPWhkcW5xaTZnYWlxcW1wOGZwNDd0ZDYzNGEzDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQpzZWFyY2g9RlVaWiZzdWJtaXQ9U2VhcmNo]]></request>
+    <status></status>
+    <responselength></responselength>
+    <mimetype></mimetype>
+    <response base64="true"></response>
+    <comment></comment>
+  </item>
+</items>
