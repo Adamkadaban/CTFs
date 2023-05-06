@@ -94,7 +94,7 @@ kuoRiShh6uCjGCCH/WfwCof9enCej4HEj5EPj8nZ0cMNvoARq7VnCNGTPamcXBrfIwxcVT
 
 The website says the only user on the account is `oscp`
 
-Thus, we can set the permissions for the private key and `ssh oscp@192.168.54.89 - <priv.key>`
+Thus, we can set the permissions for the private key and `ssh oscp@192.168.54.89 -i <priv.key>`
 
 We get a flag in `local.txt`
 
