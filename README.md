@@ -1006,6 +1006,12 @@ print(flag)
 - Find files with the SUID permission
     - `find / -perm -u=s -type f 2>/dev/null`
     - These files execute with the privileges of the owner instead of the user executing them
+- Find permissions for all services
+    - `accesschk.exe -uwcqv *`
+    - Look for services that are not under the System or Administrator accounts
+- Query Service
+    - `sc qc <service name>`
+    - Only works in cmd.exe 
 
 ### Listen for reverse shell
 
