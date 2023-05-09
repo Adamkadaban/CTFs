@@ -679,7 +679,7 @@ p.interactive()
     - Useful for websites that allow you to upload files
     - This file needs to be executed on the server to work
 - [jwt](https://jwt.io/)
-    - You can identify a JWT token since it begins with "ey"
+    - You can identify a JWT token since base64-encoded json (and thus jwt tokens) begins with "ey"
     - This site will decode JSON web tokens
     - You can crack the secret for the JSON web token to modify and sign your own tokens
         - `echo <token> > jwt.txt`
@@ -710,7 +710,6 @@ p.interactive()
 - Cross Site Scripting
 	- [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 		- Google's Content Security Policy Evaluator
-
 
 ### Fuzzing input fields
 
