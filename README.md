@@ -678,6 +678,9 @@ p.interactive()
 - [php reverse shell](https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php)
     - Useful for websites that allow you to upload files
     - This file needs to be executed on the server to work
+- [WPScan](http://wpscan.com)
+    - Scan wordpress websites
+    - Use `wpscan --url <site> --plugins-detection mixed -e` with an api key for best results
 - [jwt](https://jwt.io/)
     - You can identify a JWT token since base64-encoded json (and thus jwt tokens) begins with "ey"
     - This site will decode JSON web tokens
