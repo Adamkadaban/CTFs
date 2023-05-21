@@ -188,9 +188,6 @@ VQAQI=
 
 Because we know there is a user called `dev-datasci-lowpriv`, we can log in with `ssh -i user.priv dev-datasci-lowpriv@10.10.111.30`
 
-```
-wUqnKWqzha*W!PWrPRWi!M8faUn
-```
 We get the user flag in `C:\Users\dev-datasci-lowpriv\Desktop\user.txt`
 
 # Privilege Escalation 
