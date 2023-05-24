@@ -108,6 +108,9 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - [RPISEC](https://www.youtube.com/c/RPISEC_talks/videos)
     - RPI University team meetings
     - Very advanced and assumes a bit of cs background knowledge
+- [Matt Brown](https://www.youtube.com/@mattbrwn)
+    - Embedded Security Pentester
+    - Makes great beginner-friendly videos about IoT hacking
     
 
 **I've also made some playlists of diff topics**
