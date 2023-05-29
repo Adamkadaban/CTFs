@@ -116,7 +116,7 @@ As a result, I resorted to modifying the payload inside of the original request 
 Currently, the contents of the login credentials are stored as following:
 
 ```js
-username=fakseUser&password=fakePass
+username=fakeUser&password=fakePass
 ```
 
 If the website was using PHP, we could attempt a NoSQL injection by changing it to something like
