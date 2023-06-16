@@ -96,6 +96,9 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - [Gynvael](https://www.youtube.com/channel/UCCkVMojdBWS-JtH7TliWkVg)
     - Polish guy that competes on an amazing international CTF team
     - Makes amazingly intuitive video writeups. Has done the entirety of picoCTF 2019 (that's a lot)
+- [Black Hills Information Security](https://www.youtube.com/@BlackHillsInformationSecurity)
+    - Security firm that makes a ton of educational content
+    - Always doing free [courses](https://www.antisyphontraining.com/pay-what-you-can/) and [webcasts](https://discord.gg/BHIS) about security topics
 - [stacksmashing](https://www.youtube.com/c/stacksmashing/videos)
     - Amazing reverse engineering & hardware hacking videos
     - Has a really cool series of him reverse engineering WannaCry
