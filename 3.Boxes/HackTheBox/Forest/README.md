@@ -158,7 +158,7 @@ Since we have a list of users, we can try using kerbrute:
 
 I put the users in a file called `users.list`
 
-`kerbrute -d htb.local --dc=forest.htb.local userenum users`
+`kerbrute -d htb.local --dc=forest.htb.local userenum users.list`
 
 ```
     __             __               __     
