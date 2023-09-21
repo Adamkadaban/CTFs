@@ -247,7 +247,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - [cryptopals](https://cryptopals.com/)
 	- The OG crypto challenge site.
 ### Smart Contracts
-- [Capture the Ether](https://cryptohack.org/)
+- [Capture the Ether](https://capturetheether.com/)
 ### Pentesting
 - [hacker101](https://www.hacker101.com/videos)
 - [hacksplaining](https://www.hacksplaining.com/lessons)
