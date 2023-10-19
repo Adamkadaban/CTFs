@@ -270,6 +270,8 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 
 #### General
 
+- [AperiSolve](https://github.com/Zeecka/AperiSolve)
+	- Tool that automatically runs other stego tools
 - Really good resource from John Hammond for different types of challenges:
     - [https://github.com/JohnHammond/ctf-katana](https://github.com/JohnHammond/ctf-katana)
 - Another very great cheat sheet for creating and solving challenges:
