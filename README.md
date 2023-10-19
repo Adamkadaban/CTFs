@@ -14,6 +14,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     + [Web](#web)
     + [Crypto](#crypto)
     + [Smart Contracts](#smart-contracts)
+	+ [Cloud](#cloud)
     + [Pentesting](#pentesting)
 
 - **[CTF Cheat Sheet](#ctf-cheat-sheet)**
@@ -248,6 +249,9 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 	- The OG crypto challenge site.
 ### Smart Contracts
 - [Capture the Ether](https://capturetheether.com/)
+### Cloud
+- [CloudFoxable](https://cloudfoxable.bishopfox.com)
+	- Walks you through setting up a vulnerable environment to be exploited using [cloudfox](https://github.com/BishopFox/cloudfox)
 ### Pentesting
 - [hacker101](https://www.hacker101.com/videos)
 - [hacksplaining](https://www.hacksplaining.com/lessons)
