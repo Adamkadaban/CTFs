@@ -252,6 +252,8 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 ### Cloud
 - [CloudFoxable](https://cloudfoxable.bishopfox.com)
 	- Walks you through setting up a vulnerable environment to be exploited using [cloudfox](https://github.com/BishopFox/cloudfox)
+- [flaws.cloud](https://flaws.cloud)
+	- Free challenges that involve finding secrets in S3, EC2, and Lambda
 ### Pentesting
 - [hacker101](https://www.hacker101.com/videos)
 - [hacksplaining](https://www.hacksplaining.com/lessons)
