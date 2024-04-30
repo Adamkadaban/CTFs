@@ -67,7 +67,7 @@ There is now a web mirror of this repo at [hackback.zip](https://hackback.zip/20
   * [Misc](#misc)
 
 # Resources
-## YouTube (We love video resources)
+## YouTube Channels
 - [John Hammond](https://www.youtube.com/user/RootOfTheNull)
     - Used to make a lot of CTF videos, but has moved on to other things
     - Still a ton of useful videos. The CTF ones especially are amazing for teaching people brand new to cyber.
