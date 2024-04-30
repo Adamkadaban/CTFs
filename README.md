@@ -743,7 +743,7 @@ p.interactive()
     - Carries out various cryptography operations
     
 
-[Cipher Detector](https://www.boxentriq.com/code-breaking/cipher-identifier)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+[Cipher Detector](https://www.boxentriq.com/code-breaking/cipher-identifier)
 
 ### Hashes
 
