@@ -1051,7 +1051,9 @@ print(flag)
 - [pimeyes](https://pimeyes.com/en)
     - Reverse search faces on the internet
 - [OSINT Framework](https://osintframework.com/)
-    - Website that aggregates tons of OSINT tools.
+    - Website that aggregates tons of OSINT tools
+- [GeoSpy AI](https://geospy.ai)
+	- Geospatial vision LLM that can estimate location just from an image
 
 ## Misc
 
