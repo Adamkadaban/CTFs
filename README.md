@@ -1054,6 +1054,10 @@ print(flag)
     - Website that aggregates tons of OSINT tools
 - [GeoSpy AI](https://geospy.ai)
 	- Geospatial vision LLM that can estimate location just from an image
+- [overpass turbo](https://overpass-turbo.eu)
+	- Website that lets you query the OpenStreetMap API and visualize results
+- [Bellingcat OSM search](https://osm-search.bellingcat.com/)
+	- Website that lets you easily query the OSM API
 
 ## Misc
 
