@@ -3,7 +3,8 @@ Writeups / Files for some of the Cyber CTFs that I've done
 
 I've also included a list of **CTF resources** as well as a comprehensive **cheat sheet** covering tons of common CTF challenges
 
-There is now a web mirror of this repo at [hackback.zip](https://hackback.zip/2024/04/30/CTF-Cheat-Sheet.html)
+> [!NOTE]
+> There is now a web mirror of this repo at [hackback.zip](https://hackback.zip/2024/04/30/CTF-Cheat-Sheet.html)
 
 # Table of Contents
 - **[Resources](#resources)**
