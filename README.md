@@ -196,7 +196,8 @@ Here are some slides I've put together: [hackback.zip/presentations](https://hac
 - [reversing.kr](http://reversing.kr/)
 - [crackmes.one](https://crackmes.one)
     - Tons of crackme (CTF) style challenges
-
+- [Malware Unicorn Workshops](https://malwareunicorn.org/#/workshops)
+	- Free workshops about Reverse engineering and Malware Analysis
 
 ### Web
 - [websec.fr](http://websec.fr/#)
