@@ -226,6 +226,8 @@ Here are some slides I've put together: [hackback.zip/presentations](https://hac
     - I'm currently working on putting writeups [here](https://github.com/Adamkadaban/CTFs/tree/master/2.Labs/CryptoHack)
 - [cryptopals](https://cryptopals.com/)
     - The OG crypto challenge site.
+- [CryptoCTF](https://cr.yp.toc.tf)
+    - Annual cryptography CTF. Previous years accessible at `20{19,20,21,22,23,24}.cr.yp.toc.tf`.
 
 ### Smart Contracts
 - [Capture the Ether](https://capturetheether.com/)
