@@ -139,7 +139,7 @@ Here are some slides I've put together: [hackback.zip/presentations](https://hac
 
 
 ### General
-- [HackTheBox](hackthebox.com)
+- [HackTheBox](https://hackthebox.com)
     - The OG box site
         - Boxes are curated to ensure quality
     - Now has some CTF-style problems
