@@ -8,7 +8,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
 
 # Table of Contents
 - **[Resources](#resources)**
-  * [YouTube (We love video resources)](#youtube-we-love-video-resources)
+  * [YouTube Channels](#youtube-channels)
   * [Practice / Learning Sites](#practice--learning-sites)
     + [CTFs](#ctfs)
     + [General](#general)
