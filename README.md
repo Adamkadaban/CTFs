@@ -42,6 +42,7 @@ I've also included a list of **CTF resources** as well as a comprehensive **chea
       - [SMT Solvers](#smt-solvers)
       - [Reversing byte-by-byte checks](#reversing-byte-by-byte-checks-side-channel-attack)
       - [Searching strings with gef](#searching-strings-with-gef)
+      - [8kSec Battlegrounds](https://8ksec.io/battle/)
   * [Web](#web-1)
       - [Fuzzing input fields](#fuzzing-input-fields)
   * [Crypto](#crypto-1)
