@@ -136,6 +136,9 @@ Here are some slides I've put together: [hackback.zip/presentations](https://hac
 - [CTF101](https://ctf101.org/)
     - One of the best intros to CTFs I've seen (gj osiris)
     - Very succinct and beginner-friendly
+- [8kSec Battlegrounds](https://8ksec.io/battle/)
+    - Free, hands-on mobile security CTF challenges
+    - For Android, iOS, and ARM exploitation.
 
 
 ### General
