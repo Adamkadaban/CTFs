@@ -136,6 +136,9 @@ Here are some slides I've put together: [hackback.zip/presentations](https://hac
 - [CTF101](https://ctf101.org/)
     - One of the best intros to CTFs I've seen (gj osiris)
     - Very succinct and beginner-friendly
+ - [FlagForge](https://flagforge.xyz/)
+    - Beginner-friendly platform with interactive labs, challenges, and training.
+    - Includes a mix of free and subscription-based content
 
 
 ### General
