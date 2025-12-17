@@ -1062,6 +1062,8 @@ print(flag)
 	- Website that lets you query the OpenStreetMap API and visualize results
 - [Bellingcat OSM search](https://osm-search.bellingcat.com/)
 	- Website that lets you easily query the OSM API
+- [Geoguessr AI](https://geoguessr.ai/)
+	- AI-powered image analysis tool that estimates photo locations and explains geographic clues to help users learn how visual details map to places
 
 ## Misc
 
